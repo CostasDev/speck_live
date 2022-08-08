@@ -1,0 +1,32 @@
+{% if page.handle == 'faq-airtags' %}
+{%section 'faq-airtags'%}
+{% else %}
+{%section 'faq'%}
+{% endif %}
+	
+<script>
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// Add event listener to all FAQ items, toggle panel, display appropriate aria attribute when clicked
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panelBtn = this.querySelector('.accordion-btn');
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+      panelBtn.ariaExpanded="false";
+    } else {
+      panel.style.display = "block";
+      panelBtn.ariaExpanded="true";
+    }
+  });
+}
+</script>

@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "1653669571081abb51": {
+      "type": "bs-home-hero",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/candyshell_iphone-13_01_shfy.jpg",
+        "mob_image": "shopify:\/\/shop_images\/candyshell_iphone-13_01_m_shfy.jpg",
+        "hero_text_display": false,
+        "pre_title": "",
+        "main_title": "",
+        "sub_title": "",
+        "link_text": "Optional Button CTA",
+        "link": "",
+        "color_text": "#ffffff"
+      }
+    },
+    "text-input": {
+      "type": "basic-landing-text",
+      "blocks": {
+        "text-h1": {
+          "type": "text-h1",
+          "settings": {
+            "text_h1": "CandyShell<sup>®<\/sup>: Back to Basics.",
+            "text_h1_marginbottom": 20
+          }
+        },
+        "text-paragraph": {
+          "type": "text-paragraph",
+          "settings": {
+            "text_p": "Bringing it back to what made us spark, Speck CandyShell is back in a big way. Featuring bold colors and bright patterns from our OG design lab, CandyShell cases hold up for iPhones, AirPods®, and any other accessories you need. Find all Speck CandyShell cases at third party retailers like Amazon or Walmart."
+          }
+        }
+      },
+      "block_order": [
+        "text-h1",
+        "text-paragraph"
+      ],
+      "settings": {
+        "text_margin_top": 28,
+        "text_margin_bottom": 180
+      }
+    }
+  },
+  "order": [
+    "1653669571081abb51",
+    "text-input"
+  ]
+}

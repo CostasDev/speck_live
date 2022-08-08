@@ -1,0 +1,33 @@
+<section class="fs-section page-width">
+    {% if section.settings.title != blank %}
+    <h2 class="fs-title text-center">{{ section.settings.title | escape }}</h2>
+    {% endif %}
+    {{ section.settings.code }}
+</section>
+
+{% schema %}
+    {
+        "name": "Instafeed",
+        "class": "shopify-section--intafeed index-section",
+        "settings": [ 
+            { 
+                "type": "text", 
+                "id": "title", 
+                "default": "Shop Our Instagram", 
+                "label": "Title" 
+            }, 
+            { 
+                "type": "textarea", 
+                "id": "code", 
+                "default": "Paste your generated Foursixty code here.", 
+                "label": "Embed Code" 
+            } 
+        ], 
+        "presets": [
+            { 
+                "name": "Instafeed", 
+                "category": "Foursixty" 
+            }
+        ] 
+    }
+{% endschema %}

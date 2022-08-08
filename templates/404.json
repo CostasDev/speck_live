@@ -1,0 +1,55 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {}
+    },
+    "1643776408c902db11": {
+      "type": "featured-collections",
+      "blocks": {
+        "164377640825bc60d4-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify:\/\/collections\/antimicrobial",
+            "image": "shopify:\/\/shop_images\/antimicrobial_cases_3131ee5b-32b3-4fc2-bc87-85eaf83d3d59.png",
+            "title": "<strong>Antimicrobial Cases<\/strong>",
+            "focal_point": "center center"
+          }
+        },
+        "164377640825bc60d4-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify:\/\/collections\/magsafe-compatible",
+            "image": "shopify:\/\/shop_images\/compatible_with_magsafe_case_58ec6860-1544-4f50-912f-262bb94b2eeb.png",
+            "title": "<strong>Compatible with MagSafe® Cases<\/strong>",
+            "focal_point": "center center"
+          }
+        },
+        "164377640825bc60d4-2": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify:\/\/collections\/android",
+            "image": "shopify:\/\/shop_images\/android_c6315b0b-762d-4706-bf3d-d21e3de4c555.jpg",
+            "title": "<strong>Android Cases<\/strong>",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "164377640825bc60d4-0",
+        "164377640825bc60d4-1",
+        "164377640825bc60d4-2"
+      ],
+      "settings": {
+        "title": "Explore Collections",
+        "divider": false,
+        "per_row": 3,
+        "enable_gutter": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1643776408c902db11"
+  ]
+}

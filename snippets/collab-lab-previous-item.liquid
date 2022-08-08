@@ -1,0 +1,34 @@
+{%- liquid
+  unless background_position
+    assign background_position = 'center center'
+  endunless
+
+  if block.settings.title != blank
+    assign title_output = block.settings.title
+  endif
+-%}
+<div class="grid__item">
+  <div class="image">
+  {%- assign img_url = prev_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {%- assign img_url_roll = prev_image_roll | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img
+      class="lazyload"
+      src=""
+      data-src="{{ img_url }}"
+      width="{{prev_image.width}}" 
+      height="{{prev_image.height}}" 
+      data-aspectratio="{{ prev_image.aspect_ratio }}"
+      data-widths="[360, 540]"
+      data-sizes="auto"
+      alt="{{ prev_image.alt | escape }}"
+      style="object-position: {{ background_position }};">
+      <noscript>
+        <img class="lazyloaded" 
+          width="{{ prev_image.width }}" 
+          height="{{ prev_image.height }}"
+          src="{{ prev_image | img_url: '400x' }}"
+          alt="{{ prev_image.alt | escape }}">
+      </noscript>
+  </div>
+  <div class="content"><h4>{{ title_output }}</h4></div>
+</div>

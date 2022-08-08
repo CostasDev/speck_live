@@ -1,0 +1,104 @@
+<div id="landing_signup-section">
+  <div class="signup-heading">{% if section.settings.signup-heading != blank %}<{{ section.settings.signup-heading-level }}>{{ section.settings.signup-heading }}</{{ section.settings.signup-heading-level }}>{% endif %}</div>
+  {% if section.settings.signup-class-id != blank %}<div class="{{ section.settings.signup-class-id }}"></div>{% endif %}
+</div>
+{% style %}
+  #landing_signup-section .signup-heading {padding:0 5%}
+  #landing_signup-section .signup-heading h1, #landing_signup-section .signup-heading h2, #landing_signup-section .signup-heading h3, #landing_signup-section .signup-heading h4, #landing_signup-section .signup-heading h5, #landing_signup-section .signup-heading h6 {font-size:20px;font-weight:normal;text-transform:none}
+  #landing_signup-section .needsclick {padding:0 !important;min-height:auto !important}
+  #landing_signup-section input[type=email] {padding:8px 12px !important;font-size:18px !important}
+  #landing_signup-section .needsclick button {margin-left:1em;padding:8px 12px !important;text-transform:uppercase !important;box-sizing:border-box !important;background-color:#007e9e !important;font-size:16px !important}
+  #landing_signup-section input[type=email], #landing_signup-section .needsclick button {height:42px !important}
+  @media only screen and (max-width:768px){
+    #landing_signup-section {margin-bottom:2em}
+  }
+{% endstyle %}
+{% schema %}
+  {
+    "name": "Signup Section",
+    "class": "landing-signup-section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "These settings are for the email signup section."
+      },
+      {
+        "type": "text",
+        "id": "signup-heading",
+        "label": "Sign-Up Section Heading",
+        "default": "Sign-Up Section Heading Goes Here"
+      },
+      {
+        "type": "select",
+        "id": "signup-heading-level",
+        "label": "Sign-Up Heading Level",
+        "options": [
+          {            
+            "value": "h1",
+            "label": "H1"
+          },
+          {            
+            "value": "h2",
+            "label": "H2"
+          },
+          {            
+            "value": "h3",
+            "label": "H3"
+          },
+          {            
+            "value": "h4",
+            "label": "H4"
+          },
+          {            
+            "value": "h5",
+            "label": "H5"
+          },
+          {            
+            "value": "h6",
+            "label": "H6"
+          }
+        ],
+        "default": "h1"        
+      },
+      {
+        "type": "select",
+        "id": "signup-text-alignment",
+        "label": "Sign-Up Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "paragraph",
+        "content": "The Klaviyo 'Form Class' referenced below is what is given by the Klaviyo platform when a signup form is published. Use the class provided only, DO NOT include provided <div> tags."
+      },
+      {
+        "type": "text",
+        "id": "signup-class-id",
+        "label": "Klaviyo Sign-Up Form Class"
+      }
+    ]
+  }
+{% endschema %}
+
+{% style %}
+  #landing_signup-section .signup-heading {text-align:{{ section.settings.signup-text-alignment}}}
+{% endstyle %}
+    
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

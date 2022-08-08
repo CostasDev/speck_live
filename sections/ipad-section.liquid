@@ -1,0 +1,143 @@
+<div class="sp-fit-gd-4-col-main">
+  <div class="sp-fit-gd-4-col-inn">
+		<div class="sp-fit-gd-pro-specification" id="ipad">
+    
+                   
+          {%if section.settings.title != blank %}
+			<h3>{{section.settings.title}}</h3>
+          {%endif%}
+          
+          
+          {%if section.settings.section-includes != blank %}          
+            <p><b>Includes the following:</b></p>
+			<h4>{{section.settings.section-includes}}</h4>
+          {%endif%}
+
+            <h4>Specifications:</h4>  
+            <div class="sp-fit-gd-pro-specification-tbl">	
+              <table>        		
+                    <thead>
+                        <tr>
+                            <th>Model Name</th>
+                            <th> </th>
+                            <th>Release Date</th>
+                            <th>Screen Size</th>
+                            <th>Model Number</th>
+                            <th>Storage</th>
+                            <th>Connector Type</th>
+                            <th> </th>
+                        </tr>
+                    </thead>   
+                    <tbody>
+                
+             
+                      
+                {%for block in section.blocks %}
+                        {%if block.type == 'list-products-blocks'%}
+                        <tr>
+                            <td data-label="Model Name"><b>{{block.settings.model-name}}</b></td>
+                            <td data-label=""><img class="lazyload" data-src="{{block.settings.product_image | img_url: 'master'}}" /></td>
+                            <td data-label="Release Date">{{block.settings.release-date}}</td>
+                            <td data-label="Screen Size">{{block.settings.screen-size}}</td>
+                            <td data-label="Model Number">{{block.settings.model-number}}</td>
+                            <td data-label="Storage">{{block.settings.storage}}</td>
+                            <td data-label="Connector Type">{{block.settings.connector-type}}</td>
+                            {% if block.settings.available == true %}
+                            <td data-label=""><em>Cases are no longer available for this device.</em></td>
+                            {% else %}
+                            <td data-label=""><a href="{{block.settings.product_link}}" class="sp-bl-lined-btn">See Cases</a></td>
+                            {% endif %}
+                        </tr>
+                 {%endif%}
+                     
+             {%endfor%}
+                      
+                    </tbody>				
+              </table>
+          </div>
+          
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "iPad Section",
+    "settings": [   
+    
+       {
+
+   "type": "text",
+   "id": "title",
+   "label": "Heading"
+
+ },
+{
+   "type": "html",
+   "id": "section-includes",
+   "label": "Includes These Devices:"
+ }    
+   ],
+"blocks":[
+
+{
+"type": "list-products-blocks",
+"name":"List Products",
+      "settings": [
+
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Product Image (400px x 383px)"
+ },
+{
+	"type": "checkbox",
+	"id": "available",
+	"label": "No Longer Available?",
+	"default": false
+},
+{
+   "type": "url",
+   "id": "product_link",
+   "label": "Product Link"
+
+ },
+{
+   "type": "text",
+   "id": "model-name",
+   "label": "Model Name"
+ },
+{
+   "type": "text",
+   "id": "release-date",
+   "label": "Release Date"
+ },
+{
+   "type": "text",
+   "id": "screen-size",
+   "label": "Screen Size"
+ },
+ {
+   "type": "html",
+   "id": "model-number",
+   "label": "Model Number"
+ },
+ {
+   "type": "html",
+   "id": "storage",
+   "label": "Storage"
+ },
+{
+   "type": "text",
+   "id": "connector-type",
+   "label": "Connector Type"
+ }
+
+]
+}
+
+  ]
+
+  }
+{% endschema %}

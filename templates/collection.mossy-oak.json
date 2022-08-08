@@ -1,0 +1,185 @@
+{
+  "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": true,
+        "collection_image_enable": true,
+        "parallax": false,
+        "text_align": "center",
+        "link": "shopify:\/\/collections\/airpods",
+        "button_text": "Shop now",
+        "bottom_description": true
+      }
+    },
+    "164330663008cf64cb": {
+      "type": "text-and-image-mossy",
+      "blocks": {
+        "754db881-9108-4b0b-a49a-13b93c471fe1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mossy-1.png",
+            "image_width": 700,
+            "subtitle": "",
+            "title": "Exclusive Prints That Last A Lifetime",
+            "text": "<p>Every unique Mossy Oak print is embedded onto the case so no matter how rough and tough you are on your case, your camo print stays vivid and bold. Guaranteed under our lifetime warranty.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "align_text": "left",
+            "layout": "left"
+          }
+        },
+        "13be17e8-345d-42a2-8b0e-b2a5b14c7da6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mossy-2.png",
+            "image_width": 700,
+            "subtitle": "",
+            "title": "Speck + Microban: A New Level Of Protection",
+            "text": "<p>Our phones go with us everywhere and the truth is, stain and odor causing bacteria are everywhere. Microban antimicrobial technology gives a 99% reduction in bacteria on the surface for a cleaner phone case.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "align_text": "left",
+            "layout": "right"
+          }
+        },
+        "4dab6367-04a2-4a1d-a16e-142cae4ba305": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mossy-3.png",
+            "image_width": 700,
+            "subtitle": "",
+            "title": "Two Layers Of Impact Cushioning",
+            "text": "<p>You never know where the day or night is going to take you. That’s why every Mossy Oak INKED has up to 13-foot drop protection. It may be stylish, but it’s strong as nails. This case was tested tough and built to protect in case your phone falls out of a tree stand.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "align_text": "left",
+            "layout": "left"
+          }
+        },
+        "ea4692d7-e5d6-48b3-b8a2-88714cf4fd13": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mossy-4.png",
+            "image_width": 700,
+            "subtitle": "",
+            "title": "Raised Bezel Screen Protection",
+            "text": "<p>No two phones fall the same way. Sometimes it’ll fall on its back, sometimes on its edges, and sometimes it’ll land flat on the screen. That’s where our raised bezel comes in handy. This added bit of protection resists screen shatters for if-and-when your phone falls face-down.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "align_text": "left",
+            "layout": "right"
+          }
+        },
+        "360b2019-938e-4d38-80fb-6edd2e943d2b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/mossy-5.png",
+            "image_width": 700,
+            "subtitle": "",
+            "title": "A Slim & Pocket-Friendly Design",
+            "text": "<p>Ease of use is key when you’re living a life on-the-go. That’s why every Mossy Oak INKED is made to be super slim so you can wirelessly charge your phone with the case on.<\/p>",
+            "button_label": "",
+            "button_link": "",
+            "button_style": "primary",
+            "align_text": "left",
+            "layout": "left"
+          }
+        }
+      },
+      "block_order": [
+        "754db881-9108-4b0b-a49a-13b93c471fe1",
+        "13be17e8-345d-42a2-8b0e-b2a5b14c7da6",
+        "4dab6367-04a2-4a1d-a16e-142cae4ba305",
+        "ea4692d7-e5d6-48b3-b8a2-88714cf4fd13",
+        "360b2019-938e-4d38-80fb-6edd2e943d2b"
+      ],
+      "settings": {
+        "title": "Camo Is Your Obsession, Protection Is Ours",
+        "subtext": "Every Presidio INKED + Mossy Oak Case Features:",
+        "bottom_title": "PERFECT FOR THE WATERFOWL HUNTER IN YOUR LIFE",
+        "button_link": "shopify:\/\/collections\/at-t",
+        "button_text": "Shop Now",
+        "bottom_text": "Live your best life outdoors with Speck + Mossy OAK",
+        "bg_image": "shopify:\/\/shop_images\/bg.png",
+        "divider": false
+      }
+    },
+    "16434023460986fb01": {
+      "type": "rich-text",
+      "blocks": {
+        "1643402346bffd51ef-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Explore Speck + Mossy Oak Cases"
+          }
+        }
+      },
+      "block_order": [
+        "1643402346bffd51ef-0"
+      ],
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 4,
+            "mobile_flush_grid": true
+          }
+        },
+        "6ed73d23-4a6b-437e-80c0-9836c84e0d82": {
+          "type": "collection_banner_product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/collection-banner.png",
+            "mobile_image": "shopify:\/\/shop_images\/collection-banner.png",
+            "image_darken": false,
+            "title": "Track Your Valuables with AirTag Accessories",
+            "text_link": "",
+            "desk_color": "#ffffff",
+            "text_position": "bottom-right",
+            "position": "3",
+            "text_below_image": true,
+            "mobile_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid",
+        "6ed73d23-4a6b-437e-80c0-9836c84e0d82"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    }
+  },
+  "order": [
+    "collection-header",
+    "164330663008cf64cb",
+    "16434023460986fb01",
+    "main-collection"
+  ]
+}

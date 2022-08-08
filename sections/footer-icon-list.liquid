@@ -1,0 +1,107 @@
+{%- if section.settings.divider -%}<div class="section--divider-top">{%- endif -%}
+
+<div class="page-width icon-list" data-aos="logo__animation">
+  {%- if section.settings.title != blank -%}
+    <div class="section-header">
+      <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <ul class="logo-bar logo-bar--{{ section.id }}">
+      {%- for block in section.blocks -%}
+        <li class="logo-bar__item item-align--{{section.settings.type}}" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="logo-bar__link">
+          {%- endif -%}
+          {%- if block.settings.image != blank -%}
+            {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+            <img class="logo-bar__image lazyload"
+                data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720]" 
+                width="{{block.settings.image.width}}" 
+                height="{{block.settings.image.height}}" 
+                data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                data-sizes="auto"
+                alt="{{ block.settings.image.alt }}">
+					{% elsif block.settings.svg != blank %}
+						{{block.settings.svg}}
+          {%- else -%}
+            {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
+					<span>{{block.settings.text}}</span>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Footer Icon list",
+    "class": "shopify-section--icon-list",
+    "max_blocks": 10,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+          "type": "select",
+          "id": "type",
+          "label": "Align type",
+          "options": [
+              {
+                  "value": "left",
+                  "label": "Horizontal Align"
+              },
+              {
+                  "value": "bottom",
+                  "label": "Vertical Align"
+              }
+          ]
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Icon (image)"
+          },
+          {
+              "type": "html",
+              "id": "svg",
+              "label": "Icon (svg)"
+          },
+          {
+              "type": "text",
+              "id": "text",
+              "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link",
+            "info": "Optional"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

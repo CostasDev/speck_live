@@ -1,0 +1,234 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page-full-width",
+      "disabled": true,
+      "settings": {}
+    },
+    "1654741528b115d0cd": {
+      "type": "bs-home-hero",
+      "settings": {
+        "hero_text_display": true,
+        "pre_title": "",
+        "main_title": "",
+        "sub_title": "",
+        "link_text": "Optional button",
+        "link": "",
+        "color_text": "#FFF"
+      }
+    },
+    "16547414844b6bc4a5": {
+      "type": "basic-landing-text",
+      "blocks": {
+        "165474148456497a4c-0": {
+          "type": "text-h1",
+          "settings": {
+            "text_h1": "H1 text goes here...",
+            "text_h1_marginbottom": 40
+          }
+        },
+        "165474148456497a4c-1": {
+          "type": "text-h2",
+          "disabled": true,
+          "settings": {
+            "text_h2": "H2 text goes here..."
+          }
+        },
+        "165474148456497a4c-2": {
+          "type": "text-paragraph",
+          "disabled": true,
+          "settings": {
+            "text_p": "P text goes here..."
+          }
+        }
+      },
+      "block_order": [
+        "165474148456497a4c-0",
+        "165474148456497a4c-1",
+        "165474148456497a4c-2"
+      ],
+      "settings": {
+        "text_margin_top": 60,
+        "text_margin_bottom": 60
+      }
+    },
+    "16547409268313b90b": {
+      "type": "featured-product",
+      "blocks": {
+        "165474092692ad81c5-0": {
+          "type": "price",
+          "settings": {}
+        },
+        "165474092692ad81c5-1": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "165474092692ad81c5-2": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": false,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "165474092692ad81c5-3": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        }
+      },
+      "block_order": [
+        "165474092692ad81c5-0",
+        "165474092692ad81c5-1",
+        "165474092692ad81c5-2",
+        "165474092692ad81c5-3"
+      ],
+      "settings": {
+        "featured_product": "ip-profm",
+        "divider": false,
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "1654741366cea71784": {
+      "type": "basic-landing-text",
+      "blocks": {
+        "165474136630871853-0": {
+          "type": "text-h1",
+          "settings": {
+            "text_h1": "H1 text goes here...",
+            "text_h1_marginbottom": 40
+          }
+        },
+        "165474136630871853-1": {
+          "type": "text-h2",
+          "disabled": true,
+          "settings": {
+            "text_h2": "H2 text goes here..."
+          }
+        },
+        "165474136630871853-2": {
+          "type": "text-paragraph",
+          "disabled": true,
+          "settings": {
+            "text_p": "P text goes here..."
+          }
+        }
+      },
+      "block_order": [
+        "165474136630871853-0",
+        "165474136630871853-1",
+        "165474136630871853-2"
+      ],
+      "settings": {
+        "text_margin_top": 60,
+        "text_margin_bottom": 60
+      }
+    },
+    "165474083983d9e0a8": {
+      "type": "featured-collections",
+      "blocks": {
+        "16547408394cd9f080-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "shopify:\/\/products\/ip-profm",
+            "image": "shopify:\/\/shop_images\/ippm21-ped-ms_brushed-floral.jpg",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "a166c135-2989-467e-a9a3-7ec9a7163c4d": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "325fd17a-dd15-4083-ac33-7470d41d77cf": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "e4e0f4bb-942b-4633-96ea-e1e744b7a3f6": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "1bcb1cf7-0d89-47bc-99bd-7534d7cbb70b": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "c6a05cec-d989-47a8-86d2-46041a39f3df": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "23a8b989-dbbf-4ba1-8bda-c8f082571a3c": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        },
+        "d76e2bf9-af0f-4b69-a651-e13cc3faab00": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "title": "",
+            "focal_point": "center center"
+          }
+        }
+      },
+      "block_order": [
+        "16547408394cd9f080-0",
+        "a166c135-2989-467e-a9a3-7ec9a7163c4d",
+        "325fd17a-dd15-4083-ac33-7470d41d77cf",
+        "e4e0f4bb-942b-4633-96ea-e1e744b7a3f6",
+        "1bcb1cf7-0d89-47bc-99bd-7534d7cbb70b",
+        "c6a05cec-d989-47a8-86d2-46041a39f3df",
+        "23a8b989-dbbf-4ba1-8bda-c8f082571a3c",
+        "d76e2bf9-af0f-4b69-a651-e13cc3faab00"
+      ],
+      "settings": {
+        "title": "",
+        "divider": false,
+        "per_row": 4,
+        "enable_gutter": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1654741528b115d0cd",
+    "16547414844b6bc4a5",
+    "16547409268313b90b",
+    "1654741366cea71784",
+    "165474083983d9e0a8"
+  ]
+}

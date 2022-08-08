@@ -1,0 +1,139 @@
+<div class="sp-text-cont-pg-main">
+  <div class="sp-cst-container">
+    <div class="blp_text">
+{%- for block in section.blocks -%}
+      <div class="blp_blk_{{ block.id }}" {{ block.shopify_attributes }}>
+	{%- case block.type -%}
+		{%- when 'text-h1' -%}
+        <h1 style="margin-bottom:{{ block.settings.text_h1_marginbottom }}px;">{{ block.settings.text_h1 }}</h1>
+    {%- endcase -%}
+        <div class="sp-text-cont-pg-inn">
+    {%- case block.type -%}
+	 	{%- when 'text-h2' -%}
+        <h2>{{ block.settings.text_h2 }}</h2>
+	 	{%- when 'text-h3' -%}
+        <h3>{{ block.settings.text_h3 }}</h3>
+		{%- when 'text-paragraph' -%}
+        <p>{{ block.settings.text_p }}</p>
+    {%- endcase -%}
+        </div>
+      </div>
+{%- endfor -%}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Basic Landing Text",
+	"class": "basic-landing-text",
+    "settings": [
+		{
+		  "type": "range",
+		  "id": "text_margin_top",
+		  "min": 0,
+		  "max": 80,
+		  "step": 2,
+		  "unit": "px",
+		  "label": "Section Margin Top",
+		  "default": 60
+		},
+		{
+		  "type": "range",
+		  "id": "text_margin_bottom",
+		  "min": 0,
+		  "max": 300,
+		  "step": 5,
+		  "unit": "px",
+		  "label": "Section Margin Bottom",
+		  "default": 60
+		}
+	],
+	"blocks": [
+		{
+			"type": "text-h1",
+			"name": "Text (H1)",
+			"settings": [
+				{
+					"type": "text",
+					"id": "text_h1",
+					"label": "H1 - Text",
+					"default": "H1 text goes here..."
+				},
+				{
+					"type": "range",
+					"id": "text_h1_marginbottom",
+					"min": 0,
+					"max": 120,
+					"step": 2,
+					"unit": "px",
+					"label": "H1 Text Margin Bottom",
+					"default": 40
+				}
+			]
+		},
+		{
+			"type": "text-h2",
+			"name": "Text (H2)",
+			"settings": [
+				{
+					"type": "text",
+					"id": "text_h2",
+					"label": "H2 - Text",
+					"default": "H2 text goes here..."
+				}
+			]
+		},
+		{
+			"type": "text-h3",
+			"name": "Text (H3)",
+			"settings": [
+				{
+					"type": "text",
+					"id": "text_h3",
+					"label": "H3 - Text",
+					"default": "H3 text goes here..."
+				}
+			]
+		},
+		{
+			"type": "text-paragraph",
+			"name": "Text (paragraph)",
+			"settings": [
+				{
+					"type": "textarea",
+					"id": "text_p",
+					"label": "Paragraph - Text",
+					"default": "P text goes here..."
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Basic Landing Text",
+			"blocks": [
+				{
+					"type": "text-h1"
+				},
+				{
+					"type": "text-h2"
+				},
+				{
+					"type": "text-paragraph"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% style %}
+.sp-text-cont-pg-main {margin-top:{{ section.settings.text_margin_top }}px;margin-bottom:{{ section.settings.text_margin_bottom }}px;}
+{% endstyle %}
+
+{% stylesheet %}
+.sp-text-cont-pg-main h1 sup {font-size:40%;top:-15px;left:-3px;}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

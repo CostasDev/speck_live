@@ -1,0 +1,11 @@
+  	          <li>
+                <a href="{% if parent_link != blank %}/products/{{ parent_link }}{% if sku_number != blank %}?variant={{ sku_number }}{% endif %}{% else %}#{% endif %}">
+                  <div class="image">{% if variation_image != blank %}<img src="{{ variation_image | image_url }}" alt="{{ variation_image.alt }}" />{% else %}<img src="https://cdn.shopify.com/s/files/1/0325/4252/3523/files/color-fantasy-teal.png?v=1651014167" alt="" />{% endif %}</div>
+                  <div class="content">
+                    <p class="h3" {% comment%} style="color:{{ text_color }}"{% endcomment %}>{{ variation_device }}</p>
+                    <p{% comment%} style="color:{{ text_color }}"{% endcomment %}>{{ variation_color }}</p>
+                    <p class="h4" {% comment%} style="color:{{ text_color }}"{% endcomment %}>{{ variation_title }}</p>
+                    <span class="button"{% comment%} style="color:{{ text_color }}"{% endcomment %}>Shop Now</span>
+                  </div>
+                </a>
+              </li>

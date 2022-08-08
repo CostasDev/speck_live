@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "6f5d2c40-2658-46cb-813e-35b46ea8d320": {
+          "type": "reviews",
+          "settings": {}
+        },
+        "7f021d87-8ec5-427f-9787-c411f6bdf678": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "namespace": "Short Description",
+            "divider": false,
+            "show_case": "small--hide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": false,
+            "picker_type": "button",
+            "color_swatches": true
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "quantity_status": true,
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "19f77b07-6217-4e52-8706-860abeb20646": {
+          "type": "icon",
+          "settings": {
+            "icon_1": "shopify:\/\/shop_images\/free-shipping_514a7f71-449b-43cd-96cc-bb5a37fdaceb.png",
+            "title_1": "Free Shipping",
+            "icon_2": "shopify:\/\/shop_images\/warranty_a55a6391-54bd-4a12-9598-86277f700262.png",
+            "title_2": "1-Year Warranty:1-Year Warranty,\nLifetime Warranty:Lifetime Warranty",
+            "icon_3": "shopify:\/\/shop_images\/30-day_71f5015c-264e-4b56-8c01-bd356f08a326.png",
+            "title_3": "30-day Guarantee"
+          }
+        },
+        "fe1467a3-9608-427c-9492-35fe2b52943d": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "namespace": "Short Description",
+            "divider": false,
+            "show_case": "medium-up--hide"
+          }
+        },
+        "012e8aa0-3fa8-49ac-ae76-8bfb9addfa4f": {
+          "type": "video",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "6f5d2c40-2658-46cb-813e-35b46ea8d320",
+        "7f021d87-8ec5-427f-9787-c411f6bdf678",
+        "fe1467a3-9608-427c-9492-35fe2b52943d",
+        "variant_picker",
+        "price",
+        "buy_buttons",
+        "19f77b07-6217-4e52-8706-860abeb20646",
+        "012e8aa0-3fa8-49ac-ae76-8bfb9addfa4f"
+      ],
+      "settings": {
+        "sku_enable": true,
+        "review_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": false,
+        "thumbnail_position": "below",
+        "thumbnail_arrows": true,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "blocks": {
+        "527c5db2-3729-42a0-a397-0a2b3f02c64a": {
+          "type": "description",
+          "settings": {
+            "tab_title": "Overview",
+            "is_tab": false
+          }
+        },
+        "6869b135-16a3-40db-a807-6f0739dff803": {
+          "type": "text",
+          "settings": {
+            "tab_title": "Features",
+            "namespace": "Features",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "527c5db2-3729-42a0-a397-0a2b3f02c64a",
+        "6869b135-16a3-40db-a807-6f0739dff803"
+      ],
+      "settings": {
+        "max_width": true,
+        "tab_status": true,
+        "bg_color": "#f5f6f5"
+      }
+    },
+    "pr-display": {
+      "type": "product-powerreviews-display",
+      "settings": {}
+    },
+    "164055094452477a7a": {
+      "type": "zoom-wishlist",
+      "disabled": true,
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {}
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "pr-display",
+    "164055094452477a7a",
+    "product-recommendations",
+    "recently-viewed",
+    "collection-return"
+  ]
+}

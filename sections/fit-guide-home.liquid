@@ -1,0 +1,81 @@
+<div class="sp-text-cont-pg-main sp-text-cont-pg-ft-guide">
+	<div class="sp-cst-container">
+      {%if section.settings.main_heading != blank %}
+		<h1>{{section.settings.main_heading}}</h1>
+      {%endif%}
+      {%if section.settings.page_description != blank %}
+		<p class="sp-inn-pg-res-prgrm-top-sub-txt text-center">{{section.settings.page_description}}</p>
+      {%endif%}
+	</div>
+	<div class="sp-fit-guide-pg-main">
+		<div class="sp-fit-guide-pg-inn">
+			<div class="sp-fit-guide-pg-row">
+              {%for block in section.blocks %}
+				<div class="sp-fit-guide-pg-block">
+					<div class="sp-fit-guide-pg-box">
+						<a href="{{block.settings.image_link}}">
+							<img width="{{block.settings.product_image.width}}" 
+              height="{{block.settings.product_image.height}}"  src="{{block.settings.product_image | img_url: 'master'}}" />
+                          {%if block.settings.title != blank %}
+							<p>{{block.settings.title}}</p>
+                          {%endif%}
+						</a>
+					</div>
+				</div>
+              {%endfor%}
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Fit Guide Home",
+    "settings": [    
+    
+       {
+		"type": "text",
+        "id": "main_heading",
+        "label": "Main Heading"
+      },
+     {
+		"type": "text",
+        "id": "page_description",
+        "label": "Description"
+      }
+      
+   ],
+"blocks":
+[
+{
+"type": "image-blocks",
+"name":"Image Block",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Product Image(173x130)"
+
+ },
+  {
+
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+
+ },
+{
+   "type": "url",
+   "id": "image_link",
+   "label": "Image Link"
+
+ }
+]
+}
+  ]
+
+  }
+{% endschema %}

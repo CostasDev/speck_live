@@ -1,0 +1,103 @@
+<div class="sp-auth-res-main">
+  <div class="sp-bs-sol-top-banner sp-bs-sol-top-banner-black-lyr">
+    
+    {%if section.settings.banner != blank %}
+      <div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner | img_url: 'master'}}')"></div>
+    {%endif%}
+    
+    {%if section.settings.banner-text != blank %}
+      <div class="sp-bs-sol-top-banner-cont">
+          <h3>{{section.settings.banner-text}}</h3>
+      </div>
+    {%endif%}
+  </div>
+  
+  {%if section.settings.banner-bellow-text != blank %}
+  <div class="sp-auth-res-desc-info">
+    <div class="page-width">
+      <div class="sp-auth-res-desc-info-inn">
+        <p>{{section.settings.banner-bellow-text}}</p>
+      </div>
+    </div>
+  </div>
+  {%endif%}
+  <div class="sp-bs-sol-lwr-sec">
+      <div class="sp-cst-container">
+          <div class="sp-bs-sol-lwr-fas">
+            {%if section.settings.store-heading != blank %}
+              <h3>{{section.settings.store-heading}}</h3>
+            {%endif%}
+              <div class="sp-bs-sol-lwr-fas-list">
+                  <ul>
+               {%for block in section.blocks%}
+                    <li>
+                      <div class="sp-bs-sol-lwr-fas-img">
+                        <a href="{{block.settings.product_link}}" target="_blank"><img class="lazyload" data-src="{{block.settings.product_image | img_url: 'master'}}" /></a>
+                      </div>
+                    </li>					
+               {%endfor%}
+                  </ul>
+              </div>
+          </div>				
+      </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Authorized Reseller",
+    "settings": [
+        
+      {
+		"type": "image_picker",
+        "id": "banner",
+        "label": "Main Banner Image(1136x500)"
+      },
+       {
+		"type": "text",
+        "id": "banner-text",
+        "label": "Main Banner heading"
+      },
+       {
+		"type": "html",
+        "id": "banner-bellow-text",
+        "label": "Main Banner Bellow Text"
+      },
+      {
+       "type":"header",
+       "content":"Stores Section"
+      },
+       {
+		"type": "text",
+        "id": "store-heading",
+        "label": "Stores Section Heading"
+      }
+      
+
+   ],
+"blocks":
+[
+{
+"type": "product-blocks",
+"name":"Authorized Blocks",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Logo Image(215x126)"
+
+ },
+{
+   "type": "url",
+   "id": "product_link",
+   "label": "Logo Link"
+
+ }
+
+]
+}
+]
+  }
+{% endschema %}

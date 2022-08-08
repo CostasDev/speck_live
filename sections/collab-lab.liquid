@@ -1,0 +1,85 @@
+<div class="sp-bs-sol-top-banner sp-collab-lab-banner sp-bs-sol-top-banner-black-lyr"> 
+  
+  {%if section.settings.banner_image != blank %}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}')"></div>
+  {%endif%}
+  
+  	<div class="sp-bs-sol-top-banner-cont">
+      <div class="page-width">
+      
+      {%if section.settings.banner_small_heading != blank %}  
+		<p>{{section.settings.banner_small_heading}}</p>
+      {%endif%}  
+     
+    {%if section.settings.banner_heading != blank %}      
+		<h3>{{section.settings.banner_heading}}</h3>
+    {%endif%} 
+        
+    {%if section.settings.banner_text != blank %}    
+		<p>{{section.settings.banner_text}}</p>        
+    {%endif%}    
+    
+     {%if section.settings.button_text != blank %}  
+		<div class="sp-bs-sol-top-banner-cont-btn"><a href="{{section.settings.button_link}}" class="sp-bl-back-btn">{{section.settings.button_text}}</a></div>
+     {%endif%}   
+      </div>
+	</div>  
+</div> 
+
+{%if section.settings.banner_below_section != blank %}
+<div class="sp-collab-lab-info-main">
+	<div class="sp-collab-lab-info-inn">
+	{{section.settings.banner_below_section}}
+	</div>
+</div>
+{%endif%}
+
+
+{% schema %}
+  {
+    "name": "Collab Lab",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+      {
+		"type": "text",
+        "id": "banner_small_heading",
+        "label": "Banner Small Heading"
+      },
+      {
+		"type": "text",
+        "id": "banner_heading",
+        "label": "Banner Heading"
+      }, 
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+      {
+		"type": "text",
+        "id": "button_text",
+        "label": "Banner Text"
+      },
+      {
+		"type": "url",
+        "id": "button_link",
+        "label": "Banner Link"
+      },
+      {
+       "type":"header",
+       "content":"Banner Below Section"
+     },
+      {
+		"type": "html",
+        "id": "banner_below_section",
+        "label": "Banner below section text"
+      }
+   ]
+
+  }
+{% endschema %}

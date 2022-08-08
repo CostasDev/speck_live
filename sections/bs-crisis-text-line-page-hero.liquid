@@ -1,0 +1,103 @@
+<div class="bs-ctl-hero-main">
+  <div class="bs-ctl-hero-image-wrapper">
+    <style>
+      .bs-ctl-hero-image-wrapper {
+        min-height: {{ section.settings.image.height | times: 100 | divided_by: section.settings.image.width }}vw;
+      }
+      @media screen and (max-width: 768px) {
+        .bs-ctl-hero-image-wrapper {
+          min-height: {{ section.settings.mob_image.height | times: 100 | divided_by: section.settings.mob_image.width }}vw;
+        }
+      }
+    </style>
+    <a href="{{ section.settings.link }}"></a>
+    
+    {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class=" lazyload small--hide"
+      src="{{ section.settings.image | img_url: 'master' }}"
+      data-src="{{ img_url }}"
+      data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+      data-sizes="auto"
+      alt="{{ section.settings.image.alt | escape }}">
+    {%- assign img_url_mobile = section.settings.mob_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="lazyload medium-up--hide"
+      src="{{ section.settings.mob_image | img_url: '300x' }}"
+      data-src="{{ img_url_mobile }}"
+      data-aspectratio="{{ section.settings.mob_image.aspect_ratio }}"
+      data-sizes="auto"
+      alt="{{ section.settings.mob_image.alt | escape }}">  
+    <noscript>
+      <img class=""
+        src="{{ section.settings.image | img_url: '1400x' }}"
+        alt="{{ section.settings.image.alt | escape }}">
+    </noscript>
+  </div>
+  <div class="bs-ctl-hero-text-wrap">
+    <div class="page-width">
+      <div class="bs-ctl-hero-txt-block">
+        <div class="bs-ctl-hero-txt-ini">
+          <img src="https://cdn.shopify.com/s/files/1/0325/4252/3523/files/crisis-text-line_logo-crop.svg?v=1653520353" alt="Crisis Text Line logo" class="logo" />
+          {%- if section.settings.pre_title != blank -%}
+            <h3 class="bs-ctl-hero-pre-title" 
+            style="color: {{section.settings.color_text}}; border-bottom: 1px solid {{section.settings.color_text}};">
+            {{section.settings.pre_title}}
+            </h3>
+          {%- endif -%}
+          {%- if section.settings.main_title != blank -%}
+            <h2 class="bs-ctl-hero-main-title" style="color: {{section.settings.color_text}}">
+            {{section.settings.main_title}}
+            </h2>
+          {%- endif -%}
+          {%- if section.settings.sub_title != blank -%}
+            <p class="bs-ctl-hero-sub-title" style="color: {{section.settings.color_text}}">
+            {{section.settings.sub_title}}
+            </p>
+          {%- endif -%}
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "BS Crisis Text Line Hero",
+    "class": "bs_ctl_hero_sec",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "3200 * 1200px"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob_image",
+        "label": "Mobile Image",
+        "info": "830 * 640px"
+      },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Buttons",
+        "default": "#FFF"
+      },
+      {
+        "type": "textarea",
+        "id": "pre_title",
+        "label": "Pre Title"
+      },
+      {
+        "type": "textarea",
+        "id": "main_title",
+        "label": "Main Title"
+      },
+      {
+        "type": "textarea",
+        "id": "sub_title",
+        "label": "Sub Title"
+      }
+    ]
+  }
+{% endschema %}

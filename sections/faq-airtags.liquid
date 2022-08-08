@@ -1,0 +1,102 @@
+<div class="sp-text-cont-pg-main">
+	<div class="sp-cst-container">
+		<h1>AirTags Frequently Asked Questions</h1>
+		<div class="sp-text-cont-pg-inn">
+			<div class="sp-text-cont-pg-faq">
+				<div class="sp-text-cont-pg-faq-left">
+                  <nav>
+					<ul>
+					    {%for block in section.blocks %}
+                       {%if block.settings.heading != blank %}
+						<li class="Sidebar-link {%if forloop.index == 1%} active {%endif%}"><a href="#faq-{{forloop.index}}" {%if forloop.index == 1%} aria-current="page" {%endif%}>{{block.settings.heading}}</a></li>
+                      {%endif%}
+					  {%endfor%}
+					</ul>
+                  </nav>
+				</div>
+				<div class="sp-text-cont-pg-faq-right">
+					    {%for block in section.blocks %} 
+                  {%if block.settings.heading != blank %}
+                  {%if forloop.index != 1 %}
+                   </div>
+                   {%endif%}
+					<div id="faq-{{forloop.index}}" class="sp-text-cont-pg-faq-info">
+						<h2 >{{block.settings.heading}}</h2>
+                    {%endif%}
+						<div class="sp-text-cont-pg-faq-sec">
+							<h4 class="accordion"><button class="accordion-btn" aria-controls="faq_{{ forloop.index0 | plus: 1 }}" aria-expanded="false">{{ block.settings.title }}</button></h4>
+                            <div class="panel" id="faq_{{ forloop.index0 | plus: 1 }}" style="display:none">
+                              <p>{{ block.settings.text }}</p>
+                            </div>
+						</div>
+                     {% if forloop.last == true %}  
+                 </div> 
+                    {%endif%}  
+                   {%endfor%}
+                  
+			</div>
+		</div>
+	</div>
+</div>
+
+			
+
+{% schema %}
+  {
+    "name": "FAQ",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "FAQs"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "question",
+        "name": "Question",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "info": "Add this heading for start new section"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Question",
+            "default": "Frequently asked question"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>Use this text to answer questions in as much detail as possible for your customers.</p>"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }]
+  }
+{% endschema %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(".Sidebar-link").click(function(){
+  $('.Sidebar-link').removeClass("active");
+  $(this).addClass("active");
+});
+</script>  
+  

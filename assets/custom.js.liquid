@@ -1,0 +1,80 @@
+document.querySelectorAll('.site-nav .megamenu').forEach(megamenu => {
+    megamenu.querySelectorAll('.side-accordian .accordian-link').forEach(el => {
+        el.querySelector('.site-nav__dropdown-link').addEventListener('click', function (evt) {
+            console.log(this)
+            if (this.classList.contains("has-submenu")) {
+                evt.preventDefault();
+                megamenu.querySelectorAll('.side-accordian .accordian-link .site-nav__dropdown-link').forEach(el => {
+                    el.classList.remove('active')
+                });
+                this.classList.add('active');
+                var id = this.getAttribute('data-id');
+                megamenu.querySelectorAll('.submenus .accordian-pannel').forEach(el => {
+                    el.classList.add('hide');
+                })
+                console.log(id)
+                document.querySelector(id).classList.remove('hide')
+            }
+        })
+    });
+});
+
+if (document.querySelectorAll('.show_more').length > 0) {
+    document.querySelectorAll('.show_more')[0].addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var id = this.getAttribute('href');
+        document.querySelector(id).classList.add('active')
+        this.classList.add('hide')
+    })
+}
+
+(function(){
+    'use strict';
+  
+    const isMobile = window.matchMedia("only screen and (max-width: 768px)").matches;
+    if (isMobile) {
+        var featured_slideshow = document.querySelectorAll('.featured-articles');
+        featured_slideshow.forEach(el => {
+            var sliderArgs = {
+                prevNextButtons: false,
+                pageDots: false
+            };
+        
+            var featured_blog_flickity = new Flickity(el, sliderArgs);
+        });
+        
+    }
+})();
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Add event listener to all product grid items, get URL and go to URL of product clicked on
+//////////////////////////////////////////////////////////////////////////////////////////////
+document.querySelectorAll('.grid-product__link').forEach(el => {
+    el.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var purl = evt.currentTarget.querySelector('.grid-product__title').getAttribute('href');
+      	// console.log(purl);      
+	    window.location.href = purl;
+    }.bind(this));
+});
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// Add event listener to all collection grid items, get URL and go to URL of collection clicked on
+////////////////////////////////////////////////////////////////////////////////////////////////////
+document.querySelectorAll('.collection-item').forEach(el => {
+    el.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var nurl = evt.currentTarget.getAttribute('data-url');
+      	// console.log(nurl);
+	    window.location.href = nurl;
+    }.bind(this));
+});
+
+
+setTimeout(() => {
+    document.querySelectorAll('.bs-hp-hero-image-wrapper img.medium-up--hide').forEach(panel => {
+        panel.classList.add('lazyload')
+    });
+}, 8000); 

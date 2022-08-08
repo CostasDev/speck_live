@@ -1,0 +1,75 @@
+{%if section.settings.collab-section-collection != blank %}
+{%- assign collection = collections[section.settings.collab-section-collection] -%}
+
+
+
+<div class="sp-collab-lab-products">
+	<div class="page-width">
+		<div class="sp-collab-lab-pro-inn">
+			<p>{{ collection.all_products_count }} products</p>
+			<div class="sp-collab-lab-pro-row">              
+              
+    {%for product in collections[section.settings.collab-section-collection].products %}
+{%- if product.metafields.inventory.ShappifyHidden == 'true' -%}{%- continue -%}{%- endif -%}          
+				<div class="sp-collab-lab-pro-block" onclick="window.location.assign('{{product.url}}');">
+                  <div class="sp-collab-lab-pro-block-inn">
+					<div class="sp-collab-lab-pro-img">
+						<img class="lazyload" data-src="{{ product.featured_image | img_url: '670x670' }}" />
+						<!-- <div class="sp-collab-lab-pro-qw">Quick Shop</div> -->
+						<!-- <div class="sp-collab-lab-pro-off">25%<br />OFF</div> -->
+					</div>
+					<div class="sp-collab-lab-pro-det">                      
+                        <a href="{{product.url}}">
+                       		<div class="grid-product__title">
+								<h3>{%for tag in product.tags %} 
+    	                        	  {%if tag contains 'design-center' %}
+        	                        	{%assign completeDesign = tag %}
+            	                    	{% assign myDesign = completeDesign | split:":" | last %}
+                	                	{{myDesign}}
+                    	          	{%endif%}
+                        	    	{%endfor%}</h3>
+								<h4>{%for tag in product.tags %}
+    	                   	          {%if tag contains 'model'%}
+        	               	            {%assign completeModel = tag %}
+            	           	            {%assign myModel = completeModel | split:":" | last %}
+                	       	    	    {{myModel}}
+                    	   		     {%endif%}
+                        		     {%endfor%}</h4>
+		                    </div>
+                        </a>
+						<div class="sp-collab-lab-pro-price">
+							<!--<span class="sp-collab-lab-pro-sale-price">--><span>{{product.price | money}}</span>
+							<span>{{product.compare_at_price | money}}</span>
+						</div>
+						<div class="sp-collab-lab-pro-rating"><!--rating here--></div>
+					</div>
+                  </div>
+                  </a>
+				</div>
+       {%endfor%}       
+				
+		
+			</div>
+		</div>
+	</div>
+</div> 
+
+
+{%endif%}
+
+
+{% schema %}
+  {
+    "name": "Sales Products Section",
+    "settings": [
+
+    {
+      "type": "collection",
+      "id":"collab-section-collection",
+      "label":"Select Collection"
+ 
+    }
+
+ ]
+  }
+{% endschema %}

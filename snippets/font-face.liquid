@@ -1,0 +1,70 @@
+{% assign custom_font = true %}
+{% unless custom_font %}
+  {%- assign header_font = settings.type_header_font_family -%}
+  {%- assign base_font = settings.type_base_font_family -%}
+  {%- assign base_font_bold = base_font | font_modify: 'weight', '600' -%}
+  {%- assign base_font_italic = base_font | font_modify: 'style', 'italic' -%}
+  {%- assign base_font_bold_italic = base_font_bold | font_modify: 'style', 'italic' -%}
+
+  {%- style -%}
+    {{ header_font | font_face: font_display: 'swap' }}
+    {{ base_font | font_face: font_display: 'swap' }}
+
+    {{ base_font_bold | font_face: font_display: 'swap' }}
+    {{ base_font_italic | font_face: font_display: 'swap' }}
+    {{ base_font_bold_italic | font_face: font_display: 'swap' }}
+  {%- endstyle -%}
+{% endunless %}
+
+<style>
+  @font-face {
+    font-family: 'Texta';
+    src: url({{'Texta-Regular.eot' | asset_url }});
+    src: local('Texta'), local('Texta-Regular'),
+        url({{'Texta-Regular.eot' | asset_url }}) format('embedded-opentype'),
+        url({{'Texta-Regular.woff2' | asset_url }}) format('woff2'),
+        url({{'Texta-Regular.woff' | asset_url }}) format('woff'),
+        url({{'Texta-Regular.ttf' | asset_url }}) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+      font-family: 'Texta';
+      src: url({{'Texta-Bold.eot' | asset_url }});
+      src: local('Texta Bold'), local('Texta-Bold'),
+          url({{'Texta-Bold.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+          url({{'Texta-Bold.woff2' | asset_url }}) format('woff2'),
+          url({{'Texta-Bold.woff' | asset_url }}) format('woff'),
+          url({{'Texta-Bold.ttf' | asset_url }}) format('truetype');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+  }
+  @font-face {
+      font-family: 'Texta';
+      src: url({{'Texta-Medium.eot' | asset_url }});
+      src: local('Texta Medium'), local('Texta-Medium'),
+          url({{'Texta-Medium.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+          url({{'Texta-Medium.woff2' | asset_url }}) format('woff2'),
+          url({{'Texta-Medium.woff' | asset_url }}) format('woff'),
+          url({{'Texta-Medium.ttf' | asset_url }}) format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+  }
+  @font-face {
+      font-family: 'Texta';
+      src: url({{'Texta-Heavy.eot' | asset_url }});
+      src: local('Texta Heavy'), local('Texta-Heavy'),
+          url({{'Texta-Heavy.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+          url({{'Texta-Heavy.woff2' | asset_url }}) format('woff2'),
+          url({{'Texta-Heavy.woff' | asset_url }}) format('woff'),
+          url({{'Texta-Heavy.ttf' | asset_url }}) format('truetype');
+      font-weight: 900;
+      font-style: normal;
+      font-display: swap;
+  }
+</style>
+
+

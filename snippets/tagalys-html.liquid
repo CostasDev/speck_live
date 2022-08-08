@@ -1,0 +1,115 @@
+{% capture tagalys_html %}
+{% case context %}
+    {% when 'filter_content' %}
+        {% raw %}
+        <div class="filters-container">
+            <div class="filters-heading">
+              <h1 class="heading">Filters</h1><a class="filter-toggle" onclick="closeFilter();" href="#"><img
+                  src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3NS4yIDQ3NS4yIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzUuMiA0NzUuMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTJweCIgaGVpZ2h0PSI1MTJweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQwNS42LDY5LjZDMzYwLjcsMjQuNywzMDEuMSwwLDIzNy42LDBzLTEyMy4xLDI0LjctMTY4LDY5LjZTMCwxNzQuMSwwLDIzNy42czI0LjcsMTIzLjEsNjkuNiwxNjhzMTA0LjUsNjkuNiwxNjgsNjkuNiAgICBzMTIzLjEtMjQuNywxNjgtNjkuNnM2OS42LTEwNC41LDY5LjYtMTY4UzQ1MC41LDExNC41LDQwNS42LDY5LjZ6IE0zODYuNSwzODYuNWMtMzkuOCwzOS44LTkyLjcsNjEuNy0xNDguOSw2MS43ICAgIHMtMTA5LjEtMjEuOS0xNDguOS02MS43Yy04Mi4xLTgyLjEtODIuMS0yMTUuNywwLTI5Ny44QzEyOC41LDQ4LjksMTgxLjQsMjcsMjM3LjYsMjdzMTA5LjEsMjEuOSwxNDguOSw2MS43ICAgIEM0NjguNiwxNzAuOCw0NjguNiwzMDQuNCwzODYuNSwzODYuNXoiIGZpbGw9IiMwMDAwMDAiLz4KCQk8cGF0aCBkPSJNMzQyLjMsMTMyLjljLTUuMy01LjMtMTMuOC01LjMtMTkuMSwwbC04NS42LDg1LjZMMTUyLDEzMi45Yy01LjMtNS4zLTEzLjgtNS4zLTE5LjEsMGMtNS4zLDUuMy01LjMsMTMuOCwwLDE5LjEgICAgbDg1LjYsODUuNmwtODUuNiw4NS42Yy01LjMsNS4zLTUuMywxMy44LDAsMTkuMWMyLjYsMi42LDYuMSw0LDkuNSw0czYuOS0xLjMsOS41LTRsODUuNi04NS42bDg1LjYsODUuNmMyLjYsMi42LDYuMSw0LDkuNSw0ICAgIGMzLjUsMCw2LjktMS4zLDkuNS00YzUuMy01LjMsNS4zLTEzLjgsMC0xOS4xbC04NS40LTg1LjZsODUuNi04NS42QzM0Ny42LDE0Ni43LDM0Ny42LDEzOC4yLDM0Mi4zLDEzMi45eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo="></a><a
+                class="clear-all-filters" href="">Clear all</a>
+            </div>
+            [[selected_filters]]
+            [[filter_items]]
+          </div>
+        {% endraw %}
+    {% when 'selected_filters' %}
+          {% raw %}
+          <div class="selected-filters-container tagalys-filter">
+                <div class="filter-heading">
+                  <h1 class="heading">Currently selected</h1>
+                </div>
+                <ul class="selected-filters filter-items">
+                    [[selected_filters]]
+                </ul>
+            </div>
+          {% endraw %}
+    {% when 'selcted_filter' %}
+        {% raw %}
+        <li><a href="[[selected_filter_link]]" class="selected tagalys-managed-list-link">
+                <span class="tag-set">[[selected_filter_type]]</span>
+                <span class="tag">[[selected_filter_value]]</span>
+                <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE5MS40MTQgMTkxLjQxNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTkxLjQxNCAxOTEuNDE0IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Ik0xMDcuODg4LDk2LjE0Mmw4MC45MTYtODAuOTE2YzMuNDgtMy40OCwzLjQ4LTguNzAxLDAtMTIuMTgxcy04LjcwMS0zLjQ4LTEyLjE4MSwwTDk1LjcwNyw4My45NjFMMTQuNzkxLDMuMDQ1ICAgYy0zLjQ4LTMuNDgtOC43MDEtMy40OC0xMi4xODEsMHMtMy40OCw4LjcwMSwwLDEyLjE4MWw4MC45MTUsODAuOTE2TDIuNjEsMTc3LjA1N2MtMy40OCwzLjQ4LTMuNDgsOC43MDEsMCwxMi4xODEgICBjMS43NCwxLjc0LDUuMjIsMS43NCw2Ljk2LDEuNzRzNS4yMiwwLDUuMjItMS43NGw4MC45MTYtODAuOTE2bDgwLjkxNiw4MC45MTZjMS43NCwxLjc0LDUuMjIsMS43NCw2Ljk2LDEuNzQgICBjMS43NCwwLDUuMjIsMCw1LjIyLTEuNzRjMy40OC0zLjQ4LDMuNDgtOC43MDEsMC0xMi4xODFMMTA3Ljg4OCw5Ni4xNDJ6IiBmaWxsPSIjMDAwMDAwIi8+CiAgPC9nPgo8L3N2Zz4K">
+            </a>
+        </li>
+        {% endraw %}
+    {% when 'filter_type' %}
+        {% raw %}
+            <div class="tagalys-filter [[cls]]" id="tagalys-filter-[[filter_type_id]]" onclick="toggleFilter(this);">
+                <div class="filter-heading">
+                  <h2 class="heading"><button aria-controls="filter-items_[[filter_type_id]]" class="filter-button" aria-expanded="false">[[filter_type]]</button></h2>
+                </div>
+                <ul class="filter-items" id="filter-items_[[filter_type_id]]">
+                    [[filter_values]]
+                </ul>
+            </div>
+        {% endraw %}
+    {% when 'filter_value' %}
+        {% raw %}
+            <li id="[[filter_type_id]]-[[filter_value_id]]">
+                <a href="[[filter_link]]"  class="tagalys-managed-list-link [[selected]]">
+                [[filter_value_title]]<span class="count">[[filter_value_count]]</span>
+                </a>
+            </li>
+        {% endraw %}
+    {% when 'product_list' %}
+        {% raw %}
+            <div class="header">
+                <h1>All products</h1>
+                <div class="paginator-filter-toggle-and-sorter">
+                <div class="filter-toggle-and-sorter">
+                    <a class="filter-toggle" onclick="activefilter();" href="#">Filters</a>
+                    <div class="tagalys-sorter">
+                        <span class="sort-and-options">
+                            [[sort_options]]
+                        </span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="tagalys-product-tiles">
+              <ul class="product-grid">
+                [[product_items]]
+              </ul>
+            </div>
+            <div class="footer">
+                <div class="tagalys-paginator">
+                    [[pagination]]
+                </div>
+            </div>
+        {% endraw %}
+    {% when 'product' %}
+        {% raw %}
+            <li class="grid__item grid-product" data-product-id="[[product_id]]" role="group" aria-label="product">
+              <div class="tagalys-product-tile" style="width:100%;">
+                <div class="tile-container" data-product-id="[[product_id]]" style="width:100%;">
+                    [[label]]
+                    <a class="product-link" href="[[product_url]]">
+                        <span class="product-image-container">
+                        <img class="product-image" src="[[product_image]]" alt="[[product_image_alt]]">
+                        </span>
+                        <div class="grid-product__title grid-product__title--heading">
+                          <h3 class="product-name">[[product_title]]</h3>
+                        </div>
+                        <div class="grid-product__price">
+                          <span class="product-prices sale">
+                            <span class="product-sale-price">[[product_sale_price]]</span>
+                            <span class="product-price">[[product_price]]</span>
+                          </span>
+                        </div>
+                        [[product_reviews]]
+                    </a>
+                </div>
+              </div>              
+			</li>
+        {% endraw %}
+    {% when 'sort_options' %}
+        {% raw %}
+            <span class="current-sort">[[active_sort_value]]</span>
+            <ul class="sort-options">
+                [[sort_values]]
+            </ul>
+        {% endraw %}
+{% endcase %}
+{% endcapture %}
+{%- assign str = '}}' -%}
+{{- tagalys_html | json | replace: '[[', '{{' | replace: ']]', str -}}

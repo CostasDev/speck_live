@@ -1,0 +1,107 @@
+{%- form 'product', product, id: form_id, class: 'product-single__form' -%}
+
+  {%- liquid
+    assign enable_dynamic_buttons = false
+    if show_dynamic_checkout and template != 'product.preorder'
+      assign enable_dynamic_buttons = true
+    endif
+  -%}
+
+  {%- if enable_dynamic_buttons -%}
+    <div class="payment-buttons">
+  {%- endif -%}
+
+    {%- liquid
+      assign default_text = 'products.product.add_to_cart' | t
+      assign button_text = 'products.product.add_to_cart' | t
+      if template == 'product.preorder'
+        assign default_text = 'products.product.preorder' | t
+        assign button_text = 'products.product.preorder' | t
+      endif
+      unless current_variant.available
+        assign button_text = 'products.product.sold_out' | t
+        if product.tags contains "quantity:coming-soon"
+          assign button_text = 'Coming Soon'
+        endif
+      endunless
+    -%}
+    <div class="pucharge-bar">
+      {% if show_quantity %}
+      <div class="product-block">
+        <div class="product__quantity">
+          {% assign qty_id = section_id | append: product.id %}
+          {%- render 'quantity-input', form_id: form_id, id: qty_id, qty: 1, min: 1 -%}
+        </div>
+      </div>
+      {% endif %}
+      
+      <button id="AddToCart"
+        {% if product.empty? %}type="button"{% else %}type="submit"{% endif %}
+        name="add"
+        data-add-to-cart
+        class="btn btn--full add-to-cart{% if enable_dynamic_buttons and product.selling_plan_groups == empty %} btn--secondary{% endif %} {% unless current_variant.available %}{% if product.tags contains 'quantity:coming-soon' %} coming-soon {% else %} sold-out {% endif %} {% endunless %}"
+        {% unless current_variant.available %} disabled="disabled"{% endunless %} 
+        onclick="dataLayer.push({ 'ecommerce': null });dataLayer.push({
+        'event': 'add_to_cart',
+        'ecommerce': {
+        'currency': '{{ shop.currency }}',
+        'value': '{{ product.price  | times: 0.01}}',
+		    'items': [{
+		    'item_id': '{{ product.id }}',
+		    'item_name': '{{ product.title | remove: "'" | remove: '"' }}',
+		    'item_brand': '{{ product.vendor | remove: "'" | remove: '"' }}',
+		    'item_category': '{{ product.collections[0].title | remove: "'" | remove: '"' }}',
+		    'item_variant': '{{ product.selected_variant.sku }}',
+		    'price': '{{ product.price  | times: 0.01}}'
+		    }]
+	    }
+        });">
+        <span data-add-to-cart-text data-default-text="{{ default_text }}" data-tag-coming-soon="{% if product.tags contains 'quantity:coming-soon' %}true{% else %}false{% endif %}">
+          {{ button_text }}
+        </span>
+      </button>
+      {%- comment -%}
+      {% render 'ZooomyListWishlistProduct' %}
+      {%- endcomment -%}
+      
+    </div>
+    
+
+    {%- if enable_dynamic_buttons -%}
+      {{ form | payment_button }}
+    {%- endif -%}
+
+  {%- if enable_dynamic_buttons -%}
+    </div>
+  {%- endif -%}
+
+  {%- if current_variant.available -%}
+  <div class="shopify-payment-terms product__policies">{{ form | payment_terms }}</div>
+  {%- endif -%}
+
+  <select name="id" data-product-select class="product-single__variants no-js">
+    {%- for variant in product.variants -%}
+      {%- if variant.available -%}
+        <option {% if variant == product.selected_or_first_available_variant %}
+          selected="selected"{% endif %}
+          value="{{ variant.id }}">
+          {{ variant.title }} - {{ variant.price | money_with_currency }}
+        </option>
+      {%- else -%}
+        <option disabled="disabled">
+          {{ variant.title }} - {{ 'products.product.sold_out' | t }}
+        </option>
+      {%- endif -%}
+    {%- endfor -%}
+  </select>
+
+  <textarea data-variant-json class="hide" aria-hidden="true" aria-label="Product JSON">
+    {{ product.variants | json }}
+  </textarea>
+  {%- if product.options.size > 1 -%}
+    <textarea data-current-variant-json class="hide" aria-hidden="true" aria-label="Variant JSON">
+      {{ current_variant | json }}
+    </textarea>
+  {%- endif -%}
+  
+{%- endform -%}

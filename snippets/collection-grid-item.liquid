@@ -1,0 +1,66 @@
+{%- liquid
+  unless grid_item_width
+    assign grid_item_width = 'small--one-half medium-up--one-third'
+  endunless
+
+  unless background_position
+    assign background_position = 'center center'
+  endunless
+
+  if block.settings.title != blank
+    assign title_output = block.settings.title
+  else
+    if collection.empty?
+      assign title_output = 'home_page.onboarding.collection_title' | t
+    elsif collection_title
+      assign title_output = collection_title
+    else
+      assign title_output = collection.title | escape
+    endif
+  endif
+-%}
+
+<li class="grid__item {{ grid_item_width }}">
+  <div class="home_col_2 collection-item collection-item--{{ settings.collection_grid_style }}" data-aos="row-of-{{ per_row }}" data-url="{{ collection.url }}">
+    {%- if collection.empty? -%}
+      {%- capture placeholder -%}collection-{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+      <div class="collection-image collection-image--{{ settings.collection_grid_shape }} collection-image--placeholder">{{ placeholder | placeholder_svg_tag: 'placeholder-svg' }}</div>
+    {%- else -%}
+      {% if collection_image == blank %}
+        {% if collection.featured_image != blank %}
+          {% assign collection_image = collection.featured_image %}
+        {% else %}
+          {% assign collection_image = collection.products[0].featured_image %}
+        {% endif %}
+      {% endif %}
+      <div class="collection-image collection-image--{{ settings.collection_grid_shape }} image-wrap">
+        {%- assign img_url = collection_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img
+          class="lazyload"
+          src=""
+          data-src="{{ img_url }}"
+          data-aspectratio="{{ collection_image.aspect_ratio }}"
+          data-widths="[360, 540]"
+          data-sizes="auto" 
+          width="{{collection_image.width}}" 
+          height="{{collection_image.height}}" 
+          alt=""
+          style="object-position: {{ background_position }};">
+
+        <noscript>
+          <img class="lazyloaded" 
+            width="{{collection_image.width}}" 
+            height="{{collection_image.height}}" 
+            src="{{ collection_image | img_url: '400x' }}"
+            alt="">
+        </noscript>
+      </div>
+    {%- endif -%}
+      <a href="{{ collection.url }}"> 
+        <div class="collection-item__title collection-item__title--{{ settings.collection_grid_style }} collection-item__title--{{ settings.type_collection_font }} collection-item__title--{{ settings.collection_grid_text_align }}">
+          <h2 class="normal-weight">{{ title_output }}</h2>
+          <span class="small-size left-chevron">Explore</span>      
+        </div>
+      </a>
+  </div>
+</li>

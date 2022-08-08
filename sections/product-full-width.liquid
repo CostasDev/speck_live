@@ -1,0 +1,386 @@
+{%- if section.blocks.size > 0 -%}
+  <div data-section-type="TabSection" class="page-width{% if section.settings.max_width %} page-width--narrow{% endif %}">
+    {% capture section_content %}
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when '@app' -%}
+            {% render block %}
+          {%- when 'reviews' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block {% if section.settings.tab_status == false %}product-block--tab{% endif %} product-reviews" {{ block.shopify_attributes }}>
+              <div id="shopify-product-reviews-{{ product.id }}"></div>
+              {% assign tab_id = block.id | append: product.id %}
+              {% capture tab_title %}
+                {{ 'products.general.reviews' | t }}
+              {% endcapture %}
+              {% capture tab_content %}
+                <div id="shopify-product-reviews" data-id="{{ product.id }}">{{ product.metafields.spr.reviews }}</div>
+              {% endcapture %}
+              {%- render 'tab', id: tab_id, title: tab_title, content: tab_content, force_open: block.settings.force_open -%}
+            </div>
+          {%- when 'separator' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block"><hr></div>
+          {%- when 'text' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" {{ block.shopify_attributes }} class="tabpanel product-block">
+              {% if block.settings.text != blank %}
+                <div class="feature-content-tab">
+                  {{block.settings.text}}
+                </div>
+              {% else %}
+                <div class="feature-content-tab">
+                  {{ product.metafields["global"][block.settings.namespace] }}
+                </div>
+              {% endif %}
+              
+            </div>
+          {%- when 'tab' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block product-block--tab" {{ block.shopify_attributes }}>
+              {% assign tab_id = block.id | append: product.id %}
+              {% capture tab_content %}
+                {{ block.settings.content }}
+                {{ block.settings.page.content }}
+              {% endcapture %}
+              {%- render 'tab', id: tab_id, title: block.settings.title, content: tab_content -%}
+            </div>
+          {%- when 'contact' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" class="tabpanel product-block product-block--tab" id="product_tab_block--{{block.id}}" {{ block.shopify_attributes }}>
+              {%- render 'tab-contact', block: block -%}
+            </div>
+          {%- when 'description' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block active {% if block.settings.is_tab %} product-block--tab{% endif %}" {{ block.shopify_attributes }}>
+              <div class="feature-content-tab">
+                {%- assign id = block.id | append: product.id -%}
+                {%- render 'product-description', id: id, product: product, is_tab: block.settings.is_tab -%}
+
+                {%if product.metafields.my_fields.seo_overview != blank %}
+                  {{product.metafields.my_fields.seo_overview}}
+                {% endif %}
+                
+              </div>
+            </div>
+          {%- when 'share' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block" {{ block.shopify_attributes }}>
+              {%- render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product -%}
+            </div>
+          {%- when 'custom' -%}
+            <div role="tabpanel" tabindex="0" aria-labelledby="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" id="product_tab_block--{{block.id}}" class="tabpanel product-block" {{ block.shopify_attributes }}>
+              {{ block.settings.code }}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    {% endcapture %}
+    
+    {% if section.settings.tab_status %}
+      <div class="tab-list" role="tablist" aria-label="Product Overview/Features">
+        {% for block in section.blocks %}
+          {% if block.settings.tab_title %}
+            {% if block.type == 'text' %}
+              {% if product.metafields["global"][block.settings.namespace] != blank  %}
+              <button role="tab"{% if forloop.index != 1 %} tabindex="-1"{% endif %} aria-selected="{% if forloop.index == 1 %}true{% else %}false{% endif %}" aria-controls="product_tab_block--{{block.id}}" id="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" class="tab{% if forloop.index == 1 %} active{% endif %}" href="product_tab_block--{{block.id}}">{{block.settings.tab_title}}</button>
+              {% endif %}
+            {% else %}
+              <button role="tab"{% if forloop.index != 1 %} tabindex="-1"{% endif %} aria-selected="{% if forloop.index == 1 %}true{% else %}false{% endif %}" aria-controls="product_tab_block--{{block.id}}" id="{{ block.settings.tab_title | strip | replace: " ", "-" | downcase | escape }}-tab" class="tab{% if forloop.index == 1 %} active{% endif %}" href="product_tab_block--{{block.id}}">{{block.settings.tab_title}}</button>
+            {% endif %}            
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="tab-panels">
+        {{section_content}}
+      </div>
+    {% else %}
+      {{section_content}}
+    {% endif %}
+  </div>
+{%- endif -%}
+
+<style>
+  .full-width-detail--section{
+    background: {{section.settings.bg_color}};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Full-width details",
+    "class": "full-width-detail--section TabSection-section",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "For product lines with long descriptions, we recommend placing your Description and Tabs within this section."
+      },
+      {
+        "type": "checkbox",
+        "id": "max_width",
+        "label": "Optimize for readability",
+        "info": "Applies a maximum width",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "tab_status",
+        "label": "Tab status"
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background color"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "@app"
+      },
+      {
+        "type": "description",
+        "name": "Description",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title"
+          },
+          {
+            "type": "checkbox",
+            "id": "is_tab",
+            "label": "Show as tab"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "name": "Text",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title"
+          },
+          {
+            "type": "text",
+            "id": "namespace",
+            "label": "Name space"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      },
+      {
+        "type": "tab",
+        "name": "Tab",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Shipping information"
+          },
+          {
+            "type": "richtext",
+            "id": "content",
+            "label": "Tab content",
+            "default": "<p>Use collapsible tabs for more detailed information that will help customers make a purchasing decision.</p><p>Ex: Shipping and return policies, size guides, and other common questions.</p>"
+          },
+          {
+            "type": "page",
+            "id": "page",
+            "label": "Tab content from page"
+          }
+        ]
+      },
+      {
+        "type": "share",
+        "name": "Share on social",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Choose which platforms to share to in global theme settings"
+          }
+        ]
+      },
+      {
+        "type": "separator",
+        "name": "Separator"
+      },
+      {
+        "type": "contact",
+        "name": "Contact form",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title"
+          },
+          {
+            "type": "paragraph",
+            "content": "All submissions are sent to the customer email address of your store. [Learn more](https://help.shopify.com/en/manual/using-themes/change-the-layout/add-contact-form#view-contact-form-submissions)."
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading",
+            "default": "Ask a question"
+          },
+          {
+            "type": "checkbox",
+            "id": "phone",
+            "label": "Add phone number field"
+          }
+        ]
+      },
+      {
+        "type": "reviews",
+        "name": "Product reviews",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title"
+          },
+          {
+            "type": "paragraph",
+            "content": "Add reviews by installing the [Shopify Product Reviews app](https://apps.shopify.com/product-reviews) and following our [setup guide](https://archetypethemes.co/blogs/support/installing-shopifys-product-reviews-app)"
+          },
+          {
+            "type": "checkbox",
+            "id": "force_open",
+            "label": "Open by default",
+            "default": true
+          }
+        ]
+      },
+      {
+        "type": "custom",
+        "name": "HTML",
+        "settings": [
+          {
+            "type": "text",
+            "id": "tab_title",
+            "label": "Tab title"
+          },
+          {
+            "type": "liquid",
+            "id": "code",
+            "label": "HTML",
+            "default": "<h4>Custom code block</h4><p>Use this advanced section to add custom HTML, app scripts, or liquid.</p>",
+            "info": "Supports Liquid"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
+{% javascript %}
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+// Add event listener to all product tab items, display appropriate tab when clicked
+//////////////////////////////////////////////////////////////////////////////////////////////
+var tablist, tabs, tabpanels;
+
+window.addEventListener('DOMContentLoaded', function(e) {
+  tablist = document.querySelector('.tab-list');
+  tabs = document.querySelectorAll('.tab-list .tab');
+  tabpanels = document.querySelectorAll('.tabpanel');
+  
+  // Select previous/next tabs using Left and Right arrow keys
+  tablist.addEventListener('keydown', function(e) {
+    switch(e.key) {
+      case 'ArrowLeft':
+        selectPreviousTab();
+        break;
+        
+      case 'ArrowRight':
+        selectNextTab();
+        break;
+
+      case 'Home':  // optional
+        e.preventDefault();  // prevent page scroll
+        selectFirstTab();
+        break;
+        
+      case 'End':  // optional
+        e.preventDefault();  // prevent page scroll
+        selectLastTab();
+        break;
+    }
+  });
+  
+  // Activate tabs when they are clicked (also handles Enter and Space keys)
+  tabs.forEach(function(tab) {
+    tab.addEventListener('click', function(e) {
+      nextTabIndex = Array.prototype.slice.call(tabs).indexOf(e.target);
+      selectTab(nextTabIndex);
+    });
+  });
+});
+
+
+// Tab selection
+
+function selectPreviousTab() {
+  var activeTab = document.querySelector('.tab[aria-selected="true"]');
+  var activeTabIndex = Array.prototype.slice.call(tabs).indexOf(activeTab);
+
+  // Select the previous tab, wrapping to last tab if needed
+  if(activeTabIndex > 0) {
+    selectTab(activeTabIndex - 1);
+  } else {
+    selectTab(tabs.length - 1);
+  }
+}
+
+function selectNextTab() {
+  var activeTab = document.querySelector('.tab[aria-selected="true"]');
+  var activeTabIndex = Array.prototype.slice.call(tabs).indexOf(activeTab);
+
+  // Select the next tab, wrapping to the first tab if needed 
+  if(activeTabIndex < tabs.length - 1) {
+    selectTab(activeTabIndex + 1);
+  } else {
+    selectTab(0);
+  }
+}
+
+function selectFirstTab() {
+  selectTab(0);
+}
+
+function selectLastTab() {
+  selectTab(tabs.length - 1);
+}
+
+function selectTab(index) {
+  // Deactivate all tabs
+  tabs.forEach(function(tab) {
+    tab.classList.remove('active');
+    tab.setAttribute('aria-selected', false);
+    tab.setAttribute('tabindex', -1);
+  });
+  
+  // Activate only the requested tab, and set focus to it
+  tabs[index].classList.add('active');
+  tabs[index].setAttribute('aria-selected', true);
+  tabs[index].setAttribute('tabindex', 0);
+  tabs[index].focus();
+  
+  // Hide all tabpanels
+  tabpanels.forEach(function(tabpanel) {
+    tabpanel.classList.remove('active');
+  });
+  
+  // Show only the tabpanel for the requested tab
+  var nextTabpanel = document.querySelector('#' + tabs[index].getAttribute('aria-controls'));
+  nextTabpanel.classList.add('active');
+}
+                                 
+//////////////////////////////////////////////////////////////////////////////////////////////
+// End Product Page Tab Changing with Focus (Click and Keystroke)
+//////////////////////////////////////////////////////////////////////////////////////////////
+                                 
+{% endjavascript %}

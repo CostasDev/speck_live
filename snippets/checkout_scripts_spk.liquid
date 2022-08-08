@@ -1,0 +1,27 @@
+<script>
+(function($) {
+  $(document).on("page:load page:change", function() {
+    var el = document.querySelector(".step");
+    var att = el.getAttribute('data-step');
+    switch (att) {
+      case 'contact_information':
+        var shipCntry = document.getElementById("checkout_shipping_address_country");
+        /* console.log(shipCntry.autocomplete); */
+        shipCntry.autocomplete = "shipping country-name";
+        /* console.log(shipCntry.autocomplete); */
+      break;
+      case 'shipping_method':
+      break;
+      case 'payment_method':
+        var billCntry = document.getElementById("checkout_billing_address_country");
+        /* console.log(billCntry.autocomplete); */
+        billCntry.autocomplete = "billing country-name";
+        /* console.log(billCntry.autocomplete); */
+      break;
+      case 'thank_you':
+      break;
+    }
+    /* console.log(att); */
+  });
+})(Checkout.$);
+</script>

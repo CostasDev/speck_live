@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-gift-product",
+      "blocks": {
+        "bdde2e18-5e9e-416c-b260-5cdd1e0a9f8a": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make soneone happy by giving them the Speck Gift card.<\/p>",
+            "divider": false,
+            "show_case": "small--hide"
+          }
+        },
+        "75b0dafb-e00f-435f-8f51-54c33213cc75": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"shopify-section--icon-list\"><div class=\"page-width icon-list aos-init aos-animate\" data-aos=\"logo__animation\"><div class=\"logo-bar logo-bar--template--14192596320387__1638522934c931f8c7\"><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Multiple amounts available<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\">\n\t\t\t\t\t<span>Easy to redeem<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Redeem for any Speck product<\/span><\/div><\/div><\/div><\/div>",
+            "show_case": "small--hide"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "851757f9-6e05-416c-8b08-64b2b073cc2f": {
+          "type": "price",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "quantity_status": true,
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": true
+          }
+        },
+        "9d84ec9c-61f2-4f48-ad1b-5334b47731c1": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"shopify-section--icon-list\"><div class=\"page-width icon-list aos-init aos-animate\" data-aos=\"logo__animation\"><div class=\"logo-bar logo-bar--template--14192596320387__1638522934c931f8c7\"><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Multiple amounts available<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\">\n\t\t\t\t\t<span>Easy to redeem<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Redeem for any Speck product<\/span><\/div><\/div><\/div><\/div>",
+            "show_case": "medium-up--hide"
+          }
+        },
+        "a465f5ff-6d43-45ac-a600-975480ee5741": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make soneone happy by giving them the Speck Gift card.<\/p>",
+            "divider": true,
+            "show_case": "medium-up--hide"
+          }
+        },
+        "3f1f51e5-de3e-4612-a913-9a0063554fd3": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"shopify-section--icon-list\"><div class=\"page-width icon-list  aos-init aos-animate horizontal--only\" data-aos=\"logo__animation\"><div class=\"logo-bar logo-bar--template--14192596320387__1638522934c931f8c7\"><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/free-shipping_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Multiple amounts available<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_180x.png?v=1638523033 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_360x.png?v=1638523033 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_540x.png?v=1638523033 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/warranty_720x.png?v=1638523033 720w\">\n\t\t\t\t\t<span>Easy to redeem<\/span><\/div><div class=\"logo-bar__item item-align--left\"><img class=\"logo-bar__image lazyautosizes lazyloaded\" data-widths=\"[180, 360, 540, 720]\" data-aspectratio=\"1.0\" data-sizes=\"auto\" alt=\"\" data-srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\" sizes=\"40px\" srcset=\"\/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_180x.png?v=1638523032 180w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_360x.png?v=1638523032 360w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_540x.png?v=1638523032 540w, \/\/cdn.shopify.com\/s\/files\/1\/0325\/4252\/3523\/files\/30-day_720x.png?v=1638523032 720w\">\n\t\t\t\t\t<span>Redeem for any Speck product<\/span><\/div><\/div><\/div><\/div>",
+            "show_case": "medium-up--hide"
+          }
+        }
+      },
+      "block_order": [
+        "bdde2e18-5e9e-416c-b260-5cdd1e0a9f8a",
+        "75b0dafb-e00f-435f-8f51-54c33213cc75",
+        "variant_picker",
+        "851757f9-6e05-416c-8b08-64b2b073cc2f",
+        "buy_buttons",
+        "9d84ec9c-61f2-4f48-ad1b-5334b47731c1",
+        "a465f5ff-6d43-45ac-a600-975480ee5741",
+        "3f1f51e5-de3e-4612-a913-9a0063554fd3"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "review_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "partial",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true,
+        "tab_status": false,
+        "bg_color": ""
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    }
+  },
+  "order": [
+    "main",
+    "sub",
+    "recently-viewed"
+  ]
+}

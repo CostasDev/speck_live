@@ -1,0 +1,68 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "blocks": {
+        "5b9732df-6c49-477c-b633-6609c0232774": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/free-shipping.png",
+            "svg": "",
+            "text": "Free Shipping",
+            "link": ""
+          }
+        },
+        "89110a26-f3f7-4cad-880d-3f80634745b2": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/warranty.png",
+            "svg": "",
+            "text": "Lifetime Warranty <em>(on select products)<\/em>",
+            "link": ""
+          }
+        },
+        "212a4cfd-f6a5-47f8-88e9-3f216f5908c9": {
+          "type": "logo_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/30-day.png",
+            "svg": "",
+            "text": "30-day Guarantee",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "5b9732df-6c49-477c-b633-6609c0232774",
+        "89110a26-f3f7-4cad-880d-3f80634745b2",
+        "212a4cfd-f6a5-47f8-88e9-3f216f5908c9"
+      ],
+      "settings": {
+        "type": "left"
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 5
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "You May Also Like",
+        "home_featured_products": "antimicrobial",
+        "per_row": 5,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "recently-viewed",
+    "featured-collection"
+  ]
+}

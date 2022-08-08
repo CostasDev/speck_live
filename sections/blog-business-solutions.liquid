@@ -1,0 +1,144 @@
+<div class="sp-bs-sol-top-banner">
+  {%if section.settings.banner_image != 'blank'%}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}')"></div>
+  {%endif%}
+	<div class="sp-bs-sol-top-banner-cont">
+      {%if section.settings.banner_text != blank %}
+		<h3>{{section.settings.banner_text}}</h3>
+      {%endif%}
+		{% comment %} <div class="sp-bs-sol-top-banner-cont-btn">
+      {%if section.settings.banner_button_link != blank%}
+      <a href="{{section.settings.banner_button_link}}" class="sp-bl-back-btn">
+      {%endif%}
+      {{ section.settings.banner_button_name}}
+      {%if section.settings.banner_button_link != blank%}
+      </a>
+      {%endif%}
+    </div> {% endcomment %}
+	</div>
+</div>
+<div class="sp-bs-sol-lwr-sec">
+	<div class="sp-cst-container">
+		<div class="sp-bs-sol-lwr-fas">
+          {%if  section.settings.section_heading != blank %}
+			<h3>{{section.settings.section_heading}}</h3>
+          {%endif%}
+			<div class="sp-bs-sol-lwr-fas-list">
+				<ul>
+					<!--repeat-->
+                  {%for block in section.blocks %}
+					<li>
+                      <div class="sp-bs-sol-lwr-fas-img">
+                       {%if block.settings.logo_link != blank %}
+                       <a href="{{block.settings.logo_link}}" target="_blank">
+                       {%endif%}  
+                         
+                         
+                       {%if block.settings.logo_image != blank %}  
+                        <img class="lazyload" data-src="{{block.settings.logo_image | img_url : 'master'}}" />
+                       {%endif%}  
+                        
+                      {%if block.settings.logo_link != blank %}   
+                        </a>  
+                      {%endif%}  
+                      </div>
+                  </li>	
+                  {%endfor%}
+					<!--repeat-->
+				</ul>
+			</div>
+		</div>
+		<div class="sp-bs-sol-lwr-lr-main">
+			<!--repeat-->
+          {% for article in blogs.business-solutions.articles reversed %}
+			<div class="sp-bs-sol-lwr-lr-row">
+				<div class="sp-bs-sol-lwr-lr-block">
+					<div class="sp-bs-sol-lwr-lr-img"><img class="lazyload" data-src="{{ article.image | img_url: 'master' }}" /></div>
+				</div>
+				<div class="sp-bs-sol-lwr-lr-block">
+					<div class="sp-bs-sol-lwr-lr-cont">
+						<h3>{{article.title}}</h3>
+						<p>{{article.excerpt}}</p>
+						<div class="sp-bs-sol-lwr-lr-cont-btn"><a href="{{article.url}}" class="sp-bl-back-btn">Find a reseller</a></div>
+					</div>
+				</div>
+			</div>
+          {%endfor%}
+			<!--repeat-->
+		</div>
+		<div class="sp-bs-sol-email-main">
+			<p><span>{{section.settings.bottom_section}}</span><a href="mailto:b2b@speckproducts.com">b2b@speckproducts.com</a></p>
+		</div>
+	</div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Business Solutions",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+       {
+		"type": "text",
+        "id": "banner_button_name",
+        "label": "Banner button name"
+      },
+       {
+		"type": "url",
+        "id": "banner_button_link",
+        "label": "Banner button link"
+      },
+     {
+		"type": "text",
+        "id": "section_heading",
+        "label": "Section Heading"
+      },
+      {
+		"type": "html",
+        "id": "bottom_section",
+        "label": "Bottom Section"
+      }
+   ],
+"blocks":
+[
+{
+"type": "Reseller-logo",
+"name":"Reseller logo",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "logo_image",
+   "label": "Reseller logo Image(215x126)"
+
+ },
+    {
+
+   "type": "url",
+   "id": "logo_link",
+   "label": "Reseller image link"
+
+ }
+]
+}
+  ]
+
+  }
+{% endschema %}
+
+{% stylesheet %}  
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

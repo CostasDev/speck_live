@@ -1,0 +1,29 @@
+{% if section.settings.fit-guide_banner_enable != blank %}
+<div class="fit-guide-banner">
+  <div class="page-width">
+    <p>Not sure which MacBook you have? Let us help!</p>
+    <a href="/pages/macbook-fit-guide">MacBook Fit Guide</a>
+  </div>
+</div>
+{% endif %}
+{% schema %}
+  {
+    "name": "MacBook Fit Guide Banner",
+    "settings": [
+	  {
+		"type": "checkbox",
+		"id": "fit-guide_banner_enable",
+		"label": "Enable MacBook Fit Guide Banner"
+	  }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+/* Fit Guide Banner Start */
+.fit-guide-banner {text-align: center;padding: 6px 0;background-color: #eee;}
+.fit-guide-banner p, .fit-guide-banner a {font-size: 140%;line-height: 1;color: #333;}
+.fit-guide-banner p {margin: 0;}
+.fit-guide-banner a {display: inline-block;border: 1px solid;padding: 4px 10px;margin: 8px 0 4px;}
+/* Fit Guide Banner End */
+{% endstylesheet %}

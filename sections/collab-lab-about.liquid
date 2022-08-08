@@ -1,0 +1,159 @@
+<div class="sp-collab-newsletter">
+	<div class="sp-collab-newsletter-inn">
+		<!--<h3>The Collab Lab</h3>-->
+		<div class="sp-collab-newsletter-row">
+			<div class="sp-collab-newsletter-img"><img src="https://cdn.shopify.com/s/files/1/0325/4252/3523/files/collab-lab-feature.png?v=1642165175" /></div>
+			<div class="sp-collab-newsletter-info">
+		    
+              {%if section.settings.section_text != Blank %}
+              
+                {{section.settings.section_text}}
+              
+              {%endif%}
+				<div class="sp-collab-newsletter-form">
+                 {%if section.settings.newsletter_form_heading != blank %} 
+					<h3>{{section.settings.newsletter_form_heading}}</h3>
+                {%endif%}  
+				{%include 'newsletter-form'%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sp-collab-sp-standard">
+	<div class="sp-collab-sp-standard-inn">
+      
+      {%if section.settings.section_heading != blank %}
+		<h3>{{section.settings.section_heading}}</h3>
+      {%endif%}
+      
+     {%if section.settings.section-description != blank %}
+		<p>{{section.settings.section-description}}</p>
+	 {%endif%}
+      <ul>
+        {%for block in section.blocks %}
+			<li>
+             {%if block.settings.product_image != blank %} 
+				<div class="sp-collab-sp-standard-icon"><img src="{{block.settings.product_image | img_url: 'master'}}" /></div>
+              {%endif%}
+             {%if block.settings.description != blank %} 
+				<p>{{block.settings.description}}</p>
+              {%endif%}
+			</li>
+        {%endfor%}
+			
+		</ul>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "About Collab Lab",
+    "settings": [
+    {
+		"type": "text",
+        "id": "section_heading",
+        "label": "Section Heading"
+      },
+      {
+		"type": "html",
+        "id": "section-description",
+        "label": "Section Description"
+      },
+      {
+      "type":"header",
+      "content": "The Collab Section" 
+     }, 
+     {
+		"type": "text",
+        "id": "section_title",
+        "label": "Section Heading"
+      },
+      {
+		"type": "html",
+        "id": "section_text",
+        "label": "Section Text"
+      },
+      {
+		"type": "image_picker",
+        "id": "section_image",
+        "label": "The Collab Section Image(437x468)"
+      },
+      {
+      "type":"header",
+      "content": "The Newsletter Section" 
+     },
+     {
+		"type": "text",
+        "id": "newsletter_form_heading",
+        "label": "Newsletter Form Section Heading"
+     },
+     {
+      "type":"header",
+      "content": "The Previous Collections" 
+     },
+     {
+		"type": "text",
+        "id": "previous_section_heading",
+        "label": "Section Heading"
+      },
+      {
+		"type": "text",
+        "id": "previous_section_text",
+        "label": "Section "
+      }
+ ],
+
+ "blocks":
+[
+{
+"type": "text-blocks",
+"name":"Text With Image Block",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Image(113x113)"
+
+ },
+  {
+
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+
+ },
+{
+
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+
+} 
+
+]
+}
+
+  ],
+    "presets": [
+		{
+      		"name": "Collab Lab About"
+    	}
+	]
+
+  }
+{% endschema %}
+
+{% style %}
+.sp-collab-newsletter, .sp-collab-sp-standard {margin:5% 0;padding:0;}
+.sp-collab-newsletter-inn, .sp-collab-sp-standard-inn {max-width:unset;}
+.sp-collab-newsletter-inn {padding:5% 5% 1%;}
+.sp-collab-newsletter-form form .newsletter__input-group input.input-group-field {padding:2px 8px;}
+@media only screen and (max-width: 767px) {
+.sp-collab-newsletter-inn {padding:10% 5% 14%;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+}
+{% endstyle %}

@@ -1,0 +1,385 @@
+<div class="sp-bs-sol-top-banner sp-wfa-pg-banner sp-bs-sol-top-banner-black-lyr">
+  
+  {%if section.settings.banner_image %}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}')"></div>
+  {%endif%}	
+  <div class="sp-bs-sol-top-banner-cont">
+      {%if section.settings.banner_small_heading != blank %}
+		<p>{{section.settings.banner_small_heading}}</p>
+    {%endif%}
+    
+     {%if section.settings.banner_heading != blank %}
+		<h3>{{section.settings.banner_heading}}</h3>		
+    {%endif%}
+	</div>  
+</div> 
+<div class="sp-wfa-pg-info-main">
+	<div class="sp-cst-container">
+      
+      {%if section.settings.banner_bottom_desc != blank %}
+		<p class="sp-wfa-pg-info-upr-desc">{{section.settings.banner_bottom_desc}}</p>
+      {%endif%}
+      
+		<div class="sp-wfa-pg-upr-img-cont-row sp-wfa-pg-same-ht-info">		
+       {%for block in section.blocks %}   
+          
+         {%if block.type == 'collection-blocks' %} 
+          
+          {% assign collection = collections[block.settings.selected_product] %}
+          <div class="sp-wfa-pg-upr-img-cont-blk">
+            {%if block.settings.product != blank %}
+				<img class="lazyload" data-src="{{block.settings.product | img_url: 'master'}}" />
+            {%endif%}
+            
+            {%if block.settings.title != blank %}
+            <h3>{{block.settings.title}}</h3>
+            {%endif%}
+			
+            {%if block.settings.description != blank %}
+             <p>{{block.settings.description}}</p>
+			{%endif%}	
+              <div class="sp-wfa-pg-upr-img-cont-btn">
+					<a href="{{collection.url}}" class="sp-bl-back-btn">Shop The Collection</a>
+			 </div>
+			</div>
+           {%endif%}
+	    {%endfor%}		
+		</div>
+		<div class="sp-wfa-pg-lined-sec">
+			<div class="sp-wfa-pg-lined-row">
+            
+           {%for block in section.blocks %}   
+               {%if block.type == 'text-blocks' %} 
+				
+              <div class="sp-wfa-pg-lined-box">
+                   {%if block.settings.image != blank %}
+					 <img class="lazyload" width="{{block.settings.image.width}}" height="{{block.settings.image.height}}"  data-src="{{block.settings.image | img_url: 'master'}}" />
+				   {%endif%}	
+                 <h3>{{block.settings.title}}:</h3>
+					<p>{{block.settings.description}}</p>
+			 </div>
+             {%endif%}
+           {%endfor%}   
+				
+			</div>
+          {%for block in section.blocks %}   
+               {%if block.type == 'text-button' %}  
+			<div class="sp-wfa-pg-lined-bot">
+				<p>{{block.settings.text}}</p>
+				<div class="sp-wfa-pg-lined-bot-btn">
+                  <a href="{{block.settings.button_link}}" class="sp-bl-back-btn">{{block.settings.button_name}}</a>
+              </div>
+			</div>
+            {%endif%}
+          {%endfor%}
+		</div>
+		<div class="sp-wfa-pg-l-r-sec">
+			<h3>Explore WFA Collection</h3>
+         
+          {%for block in section.blocks %}   
+               {%if block.type == 'product-blocks' %}    
+          {%- assign product = all_products[block.settings.selected_product] -%}
+			<div class="sp-wfa-pg-l-r-row">
+              {%if block.settings.product != blank %}
+				<div class="sp-wfa-pg-l-r-block">
+					<img class="lazyload" data-src="{{block.settings.product | img_url: 'master'}}" />
+				</div>
+              {%endif%}
+				<div class="sp-wfa-pg-l-r-block">
+					<div class="sp-wfa-pg-l-r-cont">
+						<h3>{{block.settings.title}}</h3>
+						<p>{{block.settings.description}}</p>
+						<div class="sp-wfa-pg-l-r-cont-btn"><a href="{{product.url}}" class="sp-bl-back-btn">Shop Now</a></div>
+					</div>
+				</div>
+			</div>
+		{%endif%}
+       {%endfor%}   
+		
+		</div>
+		<div class="sp-wfa-pg-upr-img-cont-row">
+          
+         {%for block in section.blocks %} 
+               {% assign bcollection = collections[block.settings.selected_product] %}
+             {%if block.type == 'text-block' %} 
+			
+          <div class="sp-wfa-pg-upr-img-cont-blk">
+			{%if block.settings.product != blank %}	
+              <img class="lazyload" data-src="{{block.settings.product | img_url: 'master'}}" />
+            {%endif%}
+              
+              {%if block.settings.title != blank %}
+				<h3>{{block.settings.title}}</h3>
+              {%endif%}
+              
+              {%if block.settings.description != blank %}
+				<p>{{block.settings.description}}</p>
+              {%endif%}
+              
+				<div class="sp-wfa-pg-upr-img-cont-btn">
+					<a href="{{bcollection.url}}" class="sp-bl-back-btn">Shop {{bcollection.title}} Collection</a>
+				</div>
+			</div>
+          {%endif%}
+          {%endfor%}
+		
+		</div>
+	</div>
+   {%for block in section.blocks %}  
+     {%if block.type == 'hero-image' %}  
+	<div class="sp-wfa-pg-img-cont-rt-banner">
+      {%if block.settings.banner_image != blank %}
+		<img class="lazyload" data-src="{{block.settings.banner_image | img_url: 'master'}}" />
+      {%endif%}
+      
+      {%if block.settings.description != blank %}
+		<div class="sp-wfa-pg-img-cont-rt-banner-cont">
+			<p>{{block.settings.description}}</p>
+          {%if block.settings.button_text != blank %}
+			<div class="sp-wfa-pg-img-cont-rt-banner-btn"><a href="{{block.settings.button_link}}" class="sp-bl-back-btn">{{block.settings.button_text}}</a></div>
+          {%endif%}
+		</div>
+      {%endif%}
+	</div>
+   {%endif%}
+  {%endfor%}
+  
+  {%for block in section.blocks %}  
+     {%if block.type == 'rich-text' %} 
+	<div class="sp-cst-container">
+		<div class="sp-wfa-pg-guarantee-box">
+			<h3>{{block.settings.title}}</h3>
+			<p>{{block.settings.description}}</p>
+          
+         {%if block.settings.button_text %}
+			<div class="sp-wfa-pg-guarantee-box-btn"><a href="{{block.settings.button_link}}" class="sp-bl-back-btn">{{block.settings.button_text}}</a></div>
+         {%endif%} 
+		</div>
+	</div>
+    {%endif%}
+  {%endfor%}
+</div>
+{% schema %}
+  {
+    "name": "Work from anywhere",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "text",
+        "id": "banner_small_heading",
+        "label": "Banner small heading"
+      },
+       {
+		"type": "text",
+        "id": "banner_heading",
+        "label": "Banner heading"
+      },
+      {
+		"type": "text",
+        "id": "banner_bottom_desc",
+        "label": "Banner bottom description"
+      }
+     
+   ],
+"blocks":
+[
+{
+"type": "collection-blocks",
+"name":"collections",
+      "settings": [
+  {
+
+   "type": "collection",
+   "id": "selected_product",
+   "label": "collection"
+
+ },
+  {
+   "type": "image_picker",
+   "id": "product",
+   "label": "Image"
+ }, 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ }
+]
+},
+{
+"type": "text-blocks",
+"name":"Text Blocks",
+      "settings": [
+ 
+  {
+   "type": "image_picker",
+   "id": "image",
+   "label": "Image"
+ }, 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ }
+]
+},
+{
+"type": "text-button",
+"name":"Text and button",
+      "settings": [ 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "text",
+   "label": "Text"
+ },
+ {
+   "type": "text",
+   "id": "button_name",
+   "label": "Button Name"
+ },
+ {
+   "type": "url",
+   "id": "button_link",
+   "label": "Button Link"
+ }
+]
+},
+{
+"type": "product-blocks",
+"name":"product",
+      "settings": [
+  {
+
+   "type": "product",
+   "id": "selected_product",
+   "label": "product"
+
+ },
+  {
+   "type": "image_picker",
+   "id": "product",
+   "label": "Image"
+ }, 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ }
+]
+},
+{
+"type": "text-block",
+"name":"Bottom collections",
+      "settings": [
+  {
+
+   "type": "collection",
+   "id": "selected_product",
+   "label": "collection"
+
+ },
+  {
+   "type": "image_picker",
+   "id": "product",
+   "label": "Image"
+ }, 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ }
+]
+},
+{
+"type": "rich-text",
+"name":"Rich Text",
+      "settings": [ 
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ },
+{
+   "type": "text",
+   "id": "button_text",
+   "label": "Button Text"
+ },
+{
+   "type": "url",
+   "id": "button_link",
+   "label": "Button Link"
+ }
+]
+},
+{
+"type": "hero-image",
+"name":"Hero Image",
+      "settings": [ 
+    { 
+     "type": "image_picker",
+     "id": "banner_image",
+     "label": "Banner Image(1136x500)"
+   },
+  {
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+ },
+ {
+   "type": "html",
+   "id": "description",
+   "label": "Description"
+ },
+{
+   "type": "text",
+   "id": "button_text",
+   "label": "Button Text"
+ },
+{
+   "type": "url",
+   "id": "button_link",
+   "label": "Button Link"
+ }
+]
+}
+
+
+  ]
+
+  }
+{% endschema %}

@@ -1,0 +1,286 @@
+{%- assign animation_row = 1 -%}
+{%- assign drawer_position = 'right' -%}
+{% if logo_alignment == 'center' %}
+  {%- assign drawer_position = 'left' -%}
+{% endif %}
+
+<div id="NavDrawer" class="drawer drawer--left">
+  <div class="drawer__contents">
+    <div class="drawer__fixed-header">
+      <div class="drawer__header appear-animation appear-delay-{{ animation_row }}">
+        <div class="h2 drawer__title"></div>
+        <div class="drawer__close">
+          <button type="button" class="drawer__close-button js-drawer-close">
+            <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon-close" viewBox="0 0 64 64"><path d="M19 17.61l27.12 27.13m0-27.12L19 44.74"/></svg>
+            <span class="icon__fallback-text">{{ 'general.drawers.close_menu' | t }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer__scrollable">
+      <ul class="mobile-nav{% if settings.type_navigation_style == 'heading' %} mobile-nav--heading-style{% endif %}" role="navigation" aria-label="Primary">
+        {%- for link in main_menu.links -%}
+          {%- assign animation_row = animation_row | plus: 1 -%}
+          {%- assign child_list_handle = link.url | handleize | append: forloop.index -%}
+          {%- assign has_dropdown = false -%}
+          {%- if link.links != blank -%}
+            {%- assign has_dropdown = true -%}
+          {%- endif -%}
+          {% assign type = 'list' %}
+          {% for block in section.blocks %}
+            {% if block.type == 'megamenu' and block.settings.title == link.title %}
+              {% assign type = block.settings.type %}
+              {% assign menu_title = block.settings.menu_title %}
+            {% endif %}
+          {% endfor %}
+          <li class="mobile-nav__item appear-animation appear-delay-{{ animation_row }} type--{{type}}">
+            {%- if has_dropdown -%}
+              <div class="mobile-nav__has-sublist">
+                {%- if link.url == '#' -%}
+                  <button type="button"
+                    aria-controls="Linklist-{{ child_list_handle }}"{% if type == 'tab' %} aria-open="true"{% endif %}
+                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height{% if type == 'tab' %} is-open{% endif %}">
+                    <span class="mobile-nav__faux-link"{% if link.active %} data-active="true"{% endif %}>
+                      {{ link.title }}
+                    </span>
+                    <div class="mobile-nav__toggle">
+                      <span class="faux-button">
+                        {%- render 'collapsible-icons' -%}
+                      </span>
+                    </div>
+                  </button>
+                {%- else -%}
+                  <button type="button"
+                    aria-controls="Linklist-{{ child_list_handle }}"{% if type == 'tab' %} aria-open="true"{% endif %}
+                    class="mobile-nav__link--button mobile-nav__link--top-level collapsible-trigger collapsible--auto-height{% if type == 'tab' %} is-open{% endif %}">
+                    <span class="mobile-nav__faux-link"{% if link.active %} data-active="true"{% endif %}>
+                      {{ link.title }}
+                    </span>
+                    <div class="mobile-nav__toggle">
+                      <span class="faux-button">
+                        {%- render 'collapsible-icons' -%}
+                      </span>
+                    </div>
+                  </button>
+                {%- endif -%}
+              </div>
+            {%- else -%}
+              <a href="{{ link.url }}" class="mobile-nav__link mobile-nav__link--top-level"{% if link.active %} data-active="true"{% endif %}>
+                {{ link.title }}
+              </a>
+            {%- endif -%}
+
+            {%- if has_dropdown -%}
+              <div id="Linklist-{{ child_list_handle }}"
+                class="mobile-nav__sublist collapsible-content collapsible-content--all{% if type == 'tab' %} is-open{% endif %}"
+                {% if type == 'tab' %}style="height: auto;"{% endif %}>
+                
+                <div class="collapsible-content__inner">
+                  
+                  {% if type == 'list' or type == 'block' %}
+                    <div class="mobile-nav__header">
+                      <p>{{menu_title}}</p>
+                    </div>
+                    <ul class="mobile-nav__sublist">
+                      {%- for childlink in link.links -%}
+                        {% if forloop.index < 11 %}
+                          {%- assign has_sub_dropdown = false -%}
+                          {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
+                          {%- if childlink.links != blank -%}
+                            {%- assign has_sub_dropdown = true -%}
+                          {%- endif -%}
+
+                          <li class="mobile-nav__item">
+                            <div class="mobile-nav__child-item">
+                              {%- if has_sub_dropdown -%}
+                                <button type="button"
+                                aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}" aria-open="false"
+                                class="mobile-nav__link--button collapsible-trigger">
+                                  {% if type == 'tab' %}
+                                  {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                  <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                  {% endif %}
+                                  <span class="mobile-nav__faux-link"{% if childlink.active %} data-active="true"{% endif %}>{{ childlink.title | escape }}</span>
+                                  {%- render 'collapsible-icons-alt' -%}
+                                </button>
+                              {%- else -%}
+                                <a href="{{ childlink.url }}"
+                                  class="mobile-nav__link"
+                                  id="Sublabel-{{ grand_child_list_handle }}"
+                                  {% if childlink.active %}data-active="true"{% endif %}>
+                                  {% if type == 'tab' %}
+                                  {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                  <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                  {% endif %}
+                                  
+                                  {{ childlink.title | escape }}
+                                </a>
+                              {%- endif -%}
+                            </div>
+
+                            {%- if has_sub_dropdown -%}
+                              <div
+                                id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                                aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                                class="mobile-nav__sublist collapsible-content collapsible-content--all">
+                                <div class="collapsible-content__inner">
+                                  <div class="mobile-nav__header">
+                                    <p>{{menu_title}}</p>
+                                  </div>
+                                  <ul class="mobile-nav__grandchildlist">
+                                    {%- for grandchildlink in childlink.links -%}
+                                      <li class="mobile-nav__item">
+                                        <a href="{{ grandchildlink.url }}" class="mobile-nav__link"{% if grandchildlink.active %} data-active="true"{% endif %}>
+                                          {{ grandchildlink.title }}
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                              </div>
+                            {%- endif -%}
+                          </li>
+                        {% endif %}
+                      {%- endfor -%}
+                    </ul>
+                    
+                    <ul class="mobile-nav__sublist">
+                      {%- for childlink in link.links -%}
+                        {% if forloop.index > 10 %}
+                          {%- assign has_sub_dropdown = false -%}
+                          {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
+                          {%- if childlink.links != blank -%}
+                            {%- assign has_sub_dropdown = true -%}
+                          {%- endif -%}
+
+                          <li class="mobile-nav__item">
+                            <div class="mobile-nav__child-item">
+                              {%- if has_sub_dropdown -%}
+                                <button type="button"
+                                aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}" aria-open="false"
+                                class="mobile-nav__link--button collapsible-trigger">
+                                  {% if type == 'tab' %}
+                                  {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                  <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                  {% endif %}
+                                  <span class="mobile-nav__faux-link"{% if childlink.active %} data-active="true"{% endif %}>{{ childlink.title | escape }}</span>
+                                  {%- render 'collapsible-icons-alt' -%}
+                                </button>
+                              {%- else -%}
+                                <a href="{{ childlink.url }}"
+                                  class="mobile-nav__link"
+                                  id="Sublabel-{{ grand_child_list_handle }}"
+                                  {% if childlink.active %}data-active="true"{% endif %}>
+                                  {% if type == 'tab' %}
+                                  {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                  <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                  {% endif %}
+                                  
+                                  {{ childlink.title | escape }}
+                                </a>
+                              {%- endif -%}
+                            </div>
+
+                            {%- if has_sub_dropdown -%}
+                              <div
+                                id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                                aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                                class="mobile-nav__sublist collapsible-content collapsible-content--all">
+                                <div class="collapsible-content__inner">
+                                  <div class="mobile-nav__header">
+                                    <p>{{menu_title}}</p>
+                                  </div>
+                                  <ul class="mobile-nav__grandchildlist">
+                                    {%- for grandchildlink in childlink.links -%}
+                                      <li class="mobile-nav__item">
+                                        <a href="{{ grandchildlink.url }}" class="mobile-nav__link"{% if grandchildlink.active %} data-active="true"{% endif %}>
+                                          {{ grandchildlink.title }}
+                                        </a>
+                                      </li>
+                                    {%- endfor -%}
+                                  </ul>
+                                </div>
+                              </div>
+                            {%- endif -%}
+                          </li>
+                        {% endif %}
+                      {%- endfor -%}
+                    </ul>
+                  {% else %}
+                  <ul class="mobile-nav__sublist">
+                    {%- for childlink in link.links -%}
+                        {%- assign has_sub_dropdown = false -%}
+                        {%- assign grand_child_list_handle = childlink.url | handleize | append: forloop.index -%}
+                        {%- if childlink.links != blank -%}
+                          {%- assign has_sub_dropdown = true -%}
+                        {%- endif -%}
+
+                        <li class="mobile-nav__item">
+                          <div class="mobile-nav__child-item">
+                            {%- if has_sub_dropdown -%}
+                              <button type="button"
+                              aria-controls="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}" aria-open="false"
+                              class="mobile-nav__link--button collapsible-trigger">
+                                {% if type == 'tab' %}
+                                {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                {% endif %}
+                                <span class="mobile-nav__faux-link"{% if childlink.active %} data-active="true"{% endif %}>{{ childlink.title | escape }}</span>
+                                {%- render 'collapsible-icons-alt' -%}
+                              </button>
+                            {%- else -%}
+                              <a href="{{ childlink.url }}"
+                                class="mobile-nav__link"
+                                id="Sublabel-{{ grand_child_list_handle }}"
+                                {% if childlink.active %}data-active="true"{% endif %}>
+                                {% if type == 'tab' %}
+                                {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                                <img class="icon lazyload" data-src="{{file_name | asset_url }}">
+                                {% endif %}
+                                
+                                {{ childlink.title | escape }}
+                              </a>
+                            {%- endif -%}
+                          </div>
+
+                          {%- if has_sub_dropdown -%}
+                            <div
+                              id="Sublinklist-{{ child_list_handle }}-{{ grand_child_list_handle }}"
+                              aria-labelledby="Sublabel-{{ grand_child_list_handle }}"
+                              class="mobile-nav__sublist collapsible-content collapsible-content--all">
+                              <div class="collapsible-content__inner">
+                                <div class="mobile-nav__header">
+                                  <p>{{menu_title}}</p>
+                                </div>
+                                <ul class="mobile-nav__grandchildlist">
+                                  {%- for grandchildlink in childlink.links -%}
+                                    <li class="mobile-nav__item">
+                                      <a href="{{ grandchildlink.url }}" class="mobile-nav__link"{% if grandchildlink.active %} data-active="true"{% endif %}>
+                                        {{ grandchildlink.title }}
+                                      </a>
+                                    </li>
+                                  {%- endfor -%}
+                                </ul>
+                              </div>
+                            </div>
+                          {%- endif -%}
+                        </li>
+                    {%- endfor -%}
+                  </ul>
+                  {% endif %}
+                  
+                </div>
+              </div>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+        <li class="mobile-nav__item appear-animation appear-delay-8 type--second">
+          <a class="mobile-nav__link mobile-nav__link--top-level" href="/account">
+            <img class="icon" src="{{ 'account.svg' | asset_url }}">
+            My Account
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

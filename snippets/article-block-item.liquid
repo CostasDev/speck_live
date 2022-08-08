@@ -1,0 +1,80 @@
+{%- assign fixed_aspect_ratio = false -%}
+{% unless image_size == 'natural' %}
+  {%- assign fixed_aspect_ratio = true -%}
+{% endunless %}
+
+<li class="grid__item {{ grid_item_width }}" data-center-text="false" data-aos="row-of-{{ per_row }}" role="group" aria-label="blog post">
+  <div class="grid">
+    <div class="grid__item">
+      {%- if block.settings.image != blank -%}
+        <a href="{{block.settings.link}}" class="article__grid-image" aria-label="{{ block.settings.title | escape }}" target="_blank">
+          {%- if fixed_aspect_ratio -%}
+            <div class="image-wrap">
+              <div
+                class="grid__image-ratio grid__image-ratio--{{ image_size }}">
+                {% assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+                <img class="lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[360, 540, 720, 900, 1080]"
+                    width="{{block.settings.image.width}}" 
+                    height="{{block.settings.image.height}}"
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt | escape }}">
+              </div>
+              <noscript>
+                <img class="lazyloaded" width="{{block.settings.image.width}}"  height="{{block.settings.image.height}}"  src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.title | escape }}">
+              </noscript>
+            </div>
+          {%- else -%}
+            <div class="image-wrap" style="height: 0; padding-bottom: {{ 100 | divided_by: block.settings.image.aspect_ratio }}%;">
+              {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+              <img class="lazyload"
+                  data-src="{{ img_url }}"
+                  data-widths="[180, 360, 540, 720, 900, 1080]"
+                  width="{{block.settings.image.width}}" 
+                  height="{{block.settings.image.height}}" 
+                  data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                  data-sizes="auto"
+                  alt="{{ block.settings.image.alt | escape }}">
+              <noscript>
+                <img class="lazyloaded" width="{{block.settings.image.width}}"  height="{{block.settings.image.height}}"  src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.title | escape }}">
+              </noscript>
+            </div>
+          {%- endif -%}
+        </a>
+      {%- else -%}
+        <div class="article__grid-image">
+          {%- if fixed_aspect_ratio -%}
+            <div class="image-wrap">
+              <div
+                class="grid__image-ratio grid__image-ratio--{{ image_size }} lazyload">
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+    <div class="grid__item">
+      <div class="article__grid-meta">
+        {%- if section.settings.blog_show_date and block.settings.date -%}
+          <div class="article__date">
+              {{ block.settings.date }}
+          </div>
+        {%- endif -%}
+
+        <h3 class="blog_hm_title article__title"><a href="{{block.settings.link}}" class="article__title test2" target="_blank">{{ block.settings.title }}</a></h3>
+        {%- if section.settings.blog_show_author -%}
+          <div class="article__author">by {{ block.settings.author }}</div>
+        {%- endif -%}
+
+        {%- if section.settings.blog_show_excerpt -%}
+          <div class="rte article__excerpt">
+            {{block.settings.text}}
+          </div>
+        {%- endif -%}
+        <a href="{{block.settings.link}}" class="link left-chevron" target="_blank">Read</a>
+      </div>
+    </div>
+  </div>
+</li>

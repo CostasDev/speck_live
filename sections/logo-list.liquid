@@ -1,0 +1,141 @@
+{%- style -%}
+.logo-bar--{{ section.id }} {
+  opacity: {{ section.settings.logo_opacity | divided_by: 100.0 }};
+}
+{%- endstyle -%}
+
+{%- if section.settings.divider -%}<div class="section--divider">{%- endif -%}
+<div
+  class="logolist-section logolist-{{ section.id }}{% if section.settings.color_background == settings.color_body_bg %} logolist-section--with-divider{% endif %} text-{{ section.settings.align_text }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="logolist"
+  data-aos>
+  <div class="page-width" data-aos="logo__animation">
+    {%- if section.settings.title != blank -%}
+      <div class="section-header">
+        <h2 class="section-header__title">{{ section.settings.title | escape }}</h2>
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="slideshow-wrapper">
+        <div
+          class="logo-slider"
+          id="logolist-{{ section.id }}"
+          data-dots="false"
+          data-count="{{ section.blocks.size }}">
+          {%- for block in section.blocks -%}
+            <div
+              class="logo-slide logo-slide--{{ block.id }}"
+              data-index="{{ forloop.index0 }}"
+              data-aos="row-of-{{ section.blocks.size }}"
+              {{ block.shopify_attributes }}>
+              {%- if block.settings.text != blank -%}
+                <div class="rte-setting text-spacing">{{ block.settings.text }}</div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div> 
+      </div>
+      <ul class="logo-bar logobar--slideshow logo-bar--{{ section.id }}">
+        {%- for block in section.blocks -%}
+          <li class="logo-bar__item product__thumb-item {% if forloop.index == 1 %}active{% endif %}" {{ block.shopify_attributes }} data-index="{{forloop.index0}}">
+            <a class="link">
+              {%- if block.settings.image != blank -%}
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                <img class="logo-bar__image lazyload"
+                    data-src="{{ img_url }}"
+                    data-widths="[180, 360, 540, 720]"
+                    width="{{block.settings.image.width}}" 
+                    height="{{block.settings.image.height}}" 
+                    data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                    data-sizes="auto"
+                    alt="{{ block.settings.image.alt }}">
+              {% elsif block.settings.svg != blank %}
+                {{block.settings.svg}}
+              {%- else -%}
+                {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </a>
+            
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+  </div>
+</div>
+
+{%- if section.settings.divider -%}</div>{%- endif -%}
+
+{% schema %}
+  {
+    "name": "Logo list",
+    "class": "index-section",
+    "max_blocks": 10,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+      {
+        "type": "range",
+        "id": "logo_opacity",
+        "label": "Logo opacity",
+        "default": 76,
+        "min": 0,
+        "max": 100,
+        "step": 2,
+        "unit": "%"
+      },
+      {
+        "type": "checkbox",
+        "id": "divider",
+        "label": "Show section divider",
+        "default": false
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "html",
+            "id": "svg",
+            "label": "Image (svg)"
+          },
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo list",
+        "blocks": [
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,255 @@
+<div class="sp-bs-sol-top-banner sp-bs-sol-top-banner-black-lyr">  
+  {%if section.settings.banner_image != blank %}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image |img_url: 'master'}}')"></div>
+  {%endif%}
+  	<div class="sp-bs-sol-top-banner-cont">
+      {%if section.settings.banner_heading != blank %}
+    
+		<h3>{{section.settings.banner_heading}}</h3>
+      {%endif%}
+      {%if section.settings.banner_button_name != blank %}
+		<p class="sp-pg-top-banner-wht-bck-btn"><a href="{{section.settings.banner_button_link}}" class="sp-bl-lined-btn">{{section.settings.banner_button_name}}</a></p>
+	  {%endif%}
+  </div>  
+</div> 
+<div class="sp-container-1240-sec">
+	<div class="sp-career-perk-sec">
+      {%if section.settings.section_heading != blank %}
+		<h3>{{section.settings.section_heading}}</h3>
+      {%endif%}
+      
+      {%if section.settings.bottom_section != blank %}
+		<p>{{section.settings.bottom_section}}</p>
+      {%endif%}
+      
+		<div class="sp-career-perk-row">
+          {%for block in section.blocks %}
+			<div class="sp-career-perk-block">
+				<div class="sp-career-perk-tick"><span></span></div>
+				<p><b>{{block.settings.block_heading}}:</b> {{block.settings.block_text}}</p>
+			</div>
+          {%endfor%}
+		
+		</div>
+	</div>	
+	<div class="sp-career-plus-even-sec">
+      {%if section.settings.puls_even_heading != blank %}
+		<p>{{section.settings.puls_even_heading}}</p>
+      {%endif%}
+       {%if section.settings.puls_even_text != blank %}
+		<ul>
+			{{section.settings.puls_even_text}}
+		</ul>
+      {%endif%}
+	</div>
+  {%if section.settings.large_image != blank %}
+	<div class="sp-career-bg-img">
+		<img class="lazyload" data-src="{{section.settings.large_image | img_url: 'master'}}" />
+	</div>
+  {%endif%}
+</div>
+<div class="sp-cst-container-parent">
+	<div class="sp-cst-container">
+		<div class="sp-career-life-speck">
+          {%if section.settings.life_at_heading != blank %}
+			<h3>{{section.settings.life_at_heading}}</h3>
+          {%endif%}
+			<div class="sp-career-life-speck-row">
+              {%if section.settings.life_at_text != blank %}
+				<div class="sp-career-life-speck-left">
+					<p>{{section.settings.life_at_text}}</p>
+				</div>
+              {%endif%}
+				<div class="sp-career-life-speck-right">
+					<ul>
+                      {%if section.settings.detail_one != blank %}
+						<li> {%if section.settings.right_icon_image_one != blank %} {{section.settings.right_icon_image_one}} {%endif%}  <p>{{section.settings.detail_one}}</p></li>
+                      {%endif%}
+                      
+                       {%if section.settings.detail_two != blank %}
+						<li>{%if section.settings.right_icon_image_two != blank %}{{section.settings.right_icon_image_two}} {%endif%}  <p>{{section.settings.detail_two}}</p></li>
+                      {%endif%}
+                      
+                       {%if section.settings.detail_three != blank %}
+						<li>{%if section.settings.right_icon_image_three != blank %} {{section.settings.right_icon_image_three}} {%endif%}  <p>{{section.settings.detail_three}}</p></li>
+                      {%endif%}
+                      
+                       {%if section.settings.detail_four != blank %}
+						<li>{%if section.settings.right_icon_image_four != blank %} {{section.settings.right_icon_image_four}} {%endif%} <p>{{section.settings.detail_four}}</p></li>
+                      {%endif%}
+                      
+                       {%if section.settings.detail_five != blank %}
+						<li> {%if section.settings.right_icon_image_five != blank %}{{section.settings.right_icon_image_five}} {%endif%} <p>{{section.settings.detail_five}}</p></li>
+                      {%endif%}
+						
+					</ul>					
+				</div>
+			</div>
+          {%if section.settings.button_name != blank %}
+			<div class="sp-career-life-speck-btn"><a href="{{section.settings.button_link}}" class="sp-bl-back-btn">{{section.settings.button_name}}</a></div>
+	      {%endif%}	
+      </div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Career",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "text",
+        "id": "banner_heading",
+        "label": "Banner heading"
+      },
+       {
+		"type": "text",
+        "id": "banner_button_name",
+        "label": "Banner button name"
+      },
+       {
+		"type": "url",
+        "id": "banner_button_link",
+        "label": "Banner button link"
+      },
+      {
+      	"type": "header",
+        "content": "The Perks Section"
+      }, 
+     {
+		"type": "text",
+        "id": "section_heading",
+        "label": "Banner below section heading"
+      },
+      {
+		"type": "html",
+        "id": "bottom_section",
+        "label": "Banner below section text"
+      },
+      {
+      	"type": "header",
+        "content": "Puls even more section"
+      },       
+      {
+		"type": "text",
+        "id": "puls_even_heading",
+        "label": "Section heading"
+      },
+      {
+		"type": "html",
+        "id": "puls_even_text",
+        "label": "Section list"
+      },
+       {
+      	"type": "header",
+        "content": "Large image section"
+      },
+      {
+		"type": "image_picker",
+        "id": "large_image",
+        "label": "Large Image(1136x500)"
+      },
+      {
+      	"type": "header",
+        "content": "Life at speck section"
+      },
+       {
+		"type": "text",
+        "id": "life_at_heading",
+        "label": "Section heading"
+      },
+      {
+		"type": "html",
+        "id": "life_at_text",
+        "label": "Section Text"
+      },
+       {
+		"type": "html",
+        "id": "right_icon_image_one",
+        "label": "SVG Icon One (36x32)"
+      },
+      {
+		"type": "html",
+        "id": "detail_one",
+        "label": "Description one"
+      },
+      {
+		"type": "html",
+        "id": "right_icon_image_two",
+        "label": "SVG Icon Two (36x32)"
+      },
+      {
+		"type": "html",
+        "id": "detail_two",
+        "label": "Description two"
+      }, 
+     {
+		"type": "html",
+        "id": "right_icon_image_three",
+        "label": "SVG Icon Three (36x32)"
+      },
+      {
+		"type": "html",
+        "id": "detail_three",
+        "label": "Description three"
+      },
+      {
+		"type": "html",
+        "id": "right_icon_image_four",
+        "label": "SVG Icon Four (36x32)"
+      },
+      {
+		"type": "html",
+        "id": "detail_four",
+        "label": "Description Four"
+      },
+        {
+		"type": "html",
+        "id": "right_icon_image_five",
+        "label": "SVG Icon Five (36x32)"
+      },
+      {
+		"type": "html",
+        "id": "detail_five",
+        "label": "Description Five"
+      },
+       {
+		"type": "text",
+        "id": "button_name",
+        "label": "Button name"
+      },
+       {
+		"type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+   ],
+"blocks":
+[
+{
+"type": "text-blocks",
+"name":"Text Blocks",
+      "settings": [
+  {
+
+   "type": "text",
+   "id": "block_heading",
+   "label": "Block Heading"
+
+ },
+  {
+   "type": "html",
+   "id": "block_text",
+   "label": "Block Text"
+ }
+]
+}
+  ]
+
+  }
+{% endschema %}

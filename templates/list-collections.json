@@ -1,0 +1,63 @@
+{
+  "sections": {
+    "main": {
+      "type": "list-collections-template",
+      "blocks": {
+        "fe66dbdb-afa7-42ff-b255-ff79fc80d2ed": {
+          "type": "collection",
+          "settings": {
+            "collection": "antimicrobial"
+          }
+        },
+        "e8187345-b6e8-4790-acc0-216692a1c646": {
+          "type": "collection",
+          "settings": {
+            "collection": "magsafe-compatible"
+          }
+        },
+        "83ecedc8-66db-4af5-b05b-066f1e729e1b": {
+          "type": "collection",
+          "settings": {
+            "collection": "android"
+          }
+        },
+        "211d7ffe-0a5d-4eba-b696-cdb749809eb6": {
+          "type": "collection",
+          "settings": {
+            "collection": "airpods-1st-2nd-gen"
+          }
+        },
+        "4062d784-0b99-4938-b56f-14445a3459b9": {
+          "type": "collection",
+          "settings": {
+            "collection": "iphone-13-pro-cases"
+          }
+        },
+        "0ea2b9f8-4df8-4a5e-a001-31de1834c491": {
+          "type": "collection",
+          "settings": {
+            "collection": "shieldview"
+          }
+        }
+      },
+      "block_order": [
+        "fe66dbdb-afa7-42ff-b255-ff79fc80d2ed",
+        "e8187345-b6e8-4790-acc0-216692a1c646",
+        "83ecedc8-66db-4af5-b05b-066f1e729e1b",
+        "211d7ffe-0a5d-4eba-b696-cdb749809eb6",
+        "4062d784-0b99-4938-b56f-14445a3459b9",
+        "0ea2b9f8-4df8-4a5e-a001-31de1834c491"
+      ],
+      "settings": {
+        "title": "CATALOG",
+        "title_enable": true,
+        "display_type": "selected",
+        "sort": "alphabetical",
+        "grid": "3"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,244 @@
+<div id="landing_teaser-header">
+  <div class="teaser-heading">
+    {% if section.settings.header-preheading !=blank %}<p class="preheading">{{ section.settings.header-preheading }}</p>{% endif %}
+    {% if section.settings.header-heading !=blank %}<h1>{{ section.settings.header-heading }}</h1>{% endif %}    
+    {% if section.settings.header-postheading !=blank %}<p class="postheading">{{ section.settings.header-postheading }}</p>{% endif %}
+  </div>
+  <div class="teaser-features">
+    <ul>
+      <li>
+        {% if section.settings.header-feature1-img != blank %}<img src="{{ section.settings.header-feature1-img | img_url: 'large' }}" alt="{{ section.settings.header-feature1-img.alt }}" />{% endif %}
+        {% if section.settings.header-feature1-text != blank %}<h2>{{ section.settings.header-feature1-text }}</h2>{% endif %}
+      </li>
+      <li>
+        {% if section.settings.header-feature2-img != blank %}<img src="{{ section.settings.header-feature2-img | img_url: 'large' }}" alt="{{ section.settings.header-feature2-img.alt }}" />{% endif %}
+        {% if section.settings.header-feature2-text != blank %}<h2>{{ section.settings.header-feature2-text }}</h2>{% endif %}
+      </li>
+      <li>
+        {% if section.settings.header-feature3-img != blank %}<img src="{{ section.settings.header-feature3-img | img_url: 'large' }}" alt="{{ section.settings.header-feature3-img.alt }}" />{% endif %}
+        {% if section.settings.header-feature3-text != blank %}<h2>{{ section.settings.header-feature3-text }}</h2>{% endif %}
+      </li>
+    </ul>
+  </div>
+</div>
+
+{% style %}
+  {% if section.settings.header-background != blank %}#landing_teaser-header{background-image:url('{{ section.settings.header-background | img_url: '2000x' }}');background-size:{{ section.settings.header-background-cover }};background-position:{{ section.settings.header-background-position }}}{% endif %}
+  #landing_teaser-header {margin-bottom:2em;padding:2em 1em 2.5em;border-bottom-left-radius:6px;border-bottom-right-radius:6px;overflow:hidden}
+  #landing_teaser-header .teaser-heading {text-align:{{ section.settings.header-text-alignment }}}
+  #landing_teaser-header .teaser-heading h1, #landing_teaser-header .teaser-heading p {margin:0}
+  #landing_teaser-header .teaser-heading h1 {font-size:48px;font-weight:normal;text-transform:none;margin:8px 0}
+  #landing_teaser-header .teaser-heading p {font-size:28px}
+  #landing_teaser-header .teaser-heading, #landing_teaser-header .teaser-features {color:{{ section.settings.header-font-color }}}
+  #landing_teaser-header .teaser-features {margin-top:2em}
+  #landing_teaser-header .teaser-features ul {display:flex;margin:0;width:100%}
+  #landing_teaser-header .teaser-features ul li {display:flex;list-style:none;width:33.333%;margin-bottom:0;justify-content:center;text-align:center;flex-direction:column;align-items:center}
+  #landing_teaser-header .teaser-features ul li:nth-child(2) {border-left:1px solid #555;border-right:1px solid #555}
+  #landing_teaser-header .teaser-features ul li img {width:50%}
+  #landing_teaser-header .teaser-features ul li h2 {margin-bottom:0;font-weight:normal;text-transform:none;font-size:18px;width:100%}
+  #landing_teaser-header .teaser-features ul li h2 span {display:block}
+  @media only screen and (max-width:768px){
+    #landing_teaser-header {padding:1em 2em 1.5em;}
+    #landing_teaser-header .teaser-heading h1 {font-size:10vw}
+    #landing_teaser-header .teaser-heading p {font-size:5vw;line-height:1.2}
+    #landing_teaser-header .teaser-features ul {flex-direction:column}
+    #landing_teaser-header .teaser-features ul li {width:100%;flex-direction:row;text-align:left}
+    #landing_teaser-header .teaser-features ul li:nth-child(2) {border-left:none;border-right:none}    
+    #landing_teaser-header .teaser-features ul li img {width:40%;margin-right:1em}
+    #landing_teaser-header .teaser-features ul li h2 {font-size:4.25vw}
+  }
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "Teaser (Header)",
+    "class": "landing-teaser-header",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Header Styling"
+      },
+      {
+        "type": "image_picker",
+        "id": "header-background",
+        "label": "Header Background Image"      
+      },
+      {
+        "type": "select",
+        "id": "header-background-cover",
+        "label": "Header Background Scale",
+        "options": [
+          {
+            "value": "auto",
+            "label": "Auto"
+          },
+          {
+            "value": "contain",
+            "label": "Contain"
+          },
+          {
+            "value": "cover",
+            "label": "Cover"
+          },
+          {
+            "value": "inherit",
+            "label": "Inherit"
+          },
+          {
+            "value": "initial",
+            "label": "Initial"
+          },
+          {
+            "value": "revert",
+            "label": "Revert"
+          },
+          {
+            "value": "unset",
+            "label": "Unset"
+          }
+        ],
+        "default": "auto"
+      },
+      {
+        "type": "select",
+        "id": "header-background-position",
+        "label": "Header Background Placement",
+        "options": [
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "inherit",
+            "label": "Inherit"
+          },
+          {
+            "value": "initial",
+            "label": "Initial"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "revert",
+            "label": "Revert"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "unset",
+            "label": "Unset"
+          }
+        ],
+        "default": "inherit"
+      },
+      {
+        "type": "color",
+        "id": "header-font-color",
+        "label": "Header Font Color",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Headline Content"
+      },
+      {
+        "type": "html",
+        "id": "header-preheading",
+        "label": "Pre-Heading (p)",
+        "default": "Pre-Heading Goes Here"
+      },
+      {
+        "type": "html",
+        "id": "header-heading",
+        "label": "Main Heading (H1)",
+        "default": "Main Heading Goes Here"
+      },
+      {
+        "type": "html",
+        "id": "header-postheading",
+        "label": "Post-Heading (p)",
+        "default": "Post-Heading Goes Here"
+      },
+      {
+        "type": "select",
+        "id": "header-text-alignment",
+        "label": "Header Text Alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "header",
+        "content": "Feature One"
+      },
+      {
+        "type": "image_picker",
+        "id": "header-feature1-img",
+        "label": "Image: Feature One"
+      },
+      {
+        "type": "html",
+        "id": "header-feature1-text",
+        "label": "Text: Feature One"
+      },
+      {
+        "type": "header",
+        "content": "Feature Two"
+      },
+      {
+        "type": "image_picker",
+        "id": "header-feature2-img",
+        "label": "Image: Feature Two"
+      },
+      {
+        "type": "html",
+        "id": "header-feature2-text",
+        "label": "Text: Feature Two"
+      },
+      {
+        "type": "header",
+        "content": "Feature Three"
+      },
+      {
+        "type": "image_picker",
+        "id": "header-feature3-img",
+        "label": "Image: Feature Three"
+      },
+      {
+        "type": "html",
+        "id": "header-feature3-text",
+        "label": "Text: Feature Three"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

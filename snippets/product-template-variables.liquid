@@ -1,0 +1,14 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign days_price_valid_until = 10 | times: 86400
+  assign gtin_option = 'gtin'
+  assign is_barcode_available = false
+  if current_variant.barcode != blank
+    assign is_barcode_available = true
+    assign gtin_string_length = current_variant.barcode | size
+    if gtin_string_length == 8 or gtin_string_length == 12 or gtin_string_length == 13 or gtin_string_length == 14
+      assign is_valid_gtin_length = true
+      assign gtin_option = gtin_option | append: gtin_string_length
+    endif
+  endif
+-%}

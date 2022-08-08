@@ -1,0 +1,60 @@
+{% assign id = block.id %}
+{% assign image = block.settings.image %}
+{% assign mobile_image = block.settings.mobile_image %}
+{% assign title = block.settings.title %}
+{% assign text_position = block.settings.text_position %}
+{% assign text_below_image = block.settings.text_below_image %}
+{% assign text_link = block.settings.text_link %}
+{% assign mobile_text_color = block.settings.mobile_text_color %}
+{% assign desc_color = block.settings.desk_color %}
+
+
+
+<div id="banner-{{id}}" class="grid__item grid-product small--one-half medium-up--one-quarter aos-init aos-animate collection-product-banner banner full-width--true">
+  <a href="{{text_link}}">
+    {% if image != blank %}
+      {% assign img_url = image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+      <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %} small--hide"
+        data-src="{{ img_url }}"
+        data-widths="[360, 540, 720, 900, 1080]"
+        width="{{block.settings.image.width}}" 
+        height="{{block.settings.image.height}}"
+        data-aspectratio="{{ image.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ image.alt | escape }}">
+      {% assign img_url = mobile_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+      <img class="lazyload{% unless settings.product_grid_image_fill %} grid__image-contain{% endunless %} medium-up--hide"
+        data-src="{{ img_url }}"
+        data-widths="[360, 540, 720, 900, 1080]"
+        width="{{mobile_image.width}}" 
+        height="{{mobile_image.height}}" 
+        data-aspectratio="{{ mobile_image.aspect_ratio }}"
+        data-sizes="auto"
+        alt="{{ image.alt | escape }}">
+    {% else %}
+      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg placeholder-svg--banner' }}
+    {% endif %}
+
+    {% unless title == blank and button1 == blank %}
+      <div class="position-{{ text_position }} caption js-caption caption--below-{{text_below_image }}">
+        <div class="caption-content caption-transparency-{{ caption_background_transparency }}">
+          <h2 class="headline">
+            {{ title }}
+          </h2>
+        </div>
+      </div>
+    {% endunless %}
+  </a>
+  
+  {% comment %}Section specific CSS{% endcomment %}
+  {% style %}
+  #banner-{{id}} .headline, #banner-{{id}} a{
+    color: {{ desc_color }};
+  }
+  @media only screen and (max-width: 480px) {
+    #banner-{{id}} .headline, #banner-{{id}} a {
+      color: {{ mobile_text_color}};
+    }
+  }
+  {% endstyle %}
+</div>

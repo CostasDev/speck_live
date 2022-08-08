@@ -1,0 +1,253 @@
+{%- assign boost_settings = shop.metafields.bc-sf-filter.settings -%}
+{%- assign boost_in_collection_search = boost_settings | split: 'enableCollectionSearch":' | last | split: ',"' | first | strip -%}
+<div
+  id="CollectionAjaxResult"
+  class="collection-content"
+  data-section-id="{{ section.id }}"
+  data-section-type="collection-template"
+>
+  <div id="CollectionAjaxContent">
+    <div class="page-width">
+      {% if boost_in_collection_search == 'true' %}
+        <div class="eight columns boost-pfs-in-collection-search">
+          {% render 'boost-pfs-filter-skeleton', width: 4 %}
+        </div>
+      {% endif %}
+      <div class="grid">
+        <div class="grid__item medium-up--one-fifth grid__item--sidebar">
+          {% render 'collection-sidebar', section: section %}
+        </div>
+        <div class="grid__item medium-up--four-fifths grid__item--content">
+          <div class="collection-grid__wrapper">
+            {% render 'collection-template', section: section %}
+            {% if collection.description != blank %}
+            <div class="collection-description-bottom">
+            {{ collection.description }}
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "CollectionPage",
+  {% if collection.description != blank %}
+    "description": {{ collection.description | strip_html | json }},
+  {% endif %}
+  {% if page_image %}
+    {% assign image_size = page_image.width | append: 'x' %}
+    "image": {
+      "@type": "ImageObject",
+      "height": {{ page_image.height | json }},
+      "url": {{ page_image | img_url: image_size | prepend: "https:" | json }},
+      "width": {{ page_image.width | json }}
+    },
+  {% endif %}
+  "name": {{ collection.title | json }}
+}
+</script>
+{% schema %}
+
+
+
+
+
+  {
+    "name": "Product grid",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Filtering and sorting"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sidebar",
+        "label": "Enable filter",
+        "default": true,
+        "info": "Allow your customers to filter collections and search results by product availability, price, color, and more. [Customize filters](/admin/menus)"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapsed",
+        "label": "Collapse filters",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "filter_style",
+        "label": "Filter style",
+        "default": "sidebar",
+        "options": [
+          {
+            "value": "sidebar",
+            "label": "Sidebar"
+          },
+          {
+            "value": "drawer",
+            "label": "Drawer"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_color_swatches",
+        "label": "Enable color swatches",
+        "info": "[View setup instructions](https://archetypethemes.co/blogs/impulse/how-do-i-set-up-color-swatches)"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sort",
+        "label": "Show sort options",
+        "default": true
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection_description",
+        "name": "Collection description",
+        "limit": 1
+      },
+      {
+        "type": "product_grid",
+        "name": "Products",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "enable_collection_count",
+            "label": "Enable collection count",
+            "default": true
+          },
+          {
+            "type": "range",
+            "id": "per_row",
+            "label": "Products per row",
+            "default": 4,
+            "min": 2,
+            "max": 5,
+            "step": 1
+          },
+          {
+            "type": "range",
+            "id": "rows_per_page",
+            "label": "Rows per page",
+            "default": 7,
+            "min": 3,
+            "max": 20,
+            "step": 1
+          },
+          {
+            "type": "checkbox",
+            "id": "mobile_flush_grid",
+            "label": "Flush grid on mobile",
+            "default": false
+          }
+        ],
+        "limit": 1
+      },
+      {
+        "type": "subcollections",
+        "name": "Subcollections",
+        "settings": [
+          {
+            "type": "paragraph",
+            "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/expanse/how-do-i-create-subcollections)"
+          },
+          {
+            "type": "range",
+            "id": "subcollections_per_row",
+            "label": "Subcollections per row",
+            "default": 5,
+            "min": 2,
+            "max": 5,
+            "step": 1
+          }
+        ],
+        "limit": 1
+      },
+      {
+        "name": "Banner image 2",
+        "type": "collection_banner_product", 
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "1800 x 1000px recommended"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image",
+            "info": "1024 x 747px recommended"
+          },
+          {
+            "type": "checkbox",
+            "id": "image_darken",
+            "label": "Darken image",
+            "default": false
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Heading"
+          },
+          {
+            "type": "url",
+            "id": "text_link",
+            "label": "link"
+          },
+          {
+            "type": "color",
+            "id": "desk_color",
+            "label": "Title color"
+          },
+          {
+            "type": "select",
+            "id": "text_position",
+            "label": "Text position",
+            "options": [
+              {
+                "value": "top-left",
+                "label": "Top Left"
+              },
+              {
+                "value": "bottom-left",
+                "label": "Bottom Left"
+              },
+              {
+                "value": "top-right",
+                "label": "Top Right"
+              },
+              {
+                "value": "bottom-right",
+                "label": "Bottom Right"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "id": "position",
+            "label": "Position"
+          },
+          {
+            "type": "checkbox",
+            "id": "text_below_image",
+            "label": "Show text below image",
+            "default": true
+          },
+          {
+            "type": "color",
+            "id": "mobile_text_color",
+            "label": "Text"
+          }
+        ]
+      }
+    ]
+
+  }
+{% endschema %}

@@ -1,0 +1,146 @@
+<div class="sp-fit-gd-4-col-main">
+  <div class="sp-fit-gd-4-col-inn">
+		<div class="sp-fit-gd-pro-specification" id="macbook-pro">
+    
+                   
+          {%if section.settings.title != blank %}
+			<h3>{{section.settings.title}}</h3>
+          {%endif%}
+          
+          
+          {%if section.settings.section-includes != blank %}          
+            <p><b>Includes the following:</b></p>
+			<h4>{{section.settings.section-includes}}</h4>
+          {%endif%}
+
+            <h4>Specifications:</h4>          
+            <div class="sp-fit-gd-pro-specification-tbl">	
+              <table>        		
+                    <thead>
+                        <tr>
+                            <th>Model Name</th>
+                            <th></th>
+                            <th>Screen Size</th>
+                            <th>Model ID</th>
+                            <th>Peripheral Connections</th>
+                            <th>Compatible Speck Case(s)</th>
+                            <th>Compatible Speck Sleeve(s)</th>
+                        </tr>
+                    </thead>   
+                    <tbody>
+                
+             
+                      
+                {%for block in section.blocks %}
+                        {%if block.type == 'list-products-blocks'%}
+                        <tr>
+                            <td data-label="Model Name"><b>{{block.settings.model-name}}</b></td>
+                            <td data-label=""><img src="{{block.settings.product_image | img_url: 'master'}}" /></td>
+                            <td data-label="Screen Size">{{block.settings.screen-size}}</td>
+                            <td data-label="Model Number">{{block.settings.model-number}}</td>
+                            <td data-label="Connections">{{block.settings.connections}}</td>
+                            {% if block.settings.available == true %}
+                            <td data-label=""><em>Cases are no longer available for this device.</em></td>
+                            {% else %}
+                            <td data-label=""><a href="{{block.settings.product_link}}" class="sp-bl-lined-btn">See Cases</a></td>
+                            {% endif %}
+                            {% if block.settings.available-sleeve == true %}
+                            <td data-label=""><em>There are currently no sleeves available for this model.</em></td>
+                            {% else %}
+                            <td data-label=""><a href="{{block.settings.sleeve_link}}" class="sp-bl-lined-btn">See Sleeves</a></td>
+                            {% endif %}
+                        </tr>
+                 {%endif%}
+                     
+             {%endfor%}
+                      
+                    </tbody>				
+              </table>
+          </div>
+          
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "MacBook Pro Section",
+    "settings": [   
+    
+       {
+
+   "type": "text",
+   "id": "title",
+   "label": "Heading"
+
+ },
+{
+   "type": "html",
+   "id": "section-includes",
+   "label": "Includes These Devices:"
+ }    
+   ],
+"blocks":[
+
+{
+"type": "list-products-blocks",
+"name":"List Products",
+      "settings": [
+
+ {
+   "type": "text",
+   "id": "model-name",
+   "label": "Model Name"
+ },
+  {
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Product Image (940px x 900px)"
+ },
+ {
+   "type": "text",
+   "id": "screen-size",
+   "label": "Screen Size"
+ },
+ {
+   "type": "text",
+   "id": "model-number",
+   "label": "Model ID"
+ },
+{
+   "type": "html",
+   "id": "connections",
+   "label": "Peripheral Connections"
+ },
+{
+	"type": "checkbox",
+	"id": "available",
+	"label": "No Longer Available?",
+	"default": false
+},
+{
+   "type": "url",
+   "id": "product_link",
+   "label": "Product Link"
+
+ },
+{
+	"type": "checkbox",
+	"id": "available-sleeve",
+	"label": "Sleeve No Longer Available?",
+	"default": false
+},
+{
+   "type": "url",
+   "id": "sleeve_link",
+   "label": "Sleeve Link"
+
+ }
+
+]
+}
+
+  ]
+
+  }
+{% endschema %}

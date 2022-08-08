@@ -1,0 +1,318 @@
+<div class="Traditional-Columns">
+   <div class="Column-one-and-two">
+     <div class="sp-trd-lwr-link-icon">
+     {%if section.settings.imageOne != blank %}
+     <img class="lazyload" data-src="{{section.settings.imageOne | img_url: 'original'}}" alt="{{ section.settings.imageOne.alt }}">
+     {%endif%}
+     </div>
+     <ul class="Column-one">
+       {%for block in section.blocks%}
+     
+       {%if block.type == 'first-column'%} 
+         
+         {%if block.settings.title != blank %}
+         
+       <li>
+         {%if block.settings.title-link != blank %}
+         <a hrerf="{{block.settings.title-link}}">
+          {%endif%} 
+           {{ block.settings.title }}
+         {%if block.settings.title-link != blank %}
+         </a>
+         {%endif%}
+       </li>
+         {%endif%}
+           
+       {%endif%}
+      
+     {%endfor%}
+     </ul> 
+     
+          <ul class="Column-two">
+       {%for block in section.blocks%}
+     
+       {%if block.type == 'second-section'%} 
+         
+         {%if block.settings.title != blank %}
+         
+       <li>
+         {%if block.settings.title-link != blank %}
+         <a hrerf="{{block.settings.title-link}}">
+          {%endif%} 
+           {{ block.settings.title }}
+         {%if block.settings.title-link != blank %}
+         </a>
+         {%endif%}
+       </li>
+         {%endif%}
+           
+       {%endif%}
+      
+     {%endfor%}
+     </ul> 
+   </div>
+  
+  
+    <div class="Column-three-and-four">
+     <div class="sp-trd-lwr-link-icon">
+      {%if section.settings.imageOne != blank %}
+     <img class="lazyload" data-src="{{section.settings.imageTwo | img_url: 'original'}}" alt="{{ section.settings.imageTwo.alt }}">
+     {%endif%}
+      </div>
+     <ul class="Column-third">
+       {%for block in section.blocks%}
+     
+       {%if block.type == 'third-section'%} 
+         
+         {%if block.settings.title != blank %}
+         
+       <li>
+         {%if block.settings.title-link != blank %}
+         <a hrerf="{{block.settings.title-link}}">
+          {%endif%} 
+           {{ block.settings.title }}
+         {%if block.settings.title-link != blank %}
+         </a>
+         {%endif%}
+       </li>
+         {%endif%}
+           
+       {%endif%}
+      
+     {%endfor%}
+     </ul> 
+     
+          <ul class="Column-fourth">
+       {%for block in section.blocks%}
+     
+       {%if block.type == 'fourth-section'%} 
+         
+         {%if block.settings.title != blank %}
+         
+       <li>
+         {%if block.settings.title-link != blank %}
+         <a hrerf="{{block.settings.title-link}}">
+          {%endif%} 
+           {{ block.settings.title }}
+         {%if block.settings.title-link != blank %}
+         </a>
+         {%endif%}
+       </li>
+         {%endif%}
+           
+       {%endif%}
+      
+     {%endfor%}
+     </ul> 
+   </div>
+</div>
+<div class="Traditional-Columns-bot-era">
+  <div class="Traditional-Columns-bot-era-left">
+    <ul>
+     {%for block in section.blocks%} 
+      {%if block.type == 'left-column_image'%}
+      {%assign lcotentsize = block.settings.left_text  | size %}
+      <li {%if lcotentsize <=  3 %} class="traditional-col-ref-icon-txt"  {%endif%}>
+        <div class="Traditional-Columns-bot-era-box">
+          {%if block.settings.left_image != blank %}
+          <div class="Traditional-Columns-bot-era-img">
+             <img class="lazyload" data-src="{{block.settings.left_image | img_url }}"  alt="{{ block.settings.left_image.alt }}"/>
+          </div>
+          {%endif%}
+          {%if block.settings.left_text != blank %}
+          <div class="Traditional-Columns-bot-era-cont">
+            <p>{{block.settings.left_text}}</p>
+          </div>
+          {%endif%}
+        </div>
+      </li>
+       {%endif%}
+     {%endfor%} 
+    </ul>
+  </div>
+  <div class="Traditional-Columns-bot-era-right">
+  	<ul>
+        {%for block in section.blocks%} 
+      {%if block.type == 'right-column_image'%}
+      {%assign cotentsize = block.settings.right_text  | size %}
+      <li {%if cotentsize <=  3 %} class="traditional-col-ref-icon-txt"  {%endif%}>
+          <div class="Traditional-Columns-bot-era-box">
+          {%if block.settings.right_image != blank %}
+          <div class="Traditional-Columns-bot-era-img">
+             <img class="lazyload" data-src="{{block.settings.right_image | img_url }}"  alt="{{ block.settings.right_image.alt }}"/>
+          </div>
+          {%endif%}
+          {%if block.settings.right_text != blank %}
+          <div class="Traditional-Columns-bot-era-cont">
+            <p>{{block.settings.right_text}}</p>
+          </div>
+          {%endif%}
+        </div>
+      </li>
+     {%endif%}
+     {%endfor%} 
+    </ul>
+  </div>  
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Traditional Guide",
+    "settings": [
+   
+      			{
+                  "id": "imageOne",
+                  "type": "image_picker",
+                  "label": "Image One(240x60)"
+                },
+                {
+                  "id": "imageTwo",
+                  "type": "image_picker",
+                  "label": "Image Two(240x60)"
+                }
+      ],
+"blocks": [
+            {
+              "type": "first-column",
+              "name": "First Column",
+              "settings": [
+                  {
+                  "id": "title",
+                  "type": "text",
+                  "label": "title"
+                },
+                {
+                  "id": "title-link",
+                  "type": "url",
+                  "label": "Title Link"
+                }
+              ]
+            },
+            {
+              "type": "second-section",
+              "name": "Second column",
+              "settings": [
+                {
+                  "id": "title",
+                  "type": "text",
+                  "label": "title"
+                },
+				{
+                  "id": "title-link",
+                  "type": "url",
+                  "label": "Title Link"
+                }
+              ]
+            },
+                   {
+              "type": "third-section",
+              "name": "Third column",
+              "settings": [
+                {
+                  "id": "title",
+                  "type": "text",
+                  "label": "title"
+                },
+				{
+                  "id": "title-link",
+                  "type": "url",
+                  "label": "Title Link"
+                }
+              ]
+            },
+
+			     {
+              "type": "fourth-section",
+              "name": "Fourth column",
+              "settings": [
+                {
+                  "id": "title",
+                  "type": "text",
+                  "label": "title"
+                },
+				{
+                  "id": "title-link",
+                  "type": "url",
+                  "label": "Title Link"
+                }
+              ]
+            },  
+            {
+              "type": "left-column_image",
+              "name": "Left Column Image text",
+              "settings": [
+                {
+                  "id": "left_image",
+                  "type": "image_picker",
+                  "label": "Image (100x100)"
+                },
+                {
+                  "id": "left_text",
+                  "type": "html",
+                  "label": "Text"
+                }
+                
+              ]
+            },
+            {
+              "type": "right-column_image",
+              "name": "Right Column Image text",
+              "settings": [
+                {
+                  "id": "right_image",
+                  "type": "image_picker",
+                  "label": "Image(100x100)"
+                },
+                {
+                  "id": "right_text",
+                  "type": "html",
+                  "label": "Text"
+                }
+                
+              ]
+            },
+               {
+              "type": "Icon-list",
+              "name": "Icon List",
+              "settings": [
+                {
+                  "id": "icon_image_one",
+                  "type": "image_picker",
+                  "label": "Icon Image(100x100)"
+                },
+                {
+                  "id": "icon_text_one",
+                  "type": "text",
+                  "label": "Text"
+                },
+                {
+                  "id": "icon_image_two",
+                  "type": "image_picker",
+                  "label": "Icon Image(100x100)"
+                },
+                {
+                  "id": "icon_text_two",
+                  "type": "text",
+                  "label": "Text"
+                },
+				   {
+                  "id": "icon_image_three",
+                  "type": "image_picker",
+                  "label": "Icon Image(100x100)"
+                },
+                {
+                  "id": "icon_text_three",
+                  "type": "text",
+                  "label": "Text"
+                }
+                
+              ]
+            }
+          
+
+       ]
+    }
+{% endschema %}
+

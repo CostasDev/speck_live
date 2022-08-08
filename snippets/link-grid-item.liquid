@@ -1,0 +1,53 @@
+{%- liquid
+  unless grid_item_width
+    assign grid_item_width = 'small--one-half medium-up--one-third'
+  endunless
+
+  unless background_position
+    assign background_position = 'center center'
+  endunless
+
+  if title != blank
+    assign title_output = title
+  
+  endif
+-%}
+
+<li class="grid__item {{ grid_item_width }}">
+  <div class="collection-item collection-item--{{ settings.collection_grid_style }}" data-aos="row-of-{{ per_row }}" data-url="{{ collection }}">
+    {%- if collection.empty? -%}
+      {%- capture placeholder -%}collection-{% cycle 1, 2, 3, 4, 5, 6 %}{%- endcapture -%}
+      <div class="collection-image collection-image--{{ settings.collection_grid_shape }} collection-image--placeholder">{{ placeholder | placeholder_svg_tag: 'placeholder-svg' }}</div>
+    {%- else -%}
+      <div class="collection-image collection-image--{{ settings.collection_grid_shape }} image-wrap">
+        {%- assign img_url = collection_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        <img
+          class="lazyload"
+          src=""
+          data-src="{{ img_url }}"
+          data-aspectratio="{{ collection_image.aspect_ratio }}"
+          data-widths="[360, 540]"
+          data-sizes="auto" 
+          width="{{collection_image.width}}" 
+          height="{{collection_image.height}}" 
+          alt="{{ collection_image.alt | escape }}"
+          style="object-position: {{ background_position }};">
+
+        <noscript>
+          <img class="lazyloaded" 
+            width="{{collection_image.width}}" 
+            height="{{collection_image.height}}" 
+            src="{{ collection_image | img_url: '400x' }}"
+            alt="{{ collection_image.alt | escape }}">
+        </noscript>
+      </div>
+    {%- endif -%}
+
+      <a href="{{ collection }}">
+        <div class="collection-item__title collection-item__title--{{ settings.collection_grid_style }} collection-item__title--{{ settings.type_collection_font }} collection-item__title--{{ settings.collection_grid_text_align }}">
+          <h2 class="normal-weight">{{ title_output }}</h2>
+          <span class="small-size left-chevron">Explore</span>
+        </div>
+      </a>
+  </div>
+</li>

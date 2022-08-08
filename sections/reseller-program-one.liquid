@@ -1,0 +1,144 @@
+<div class="sp-inn-pg-tp-secndry-nav">
+  {% assign submenu = linklists[section.settings.second_menu] %}
+	<ul>
+      {% for link in submenu.links %}
+		<li {%if forloop.index == 1 %}class="active"{%endif%}><a href="{{link.url}}">{{link.title}}</a></li>
+	  {%endfor%}	
+	</ul>
+</div>
+<div class="sp-bs-sol-top-banner sp-bs-sol-top-banner-res-prgrm sp-bs-sol-top-banner-black-lyr">
+  {%if section.settings.banner_image != blank %}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url : 'master'}}')"></div>
+  {%endif%}
+  
+  {%if section.settings.banner_text != blank %}
+	<div class="sp-bs-sol-top-banner-cont">
+		<h3>{{section.settings.banner_text}}</h3>
+	</div>
+  {%endif%}
+</div>
+<div class="sp-inn-pg-res-prgrm-main">
+	<div class="sp-inn-pg-res-prgrm-top">
+ {%if section.settings.banner_bottom_text != blank %}
+      <p>{{section.settings.banner_bottom_text}}</p>
+ {%endif%}	
+    <div class="sp-inn-pg-res-prgrm-top-row">
+		{%for block in section.blocks %}	
+      		<div class="sp-inn-pg-res-prgrm-top-block">
+				<h3>{{block.settings.block_heading}}</h3>
+				<p>{{block.settings.block_text}}</p>
+			</div>
+		{%endfor%}	
+		</div>
+      </div>
+      <div class="sp-cst-container">
+        <div class="sp-inn-pg-res-prgrm-lined-box">
+          {%if section.settings.form_heading != blank %}
+          <h3 class="lined-box-cross-title"><span>{{section.settings.form_heading}}</span></h3>
+          {%endif%}
+         
+          {%if section.settings.form_name != blank %}
+          <h3>{{section.settings.form_name}}</h3>
+         {%endif%}
+          
+         {%if section.settings.form_description != blank %} 
+          <p class="sp-inn-pg-res-prgrm-lined-sub-txt">{{section.settings.form_description}}</p>
+          {%endif%}
+          
+        {%include 'reseller-page-form'%}
+          
+          <div class="sp-inn-pg-res-prgrm-form-txt">
+               {%if section.settings.form_description != blank %} 
+            {{section.settings.form_bottom_details}}
+            {%endif%}
+          </div>
+        </div>
+        {%if section.settings.bottom_info_section != blank %} 
+        <div class="sp-bs-sol-email-main sp-inn-pg-res-prgrm-mail-box">
+          <p>{{section.settings.bottom_info_section}}</p>
+        </div>
+        {%endif%}
+      </div>
+</div>
+
+
+
+
+{% schema %}
+  {
+    "name": "Reseller Program One",
+    "settings": [
+       {
+		"type": "link_list",
+        "id": "second_menu",
+        "label": "Second Menu"
+
+      },
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+     {
+		"type": "html",
+        "id": "banner_bottom_text",
+        "label": "Banner Bottom Text"
+      },
+   {
+   "type": "text",
+   "id": "form_heading",
+   "label": "Form Heading"
+ },
+ {
+   "type": "text",
+   "id": "form_name",
+   "label": "Form Name"
+ },
+{
+   "type": "html",
+   "id": "form_description",
+   "label": "Form Description"
+ },
+{
+   "type": "html",
+   "id": "form_bottom_details",
+   "label": "Form Bottom Details"
+ },
+ {
+   "type": "html",
+   "id": "bottom_info_section",
+   "label": "Info  section"
+ }    
+      
+   ],
+"blocks":
+[
+{
+"type": "text-blocks",
+"name":"Text Blocks",
+      "settings": [
+  {
+
+   "type": "text",
+   "id": "block_heading",
+   "label": "Block Heading"
+
+ },
+ {
+   "type": "html",
+   "id": "block_text",
+   "label": "Block Text"
+
+ }
+]
+}
+  ]
+
+  }
+{% endschema %}

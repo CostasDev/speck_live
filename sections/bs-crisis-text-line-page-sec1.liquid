@@ -1,0 +1,64 @@
+<div class="bs-ctl-sec1-main">
+  <div class="page-width">
+    <div class="bs-ctl-sec1-wrapper">
+      {%- if section.settings.text1 != blank -%}
+        <p class="bs-ctl-sec1-text1">
+        {{section.settings.text1}}
+        </p>
+      {%- endif -%}
+      <div class="bs-ctl-sec1-row">
+        <div class="bs-ctl-sec1-block">
+          <img class="lazyload ctl-sticker" src="{{ section.settings.image | img_url: 'master' }}" />
+        </div>
+        <div class="bs-ctl-sec1-block">
+          {%- if section.settings.text2 != blank -%}
+            <p>
+            {{section.settings.text2}}
+            </p>
+          {%- endif -%}    
+          {%- if section.settings.link_text != blank -%}
+            <a href="{{ section.settings.link }}" class="bs-ctl-sec1-btn btn ctl">
+              {{ section.settings.link_text }}
+            </a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "BS Crisis Text Line Sec1",
+    "class": "bs_ctl_sec1",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "text1",
+        "label": "Text 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "info": "620 * 680px"
+      },
+      {
+        "type": "textarea",
+        "id": "text2",
+        "label": "Text 2"
+      },
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Button text",
+        "default": "Optional button"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Button link"
+      }
+    ]
+  }
+{% endschema %}

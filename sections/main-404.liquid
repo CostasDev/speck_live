@@ -1,0 +1,31 @@
+<div class="sp-pg-404-upr-main">
+	<div class="sp-pg-404-upr-inn">
+		<div class="sp-pg-404-upr-img"><img class="lazyload" data-src="https://cdn.shopify.com/s/files/1/0325/4252/3523/files/space.svg?v=1643778895" /></div>
+		<h2>Uh, Oh.. There’s a Problem</h2>
+      <p>The page you are looking for is not here. Why don’t you <a href="/">go back to the homepage</a> and browse from there? Or explore our collections.</p>
+	</div>
+</div>
+<div class="sp-pg-404-lwr-main">
+	<div class="sp-pg-404-lwr-inn">
+		<!--collection block here-->
+	</div>
+</div>
+
+
+{% comment %}
+<div class="page-width page-content">
+  <header class="section-header section-header--404">
+    <h1 class="section-header__title">{{ 'general.404.title' | t }}</h1>
+    <div class="rte text-spacing">
+      {{ 'general.404.subtext_html' | t: url: routes.root_url }}
+    </div>
+  </header>
+</div>
+{% endcomment %}
+
+{% schema %}
+  {
+    "name": "404 page",
+    "class": "cstm_404_pge"
+  }
+{% endschema %}

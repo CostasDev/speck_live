@@ -1,0 +1,1717 @@
+#tagalys-ss{
+    position:absolute
+}
+#tagalys-ss html,#tagalys-ss body,#tagalys-ss div,#tagalys-ss span,#tagalys-ss applet,#tagalys-ss object,#tagalys-ss iframe,#tagalys-ss h1,#tagalys-ss h2,#tagalys-ss h3,#tagalys-ss h4,#tagalys-ss h5,#tagalys-ss h6,#tagalys-ss p,#tagalys-ss blockquote,#tagalys-ss pre,#tagalys-ss a,#tagalys-ss abbr,#tagalys-ss acronym,#tagalys-ss address,#tagalys-ss big,#tagalys-ss cite,#tagalys-ss code,#tagalys-ss del,#tagalys-ss dfn,#tagalys-ss em,#tagalys-ss img,#tagalys-ss ins,#tagalys-ss kbd,#tagalys-ss q,#tagalys-ss s,#tagalys-ss samp,#tagalys-ss small,#tagalys-ss strike,#tagalys-ss strong,#tagalys-ss sub,#tagalys-ss sup,#tagalys-ss tt,#tagalys-ss var,#tagalys-ss b,#tagalys-ss u,#tagalys-ss i,#tagalys-ss center,#tagalys-ss dl,#tagalys-ss dt,#tagalys-ss dd,#tagalys-ss ol,#tagalys-ss ul,#tagalys-ss li,#tagalys-ss fieldset,#tagalys-ss form,#tagalys-ss label,#tagalys-ss legend,#tagalys-ss table,#tagalys-ss caption,#tagalys-ss tbody,#tagalys-ss tfoot,#tagalys-ss thead,#tagalys-ss tr,#tagalys-ss th,#tagalys-ss td,#tagalys-ss article,#tagalys-ss aside,#tagalys-ss canvas,#tagalys-ss details,#tagalys-ss embed,#tagalys-ss figure,#tagalys-ss figcaption,#tagalys-ss footer,#tagalys-ss header,#tagalys-ss hgroup,#tagalys-ss menu,#tagalys-ss nav,#tagalys-ss output,#tagalys-ss ruby,#tagalys-ss section,#tagalys-ss summary,#tagalys-ss time,#tagalys-ss mark,#tagalys-ss audio,#tagalys-ss video{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline
+}
+#tagalys-ss article,#tagalys-ss aside,#tagalys-ss details,#tagalys-ss figcaption,#tagalys-ss figure,#tagalys-ss footer,#tagalys-ss header,#tagalys-ss hgroup,#tagalys-ss menu,#tagalys-ss nav,#tagalys-ss section{
+    display:block
+}
+#tagalys-ss body{
+    line-height:1
+}
+#tagalys-ss ol,#tagalys-ss ul{
+    list-style:none
+}
+#tagalys-ss blockquote,#tagalys-ss q{
+    quotes:none
+}
+#tagalys-ss blockquote:before,#tagalys-ss blockquote:after,#tagalys-ss q:before,#tagalys-ss q:after{
+    content:'';
+    content:none
+}
+#tagalys-ss table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+.rtl #tagalys-ss .tagalys-section li{
+    text-align:initial
+}
+#tagalys-ss{
+    z-index:100000;
+    display:inline-block;
+    width:auto;
+    min-width:300px;
+    border-radius:3px;
+    background:#fff;
+    box-shadow:0 0 0 1px rgba(0,0,0,0.05),0 4px 6px rgba(0,0,0,0.1),0 6px 16px rgba(0,0,0,0.2);
+    font-size:14px;
+    text-align:left;
+    overflow:hidden
+}
+#tagalys-ss h3{
+    color:#666;
+    font-weight:700;
+    font-size:13px
+}
+#tagalys-ss a{
+    line-height:20px;
+    color:#2196f3
+}
+#tagalys-ss .tagalys-navigate-active{
+    background:#f6f6f6
+}
+#tagalys-ss .tagalys-section{
+    padding:5px 0;
+    border-bottom:1px solid #eee
+}
+#tagalys-ss .tagalys-section:last-child{
+    border-bottom:0
+}
+#tagalys-ss .tagalys-section li{
+    padding:5px 10px;
+    width:1000px;
+    cursor:pointer;
+    width:auto;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+#tagalys-ss .tagalys-section li .highlight{
+    padding:0.1em;
+    border-radius:2px;
+    background:#d2ebf9
+}
+#tagalys-ss .tagalys-section li .category_separator{
+    display:inline-block;
+    padding:0 5px
+}
+#tagalys-ss .tagalys-section li .search-suggestions-close-btn{
+    background:none;
+    border:none;
+    float:right;
+    padding:0px;
+    outline:none !important
+}
+#tagalys-ss .tagalys-section li .search-suggestions-close-btn svg{
+    height:16px;
+    display:inline-block;
+    fill:#333;
+    position:relative;
+    top:2px
+}
+#tagalys-ss .tagalys-section li .search-suggestions-left-icon{
+    height:16px;
+    fill:#333;
+    font-size:12px;
+    vertical-align:middle;
+    padding-right:5px;
+    display:inline-block;
+    cursor:pointer
+}
+#tagalys-ss .tagalys-section li .classification-item{
+    font-size:12px;
+    display:inline-block
+}
+#tagalys-ss .tagalys-section li svg.classification-item{
+    margin-left:10px
+}
+#tagalys-ss .tagalys-section li svg.classification-item{
+    height:16px;
+    fill:#999;
+    vertical-align:middle;
+    padding-right:5px;
+    display:inline-block;
+    position:relative;
+    top:-1px;
+    cursor:pointer
+}
+#tagalys-ss .tagalys-section li a.classification-item,#tagalys-ss .tagalys-section li .classification-item.category_separator{
+    color:#999;
+    line-height:16px;
+    display:inline-block
+}
+#tagalys-ss .tagalys-section li a.in:hover ~ a.in,#tagalys-ss .tagalys-section li a.in:hover ~ .classification-item.category_separator{
+    color:#ddd
+}
+#tagalys-ss .tagalys-hint .clickable{
+    cursor:pointer
+}
+#tagalys-ss .tagalys-hint .clickable:hover{
+    background:#f6f6f6
+}
+#tagalys-ss .tagalys-searches li{
+    cursor:pointer
+}
+#tagalys-ss .tagalys-searches li:hover{
+    background:#f6f6f6
+}
+#tagalys-ss .tagalys-products li:hover{
+    background:#f6f6f6
+}
+#tagalys-ss .tagalys-products li a{
+    display:block;
+    overflow:hidden;
+    clear:both;
+    height:40px;
+    position:relative
+}
+#tagalys-ss .tagalys-products li a .image-container{
+    width:30px;
+    overflow:hidden;
+    position:absolute;
+    background:#fff;
+    top:0;
+    left:0
+}
+#tagalys-ss .tagalys-products li a .image-container:before{
+    content:"";
+    float:left;
+    padding-bottom:133%
+}
+#tagalys-ss .tagalys-products li a .image-container:after{
+    content:"";
+    display:table;
+    clear:both
+}
+#tagalys-ss .tagalys-products li a .image-container .image{
+    max-height:100%;
+    max-width:100%;
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto
+}
+#tagalys-ss .tagalys-products li a .details{
+    display:block;
+    float:left;
+    padding-left:40px
+}
+#tagalys-ss .tagalys-products li a .details .name,#tagalys-ss .tagalys-products li a .details .combined-price{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis
+}
+#tagalys-ss .tagalys-products li a .details .name{
+    height:22px;
+    line-height:24px
+}
+#tagalys-ss .tagalys-products li a .details .combined-price{
+    height:18px;
+    line-height:16px
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .price{
+    position:relative;
+    display:inline-block;
+    color:#999;
+    margin-left:10px;
+    font-size:12px
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .strike{
+    position:relative;
+    display:inline-block
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .strike::before{
+    content:'';
+    border-bottom:1px solid #999;
+    width:100%;
+    position:absolute;
+    right:0;
+    top:45%
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .cross{
+    position:relative;
+    display:inline-block
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .cross::before,#tagalys-ss .tagalys-products li a .details .combined-price .cross::after{
+    content:'';
+    width:100%;
+    position:absolute;
+    right:0;
+    top:50%
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .cross::before{
+    border-bottom:2px solid #999;
+    -webkit-transform:skewY(-10deg);
+    transform:skewY(-10deg)
+}
+#tagalys-ss .tagalys-products li a .details .combined-price .cross::after{
+    border-bottom:2px solid #999;
+    -webkit-transform:skewY(10deg);
+    transform:skewY(10deg)
+}
+#tagalys-ss .tagalys-powered-by-tagalys{
+    font-size:11px;
+    padding:0 0
+}
+#tagalys-ss .tagalys-powered-by-tagalys li{
+    padding:0 0
+}
+#tagalys-ss .tagalys-powered-by-tagalys a{
+    display:block;
+    padding:5px 10px;
+    color:#666
+}
+@media (max-width: 767px){
+    #tagalys-ss{
+        width:90%
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li:nth-child(n+5){
+        display:none
+    }
+}
+@media (min-width: 768px){
+    #tagalys-ss{
+        width:700px
+    }
+    #tagalys-ss .tagalys-section{
+        border-bottom:0
+    }
+    #tagalys-ss .tagalys-hint{
+        border-bottom:1px solid #eee
+    }
+    #tagalys-ss .tagalys-powered-by-tagalys{
+        clear:both;
+        border-top:1px solid #eee
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li{
+        width:25%;
+        float:left;
+        padding:0
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li:nth-child(n+9){
+        display:none
+    }
+    #tagalys-ss.with-widget-products .tagalys-products .tagalys-product-link{
+        height:auto;
+        padding:5px
+    }
+    #tagalys-ss.with-widget-products .tagalys-products .tagalys-product-link .image-container{
+        display:block;
+        position:relative;
+        width:100%;
+        float:none
+    }
+    #tagalys-ss.with-widget-products .tagalys-products .tagalys-product-link .details{
+        float:none;
+        padding:0
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-searches{
+        width:420px;
+        float:right;
+        padding-right:5px;
+        box-sizing:border-box
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products{
+        width:280px;
+        float:left;
+        padding-left:5px;
+        overflow:hidden;
+        box-sizing:border-box;
+        border-right:1px solid #eee
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products li{
+        width:50%
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products li:nth-child(n+5){
+        display:none
+    }
+}
+@media (min-width: 1000px){
+    #tagalys-ss{
+        width:900px
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li{
+        width:20%
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li:nth-child(n+5){
+        display:block
+    }
+    #tagalys-ss.with-widget-products .tagalys-products li:nth-child(n+11){
+        display:none
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-searches{
+        width:400px
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products{
+        width:500px
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products li{
+        width:33%
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products li:nth-child(n+5){
+        display:block
+    }
+    #tagalys-ss.with-widget-searches.with-widget-products .tagalys-products li:nth-child(n+7){
+        display:none
+    }
+}
+
+@keyframes spin{
+    0%{
+        transform:rotate(0deg)
+    }
+    100%{
+        transform:rotate(360deg)
+    }
+}
+body.tagalys-no_scroll{
+    overflow:hidden
+}
+.tagalys-namespace.tagalys-html-editor-content strong,.tagalys-namespace .tagalys-html-editor-content strong,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content strong,#tagalys-namespace .tagalys-html-editor-content strong{
+    font-weight:bold
+}
+.tagalys-namespace.tagalys-html-editor-content em,.tagalys-namespace .tagalys-html-editor-content em,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content em,#tagalys-namespace .tagalys-html-editor-content em{
+    font-style:italic
+}
+.tagalys-namespace.tagalys-html-editor-content h1,.tagalys-namespace.tagalys-html-editor-content h2,.tagalys-namespace.tagalys-html-editor-content h3,.tagalys-namespace.tagalys-html-editor-content h4,.tagalys-namespace.tagalys-html-editor-content h5,.tagalys-namespace.tagalys-html-editor-content h6,.tagalys-namespace .tagalys-html-editor-content h1,.tagalys-namespace .tagalys-html-editor-content h2,.tagalys-namespace .tagalys-html-editor-content h3,.tagalys-namespace .tagalys-html-editor-content h4,.tagalys-namespace .tagalys-html-editor-content h5,.tagalys-namespace .tagalys-html-editor-content h6,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h1,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h2,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h3,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h4,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h5,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h6,#tagalys-namespace .tagalys-html-editor-content h1,#tagalys-namespace .tagalys-html-editor-content h2,#tagalys-namespace .tagalys-html-editor-content h3,#tagalys-namespace .tagalys-html-editor-content h4,#tagalys-namespace .tagalys-html-editor-content h5,#tagalys-namespace .tagalys-html-editor-content h6{
+    font-weight:bold;
+    margin-bottom:0.5em
+}
+.tagalys-namespace.tagalys-html-editor-content h1,.tagalys-namespace .tagalys-html-editor-content h1,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h1,#tagalys-namespace .tagalys-html-editor-content h1{
+    font-size:2em
+}
+.tagalys-namespace.tagalys-html-editor-content h2,.tagalys-namespace .tagalys-html-editor-content h2,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h2,#tagalys-namespace .tagalys-html-editor-content h2{
+    font-size:1.8em
+}
+.tagalys-namespace.tagalys-html-editor-content h3,.tagalys-namespace .tagalys-html-editor-content h3,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h3,#tagalys-namespace .tagalys-html-editor-content h3{
+    font-size:1.6em
+}
+.tagalys-namespace.tagalys-html-editor-content h4,.tagalys-namespace .tagalys-html-editor-content h4,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h4,#tagalys-namespace .tagalys-html-editor-content h4{
+    font-size:1.4em
+}
+.tagalys-namespace.tagalys-html-editor-content h5,.tagalys-namespace .tagalys-html-editor-content h5,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h5,#tagalys-namespace .tagalys-html-editor-content h5{
+    font-size:1.2em
+}
+.tagalys-namespace.tagalys-html-editor-content h6,.tagalys-namespace .tagalys-html-editor-content h6,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content h6,#tagalys-namespace .tagalys-html-editor-content h6{
+    font-size:1em
+}
+.tagalys-namespace.tagalys-html-editor-content ol,.tagalys-namespace .tagalys-html-editor-content ol,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ol,#tagalys-namespace .tagalys-html-editor-content ol{
+    list-style:decimal
+}
+.tagalys-namespace.tagalys-html-editor-content ul,.tagalys-namespace .tagalys-html-editor-content ul,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ul,#tagalys-namespace .tagalys-html-editor-content ul{
+    list-style:disc
+}
+.tagalys-namespace.tagalys-html-editor-content ol,.tagalys-namespace.tagalys-html-editor-content ul,.tagalys-namespace .tagalys-html-editor-content ol,.tagalys-namespace .tagalys-html-editor-content ul,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ol,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ul,#tagalys-namespace .tagalys-html-editor-content ol,#tagalys-namespace .tagalys-html-editor-content ul{
+    display:block;
+    margin-left:1em;
+    margin-bottom:1em
+}
+.tagalys-namespace.tagalys-html-editor-content ol li,.tagalys-namespace.tagalys-html-editor-content ul li,.tagalys-namespace .tagalys-html-editor-content ol li,.tagalys-namespace .tagalys-html-editor-content ul li,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ol li,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content ul li,#tagalys-namespace .tagalys-html-editor-content ol li,#tagalys-namespace .tagalys-html-editor-content ul li{
+    display:block;
+    margin-left:1em;
+    display:list-item
+}
+.tagalys-namespace.tagalys-html-editor-content a,.tagalys-namespace .tagalys-html-editor-content a,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content a,#tagalys-namespace .tagalys-html-editor-content a{
+    text-decoration:underline
+}
+.tagalys-namespace.tagalys-html-editor-content sup,.tagalys-namespace .tagalys-html-editor-content sup,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content sup,#tagalys-namespace .tagalys-html-editor-content sup{
+    vertical-align:super;
+    font-size:smaller
+}
+.tagalys-namespace.tagalys-html-editor-content sub,.tagalys-namespace .tagalys-html-editor-content sub,#tagalys-namespace.tagalys-namespace .tagalys-html-editor-content sub,#tagalys-namespace .tagalys-html-editor-content sub{
+    vertical-align:sub;
+    font-size:smaller
+}
+.tagalys-namespace,#tagalys-namespace{
+    display:block;
+    font-size:13px;
+    line-height:1.2em;
+    text-align:left;
+    clear:both
+}
+.tagalys-namespace a,.tagalys-namespace p,.tagalys-namespace span,.tagalys-namespace h1,.tagalys-namespace h2,.tagalys-namespace h3,.tagalys-namespace h4,.tagalys-namespace h5,.tagalys-namespace h6,.tagalys-namespace label,.tagalys-namespace button,.tagalys-namespace input,.tagalys-namespace ol,.tagalys-namespace ul,.tagalys-namespace li,#tagalys-namespace a,#tagalys-namespace p,#tagalys-namespace span,#tagalys-namespace h1,#tagalys-namespace h2,#tagalys-namespace h3,#tagalys-namespace h4,#tagalys-namespace h5,#tagalys-namespace h6,#tagalys-namespace label,#tagalys-namespace button,#tagalys-namespace input,#tagalys-namespace ol,#tagalys-namespace ul,#tagalys-namespace li{
+    font-family:sans-serif;
+    font-size:1em;
+    line-height:1.2em;
+    color:#000
+}
+.tagalys-namespace a,#tagalys-namespace a{
+    cursor:pointer
+}
+.tagalys-namespace a *,#tagalys-namespace a *{
+    cursor:pointer
+}
+.tagalys-namespace a:hover,#tagalys-namespace a:hover{
+    color:#000
+}
+.tagalys-namespace h1,#tagalys-namespace h1{
+    font-size:1.2em;
+    margin-bottom:0.833em;
+    font-weight:bold
+}
+.tagalys-namespace p,#tagalys-namespace p{
+    margin-bottom:0.75em
+}
+.tagalys-namespace div,.tagalys-namespace section,.tagalys-namespace h1,.tagalys-namespace h2,.tagalys-namespace h3,.tagalys-namespace h4,.tagalys-namespace h5,.tagalys-namespace h6,.tagalys-namespace p,#tagalys-namespace div,#tagalys-namespace section,#tagalys-namespace h1,#tagalys-namespace h2,#tagalys-namespace h3,#tagalys-namespace h4,#tagalys-namespace h5,#tagalys-namespace h6,#tagalys-namespace p{
+    display:block
+}
+.tagalys-namespace div,#tagalys-namespace div{
+    box-sizing:border-box
+}
+.tagalys-namespace img,#tagalys-namespace img{
+    opacity:1;
+    transition:opacity 0.3s
+}
+.tagalys-namespace img[data-src],#tagalys-namespace img[data-src]{
+    opacity:0
+}
+.tagalys-namespace .tagalys-show-more-container .tagalys-show-more-content,#tagalys-namespace .tagalys-show-more-container .tagalys-show-more-content{
+    overflow:hidden
+}
+.tagalys-namespace .tagalys-show-more-container .tagalys-show-more-toggle,#tagalys-namespace .tagalys-show-more-container .tagalys-show-more-toggle{
+    display:block;
+    margin:1em 0
+}
+.tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+    display:block
+}
+.tagalys-namespace .tagalys-product-tiles,#tagalys-namespace .tagalys-product-tiles{
+    width:100%;
+    overflow:hidden
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link{
+    display:block;
+    border:1px solid #eee;
+    border-radius:3px;
+    padding:5px
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link:hover,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link:hover{
+    border-color:#ccc
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link.active,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link.active{
+    border-color:#666
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-images,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-images{
+    display:block;
+    overflow:hidden;
+    margin-bottom:5px
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-images .product-image-container,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-images .product-image-container{
+    width:50%;
+    float:left;
+    margin-bottom:0
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container{
+    margin-bottom:5px;
+    width:100%;
+    position:relative;
+    display:block
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container:before,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container:before{
+    content:"";
+    float:left;
+    padding-bottom:133%
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container:after,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container:after{
+    content:"";
+    display:table;
+    clear:both
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container img.product-image,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .product-image-container img.product-image{
+    display:block;
+    max-height:100%;
+    max-width:100%;
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto
+}
+.tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-name,#tagalys-namespace .my-feed-sections-carousel .my-feed-section-link .my-feed-section-name{
+    display:block;
+    text-align:center;
+    height:1.2em;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    padding:0 5px
+}
+.tagalys-namespace .tagalys-carousel-item,#tagalys-namespace .tagalys-carousel-item{
+    display:block
+}
+.tagalys-namespace .tagalys-product-tile,#tagalys-namespace .tagalys-product-tile{
+    display:block;
+    float:left;
+    text-align:center
+}
+.tagalys-namespace .tagalys-product-tile .product-link,#tagalys-namespace .tagalys-product-tile .product-link{
+    display:block
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image,#tagalys-namespace .tagalys-product-tile .product-link .product-image{
+    width:100%
+}
+.tagalys-namespace .tagalys-product-tile:hover .product-link .product-image-container.has-hover-image img.product-image,#tagalys-namespace .tagalys-product-tile:hover .product-link .product-image-container.has-hover-image img.product-image{
+    opacity:0
+}
+.tagalys-namespace .tagalys-product-tile:hover .product-link .product-image-container.has-hover-image img.product-image.product-image-hover,#tagalys-namespace .tagalys-product-tile:hover .product-link .product-image-container.has-hover-image img.product-image.product-image-hover{
+    opacity:1
+}
+.tagalys-namespace .tagalys-product-tile .product-link,#tagalys-namespace .tagalys-product-tile .product-link{
+    display:block;
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:3px;
+    overflow:hidden;
+    padding:5px;
+    color:#000;
+    overflow:hidden
+}
+.tagalys-namespace .tagalys-product-tile .product-link:hover,#tagalys-namespace .tagalys-product-tile .product-link:hover{
+    background:#fff;
+    border-color:#666
+}
+.tagalys-namespace .tagalys-product-tile .product-link:hover span,#tagalys-namespace .tagalys-product-tile .product-link:hover span{
+    color:#000
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image-container,#tagalys-namespace .tagalys-product-tile .product-link .product-image-container{
+    margin-bottom:5px;
+    width:100%;
+    position:relative;
+    display:block
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image-container:before,#tagalys-namespace .tagalys-product-tile .product-link .product-image-container:before{
+    content:"";
+    float:left;
+    padding-bottom:133%
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image-container:after,#tagalys-namespace .tagalys-product-tile .product-link .product-image-container:after{
+    content:"";
+    display:table;
+    clear:both
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image-container img.product-image,#tagalys-namespace .tagalys-product-tile .product-link .product-image-container img.product-image{
+    display:block;
+    max-height:100%;
+    max-width:100%;
+    width:auto;
+    height:auto;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin:auto
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-image-container img.product-image-hover,#tagalys-namespace .tagalys-product-tile .product-link .product-image-container img.product-image-hover{
+    opacity:0
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-name,#tagalys-namespace .tagalys-product-tile .product-link .product-name{
+    display:block;
+    height:1.2em;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-prices,#tagalys-namespace .tagalys-product-tile .product-link .product-prices{
+    height:1.2em;
+    font-size:0.9em;
+    display:block;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+.tagalys-namespace .tagalys-product-tile .product-link:hover .product-prices .product-price,#tagalys-namespace .tagalys-product-tile .product-link:hover .product-prices .product-price{
+    color:#000
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-prices,#tagalys-namespace .tagalys-product-tile .product-link .product-prices{
+    display:block
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-prices .product-sale-price,#tagalys-namespace .tagalys-product-tile .product-link .product-prices .product-sale-price{
+    font-weight:600;
+    padding-right:0.5em
+}
+.tagalys-namespace .tagalys-product-tile .product-link .product-prices .product-price,#tagalys-namespace .tagalys-product-tile .product-link .product-prices .product-price{
+    text-decoration:line-through;
+    color:#404040
+}
+.tagalys-namespace #tagalys-mpage-header a,.tagalys-namespace #tagalys-mpage-header span,#tagalys-namespace #tagalys-mpage-header a,#tagalys-namespace #tagalys-mpage-header span{
+    display:block
+}
+.tagalys-namespace #tagalys-mpage-header a img,.tagalys-namespace #tagalys-mpage-header span img,#tagalys-namespace #tagalys-mpage-header a img,#tagalys-namespace #tagalys-mpage-header span img{
+    max-width:100%;
+    max-height:600px;
+    margin:0 auto;
+    display:block
+}
+.tagalys-namespace.tagalys-my-feed .insufficient-data,.tagalys-namespace .tagalys-my-feed .insufficient-data,#tagalys-namespace.tagalys-my-feed .insufficient-data,#tagalys-namespace .tagalys-my-feed .insufficient-data{
+    text-align:center;
+    line-height:100px;
+    margin-bottom:0;
+    color:gray
+}
+.tagalys-namespace .tagalys-managed-list,#tagalys-namespace .tagalys-managed-list{
+    width:100%;
+    overflow:hidden;
+    background:#fff
+}
+.tagalys-namespace .tagalys-managed-list .show-more-toggle-link,#tagalys-namespace .tagalys-managed-list .show-more-toggle-link{
+    font-size:0.9em;
+    color:gray
+}
+.tagalys-namespace .tagalys-managed-list .load-more-link,#tagalys-namespace .tagalys-managed-list .load-more-link{
+    border:1px solid #eee;
+    padding:1em;
+    text-align:center;
+    display:block;
+    border-radius:3px;
+    margin-bottom:1em
+}
+.tagalys-namespace .tagalys-managed-list .load-more-link:hover,#tagalys-namespace .tagalys-managed-list .load-more-link:hover{
+    border-color:#ccc
+}
+.tagalys-namespace .tagalys-managed-list .load-more-link.end-of-list,#tagalys-namespace .tagalys-managed-list .load-more-link.end-of-list{
+    cursor:default;
+    border-color:#eee
+}
+.tagalys-namespace .tagalys-managed-list .load-more-link.end-of-list:hover,#tagalys-namespace .tagalys-managed-list .load-more-link.end-of-list:hover{
+    cursor:default;
+    border-color:#eee
+}
+.tagalys-namespace .tagalys-managed-list .no-products,#tagalys-namespace .tagalys-managed-list .no-products{
+    text-align:center;
+    line-height:100px;
+    margin-bottom:0;
+    color:#bfbfbf
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator,#tagalys-namespace .tagalys-managed-list .tagalys-paginator{
+    height:2.3em;
+    margin-bottom:1em;
+    text-align:right
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link,.tagalys-namespace .tagalys-managed-list .tagalys-paginator span.page-jump,.tagalys-namespace .tagalys-managed-list .tagalys-paginator span.paginator-label,#tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link,#tagalys-namespace .tagalys-managed-list .tagalys-paginator span.page-jump,#tagalys-namespace .tagalys-managed-list .tagalys-paginator span.paginator-label{
+    display:inline-block;
+    margin-left:0.5em;
+    padding:0.5em 0.75em;
+    border-radius:3px;
+    border:1px solid transparent;
+    overflow:hidden
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator span.paginator-label,#tagalys-namespace .tagalys-managed-list .tagalys-paginator span.paginator-label{
+    padding-left:0
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link:hover,#tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link:hover{
+    border-color:#ddd
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link.current,#tagalys-namespace .tagalys-managed-list .tagalys-paginator a.page-link.current{
+    cursor:default;
+    background:#fff;
+    border-color:#666
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-paginator span.page-jump,#tagalys-namespace .tagalys-managed-list .tagalys-paginator span.page-jump{
+    opacity:0.5;
+    cursor:default;
+    position:relative;
+    top:-0.25em
+}
+.tagalys-namespace .tagalys-managed-list .filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .filter-toggle-and-sorter{
+    height:2.3em;
+    margin-bottom:1em
+}
+.tagalys-namespace .tagalys-managed-list .paginator-filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .paginator-filter-toggle-and-sorter .filter-toggle{
+    display:block;
+    background:#fff;
+    border:1px solid #ddd;
+    padding:0.5em 0.75em;
+    box-sizing:border-box;
+    text-align:center;
+    border-radius:3px
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sorter-label,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sorter-label{
+    display:inline-block;
+    margin-right:0.5em;
+    line-height:2em
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options{
+    display:inline-block;
+    position:relative
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .current-sort,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .current-sort{
+    display:inline-block;
+    padding:0.5em 0.75em;
+    background:#fff;
+    border:1px solid #ddd;
+    position:relative;
+    padding-right:2em;
+    cursor:ns-resize;
+    border-radius:3px
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .current-sort::after,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .current-sort::after{
+    content:'';
+    position:absolute;
+    right:0.5em;
+    top:0.85em;
+    width:0;
+    height:0;
+    border-left:0.45em solid transparent;
+    border-right:0.45em solid transparent;
+    border-top:0.45em solid gray;
+    clear:both
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options{
+    position:absolute;
+    left:0;
+    z-index:1000;
+    display:none;
+    width:150px;
+    border:1px solid #ddd;
+    top:2.2em;
+    border-radius:3px;
+    overflow:hidden
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li a,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li a{
+    display:block;
+    padding:5px 10px;
+    cursor:pointer;
+    background:#fff;
+    font-size:1.1em;
+    line-height:1.4em;
+    border-bottom:1px solid #ddd
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li a:hover,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li a:hover{
+    background:#eee
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li:last-child a,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options .sort-options li:last-child a{
+    border-bottom:0
+}
+.tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options:hover .sort-options,#tagalys-namespace .tagalys-managed-list .tagalys-sorter .sort-and-options:hover .sort-options{
+    display:block
+}
+.tagalys-namespace .tagalys-filters,#tagalys-namespace .tagalys-filters{
+    background:#fff
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-heading,.tagalys-namespace .tagalys-filters.collapsible .tagalys-filter,#tagalys-namespace .tagalys-filters.collapsible .filters-heading,#tagalys-namespace .tagalys-filters.collapsible .tagalys-filter{
+    padding:0
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading,.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter,#tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter{
+    border:1px solid #eee;
+    border-bottom-width:0
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading:last-child,.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter:last-child,#tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading:last-child,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter:last-child{
+    border-bottom-width:1px
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading,#tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading{
+    padding:1em
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading .heading,#tagalys-namespace .tagalys-filters.collapsible .filters-container .filters-heading .heading{
+    margin:0
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .filter-heading .heading:before,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .filter-heading .heading:before{
+    display:block
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading{
+    padding:0;
+    cursor:pointer
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .clear-filter,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .clear-filter{
+    right:3em
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading{
+    margin-bottom:0;
+    cursor:pointer;
+    padding:1em;
+    position:relative
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:before,.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:after,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:before,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:after{
+    position:absolute;
+    content:"";
+    background:#000;
+    z-index:10;
+    top:50%
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:before,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:before{
+    width:2px;
+    height:14px;
+    right:16px;
+    margin-top:-7px;
+    display:none
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:after,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-heading .heading:after{
+    width:14px;
+    height:2px;
+    right:10px;
+    margin-top:-1px
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-items a,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .filter-items a{
+    padding:0.5em 1em
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .range-slider-and-inputs,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .range-slider-and-inputs{
+    padding:0.5em 1em;
+    overflow:hidden
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .selected-filters,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter .selected-filters{
+    padding:0 1em 0.5em
+}
+.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .filter-items,.tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .range-slider-and-inputs,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .filter-items,#tagalys-namespace .tagalys-filters.collapsible .filters-container .tagalys-filter.collapsed .range-slider-and-inputs{
+    max-height:0;
+    padding:0
+}
+.tagalys-namespace .tagalys-filters .filter-actions,#tagalys-namespace .tagalys-filters .filter-actions{
+    display:none
+}
+.tagalys-namespace .tagalys-filters .clear-all-filters,#tagalys-namespace .tagalys-filters .clear-all-filters{
+    display:none
+}
+.tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+    position:relative
+}
+.tagalys-namespace .tagalys-filters .filters-heading .clear-all-filters,#tagalys-namespace .tagalys-filters .filters-heading .clear-all-filters{
+    position:absolute;
+    top:1.1em;
+    right:0
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading{
+    position:relative
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading h1,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading h1{
+    font-size:1em;
+    font-weight:bold
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading .clear-filter,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-heading .clear-filter{
+    position:absolute;
+    display:inline-block;
+    border:1px solid #ddd;
+    border-radius:2px;
+    padding:3px 5px;
+    top:50%;
+    margin-top:-12px;
+    right:0.5em
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs{
+    font-size:0.9em
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-slider,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-slider{
+    margin:1em 10px 2em
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min,.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max{
+    display:inline-block;
+    width:40%
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min input,.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max input,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min input,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max input{
+    border:1px solid #bfbfbf;
+    border-radius:3px;
+    width:100%;
+    padding:0.5em;
+    box-sizing:border-box
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min .help,.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max .help,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-min .help,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .range-inputs-max .help{
+    display:block;
+    color:gray;
+    font-size:0.9em;
+    padding-top:0.25em;
+    padding-left:0.5em;
+    border-left:1px solid transparent
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .to,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs .to{
+    width:20%;
+    text-align:center;
+    display:inline-block;
+    vertical-align:top;
+    padding:0.5em 0
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs button,#tagalys-namespace .tagalys-filters .tagalys-filter .range-slider-and-inputs .range-inputs button{
+    margin-left:1em;
+    vertical-align:top;
+    padding:0.5em;
+    border:1px solid #bfbfbf;
+    background:#e6e6e6;
+    border-radius:3px
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items,#tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items{
+    padding-left:0;
+    max-height:12em;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items::-webkit-scrollbar,#tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items::-webkit-scrollbar{
+    width:0.5em;
+    border-radius:0.5em;
+    background-color:#e6e6e6
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items::-webkit-scrollbar-thumb,#tagalys-namespace .tagalys-filters .tagalys-filter>.filter-items::-webkit-scrollbar-thumb{
+    width:0.5em;
+    border-radius:0.5em;
+    background-color:#bfbfbf
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items{
+    display:block
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items:hover li a .count,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items:hover li a .count{
+    display:inline-block
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items.radio-buttons li a::before,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items.radio-buttons li a::before{
+    border-radius:100%
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li{
+    display:block
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a{
+    display:block;
+    position:relative;
+    height:1.2em;
+    padding:0.3em 0;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a .count,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a .count{
+    display:none;
+    font-size:0.7em;
+    height:1.6em;
+    line-height:1.7em;
+    min-width:1.5em;
+    text-align:center;
+    background:#e6e6e6;
+    position:absolute;
+    right:0.25em;
+    padding:0 0.25em;
+    border-radius:3px
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a::before,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a::before{
+    content:'';
+    display:inline-block;
+    width:1em;
+    height:1em;
+    top:0.1em;
+    position:relative;
+    margin-right:0.25em;
+    border:1px solid gray;
+    border-radius:3px;
+    overflow:hidden
+}
+@media only screen and (min-width: 900px){
+    .tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a:hover::before,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a:hover::before{
+        background:#bfbfbf
+    }
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a.selected::before,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a.selected::before{
+    background:gray
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li .filter-items,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li .filter-items{
+    padding-left:1.25em
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li{
+    margin-bottom:0.5em
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li:last-child,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li:last-child{
+    margin-bottom:0
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a{
+    display:block;
+    padding:0.5em;
+    border:1px solid #bfbfbf;
+    padding-right:2.25em;
+    border-radius:3px
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a:before,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a:before{
+    display:none
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a .tag-set:after,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a .tag-set:after{
+    content:': '
+}
+.tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a img,#tagalys-namespace .tagalys-filters .selected-filters-container .selected-filters li a img{
+    width:0.75em;
+    height:0.75em;
+    position:absolute;
+    top:0.75em;
+    right:0.75em
+}
+.tagalys-namespace .tagalys-filters .tagalys-filter .selected-filters-container,#tagalys-namespace .tagalys-filters .tagalys-filter .selected-filters-container{
+    margin-bottom:0.5em
+}
+.tagalys-namespace.tagalys-similar-products,.tagalys-namespace .tagalys-similar-products,#tagalys-namespace.tagalys-similar-products,#tagalys-namespace .tagalys-similar-products{
+    background:#fff;
+    overflow:hidden;
+    display:block
+}
+.tagalys-namespace .tagalys-widget-header,.tagalys-namespace .tagalys-header,.tagalys-namespace.tagalys-similar-products .tagalys-header,.tagalys-namespace .tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-widget-header,#tagalys-namespace .tagalys-header,#tagalys-namespace.tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-similar-products .tagalys-header{
+    position:relative;
+    min-height:1.5em
+}
+.tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-header .tagalys-prev-next-links,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-header .tagalys-prev-next-links,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links{
+    position:absolute
+}
+.tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a{
+    display:inline-block
+}
+.tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg{
+    width:1.5em
+}
+.tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg .chevron-icon,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg .chevron-icon,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg .chevron-icon,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg .chevron-icon,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon{
+    fill:#000000
+}
+.tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg .chevron-icon.disabled,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a svg .chevron-icon.disabled,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a svg .chevron-icon.disabled{
+    fill:#ccc
+}
+.tagalys-namespace .tagalys-widget-footer,.tagalys-namespace .tagalys-footer,.tagalys-namespace.tagalys-similar-products .tagalys-footer,.tagalys-namespace .tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-widget-footer,#tagalys-namespace .tagalys-footer,#tagalys-namespace.tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-similar-products .tagalys-footer{
+    text-align:right;
+    line-height:2em
+}
+.tagalys-namespace .tagalys-widget-footer a,.tagalys-namespace .tagalys-footer a,.tagalys-namespace.tagalys-similar-products .tagalys-footer a,.tagalys-namespace .tagalys-similar-products .tagalys-footer a,#tagalys-namespace .tagalys-widget-footer a,#tagalys-namespace .tagalys-footer a,#tagalys-namespace.tagalys-similar-products .tagalys-footer a,#tagalys-namespace .tagalys-similar-products .tagalys-footer a{
+    font-size:0.8em
+}
+.tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+    padding-top:0
+}
+.tagalys-namespace .noUi-target,.tagalys-namespace .noUi-target *,#tagalys-namespace .noUi-target,#tagalys-namespace .noUi-target *{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -ms-touch-action:none;
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.tagalys-namespace .noUi-target,#tagalys-namespace .noUi-target{
+    position:relative;
+    direction:ltr
+}
+.tagalys-namespace .noUi-base,#tagalys-namespace .noUi-base{
+    width:100%;
+    height:100%;
+    position:relative
+}
+.tagalys-namespace .noUi-origin,#tagalys-namespace .noUi-origin{
+    position:absolute;
+    right:0;
+    top:0;
+    left:0;
+    bottom:0
+}
+.tagalys-namespace .noUi-handle,#tagalys-namespace .noUi-handle{
+    position:relative;
+    z-index:1
+}
+.tagalys-namespace .noUi-stacking .noUi-handle,#tagalys-namespace .noUi-stacking .noUi-handle{
+    z-index:10
+}
+.tagalys-namespace .noUi-stacking+.noUi-origin,#tagalys-namespace .noUi-stacking+.noUi-origin{
+    *z-index:-1
+}
+.tagalys-namespace .noUi-state-tap .noUi-origin,#tagalys-namespace .noUi-state-tap .noUi-origin{
+    -webkit-transition:left 0.3s, top 0.3s;
+    transition:left 0.3s, top 0.3s
+}
+.tagalys-namespace .noUi-state-drag *,#tagalys-namespace .noUi-state-drag *{
+    cursor:inherit !important
+}
+.tagalys-namespace .noUi-base,#tagalys-namespace .noUi-base{
+    -webkit-transform:translate3d(0, 0, 0);
+    transform:translate3d(0, 0, 0)
+}
+.tagalys-namespace .noUi-horizontal,#tagalys-namespace .noUi-horizontal{
+    height:6px
+}
+.tagalys-namespace .noUi-horizontal .noUi-handle,#tagalys-namespace .noUi-horizontal .noUi-handle{
+    width:20px;
+    height:20px;
+    left:-10px;
+    top:-8px
+}
+.tagalys-namespace .noUi-background,#tagalys-namespace .noUi-background{
+    background:#FAFAFA
+}
+.tagalys-namespace .noUi-connect,#tagalys-namespace .noUi-connect{
+    background:#bfbfbf
+}
+.tagalys-namespace .noUi-origin,#tagalys-namespace .noUi-origin{
+    border-radius:2px
+}
+.tagalys-namespace .noUi-target,#tagalys-namespace .noUi-target{
+    border-radius:4px;
+    border:1px solid gray
+}
+.tagalys-namespace .noUi-dragable,#tagalys-namespace .noUi-dragable{
+    cursor:w-resize
+}
+.tagalys-namespace .noUi-handle,#tagalys-namespace .noUi-handle{
+    border:1px solid gray;
+    border-radius:100%;
+    background:#FFF;
+    cursor:default
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content,#tagalys-namespace .tagalys-loading-indicator-and-content{
+    width:100%
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content .tagalys-loading-indicator,#tagalys-namespace .tagalys-loading-indicator-and-content .tagalys-loading-indicator{
+    display:none;
+    border-radius:50%;
+    width:24px;
+    height:24px;
+    border:0.25rem solid rgba(0,0,0,0.2);
+    border-top-color:#000;
+    animation:spin 1s infinite linear
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content .tagalys-content,#tagalys-namespace .tagalys-loading-indicator-and-content .tagalys-content{
+    display:block
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading,#tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading{
+    opacity:0.5
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load,#tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load{
+    opacity:1;
+    padding:50px 0;
+    text-align:center
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load .tagalys-loading-indicator,#tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load .tagalys-loading-indicator{
+    display:inline-block
+}
+.tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load .tagalys-content,#tagalys-namespace .tagalys-loading-indicator-and-content.tagalys-loading.tagalys-first-load .tagalys-content{
+    display:none
+}
+@media only screen and (min-width: 300px){
+    .tagalys-namespace .tagalys-product-tile,#tagalys-namespace .tagalys-product-tile{
+        width:50%;
+        padding:0 0.5em 1em
+    }
+    .tagalys-namespace .no-filters .tagalys-product-tile,#tagalys-namespace .no-filters .tagalys-product-tile{
+        width:50%
+    }
+    .tagalys-namespace .tagalys-product-tiles,#tagalys-namespace .tagalys-product-tiles{
+        padding:0 0.5em 0
+    }
+    .tagalys-namespace .header-results-and-footer .header,.tagalys-namespace .header-results-and-footer .footer,#tagalys-namespace .header-results-and-footer .header,#tagalys-namespace .header-results-and-footer .footer{
+        padding:1em 1em 0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+        padding:1em 0 0 1em
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter,#tagalys-namespace .tagalys-filters .tagalys-filter{
+        padding:0 0 1em 1em
+    }
+    .tagalys-namespace .tagalys-widget-header,.tagalys-namespace .tagalys-header,.tagalys-namespace.tagalys-similar-products .tagalys-header,.tagalys-namespace .tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-widget-header,#tagalys-namespace .tagalys-header,#tagalys-namespace.tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-similar-products .tagalys-header{
+        display:block;
+        padding:1em 1em 0 1em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-header .tagalys-prev-next-links,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-header .tagalys-prev-next-links,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links{
+        top:1em;
+        right:0.5em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a{
+        display:inline-block;
+        padding:0 0.25em
+    }
+    .tagalys-namespace .tagalys-widget-footer,.tagalys-namespace .tagalys-footer,.tagalys-namespace.tagalys-similar-products .tagalys-footer,.tagalys-namespace .tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-widget-footer,#tagalys-namespace .tagalys-footer,#tagalys-namespace.tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-similar-products .tagalys-footer{
+        display:block;
+        padding:0 1em 0 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer{
+        display:block;
+        padding:0 1em 1em 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link{
+        display:none
+    }
+    .tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,.tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel{
+        padding-bottom:0
+    }
+    .tagalys-namespace .tagalys-product-tiles.tagalys-carousel,#tagalys-namespace .tagalys-product-tiles.tagalys-carousel{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+        padding:0.5em 0.5em 1em
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles{
+        padding:0;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item{
+        width:100%;
+        padding:0 0.5em 0 0.5em;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths{
+        padding:0 0.5em 0
+    }
+}
+@media only screen and (min-width: 600px){
+    .tagalys-namespace .tagalys-product-tile,#tagalys-namespace .tagalys-product-tile{
+        width:33.33333%;
+        padding:0 0.5em 1em
+    }
+    .tagalys-namespace .no-filters .tagalys-product-tile,#tagalys-namespace .no-filters .tagalys-product-tile{
+        width:33.33333%
+    }
+    .tagalys-namespace .tagalys-product-tiles,#tagalys-namespace .tagalys-product-tiles{
+        padding:0 0.5em 0
+    }
+    .tagalys-namespace .header-results-and-footer .header,.tagalys-namespace .header-results-and-footer .footer,#tagalys-namespace .header-results-and-footer .header,#tagalys-namespace .header-results-and-footer .footer{
+        padding:1em 1em 0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+        padding:1em 0 0 1em
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter,#tagalys-namespace .tagalys-filters .tagalys-filter{
+        padding:0 0 1em 1em
+    }
+    .tagalys-namespace .tagalys-widget-header,.tagalys-namespace .tagalys-header,.tagalys-namespace.tagalys-similar-products .tagalys-header,.tagalys-namespace .tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-widget-header,#tagalys-namespace .tagalys-header,#tagalys-namespace.tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-similar-products .tagalys-header{
+        display:block;
+        padding:1em 1em 0 1em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-header .tagalys-prev-next-links,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-header .tagalys-prev-next-links,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links{
+        top:1em;
+        right:0.5em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a{
+        display:inline-block;
+        padding:0 0.25em
+    }
+    .tagalys-namespace .tagalys-widget-footer,.tagalys-namespace .tagalys-footer,.tagalys-namespace.tagalys-similar-products .tagalys-footer,.tagalys-namespace .tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-widget-footer,#tagalys-namespace .tagalys-footer,#tagalys-namespace.tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-similar-products .tagalys-footer{
+        display:block;
+        padding:0 1em 0 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer{
+        display:block;
+        padding:0 1em 1em 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link{
+        display:none
+    }
+    .tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,.tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel{
+        padding-bottom:0
+    }
+    .tagalys-namespace .tagalys-product-tiles.tagalys-carousel,#tagalys-namespace .tagalys-product-tiles.tagalys-carousel{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+        padding:0.5em 0.5em 1em
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles{
+        padding:0;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item{
+        width:100%;
+        padding:0 0.5em 0 0.5em;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths{
+        padding:0 0.5em 0
+    }
+}
+@media only screen and (min-width: 900px){
+    .tagalys-namespace .tagalys-product-tile,#tagalys-namespace .tagalys-product-tile{
+        width:25%;
+        padding:0 0.5em 1em
+    }
+    .tagalys-namespace .no-filters .tagalys-product-tile,#tagalys-namespace .no-filters .tagalys-product-tile{
+        width:25%
+    }
+    .tagalys-namespace .tagalys-product-tiles,#tagalys-namespace .tagalys-product-tiles{
+        padding:0 0.5em 0
+    }
+    .tagalys-namespace .header-results-and-footer .header,.tagalys-namespace .header-results-and-footer .footer,#tagalys-namespace .header-results-and-footer .header,#tagalys-namespace .header-results-and-footer .footer{
+        padding:1em 1em 0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+        padding:1em 0 0 1em
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter,#tagalys-namespace .tagalys-filters .tagalys-filter{
+        padding:0 0 1em 1em
+    }
+    .tagalys-namespace .tagalys-widget-header,.tagalys-namespace .tagalys-header,.tagalys-namespace.tagalys-similar-products .tagalys-header,.tagalys-namespace .tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-widget-header,#tagalys-namespace .tagalys-header,#tagalys-namespace.tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-similar-products .tagalys-header{
+        display:block;
+        padding:1em 1em 0 1em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-header .tagalys-prev-next-links,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-header .tagalys-prev-next-links,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links{
+        top:1em;
+        right:0.5em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a{
+        display:inline-block;
+        padding:0 0.25em
+    }
+    .tagalys-namespace .tagalys-widget-footer,.tagalys-namespace .tagalys-footer,.tagalys-namespace.tagalys-similar-products .tagalys-footer,.tagalys-namespace .tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-widget-footer,#tagalys-namespace .tagalys-footer,#tagalys-namespace.tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-similar-products .tagalys-footer{
+        display:block;
+        padding:0 1em 0 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer{
+        display:block;
+        padding:0 1em 1em 1em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link{
+        display:none
+    }
+    .tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,.tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel{
+        padding-bottom:0
+    }
+    .tagalys-namespace .tagalys-product-tiles.tagalys-carousel,#tagalys-namespace .tagalys-product-tiles.tagalys-carousel{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+        padding:0.5em 0.5em 1em
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles{
+        padding:0;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item{
+        width:100%;
+        padding:0 0.5em 0 0.5em;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths{
+        padding:0 0.5em 0
+    }
+}
+@media only screen and (min-width: 1200px){
+    .tagalys-namespace .tagalys-product-tile,#tagalys-namespace .tagalys-product-tile{
+        width:25%;
+        padding:0 1em 2em
+    }
+    .tagalys-namespace .no-filters .tagalys-product-tile,#tagalys-namespace .no-filters .tagalys-product-tile{
+        width:20%
+    }
+    .tagalys-namespace .tagalys-product-tiles,#tagalys-namespace .tagalys-product-tiles{
+        padding:0 1em 0
+    }
+    .tagalys-namespace .header-results-and-footer .header,.tagalys-namespace .header-results-and-footer .footer,#tagalys-namespace .header-results-and-footer .header,#tagalys-namespace .header-results-and-footer .footer{
+        padding:2em 2em 0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+        padding:2em 0 0 2em
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter,#tagalys-namespace .tagalys-filters .tagalys-filter{
+        padding:0 0 2em 2em
+    }
+    .tagalys-namespace .tagalys-widget-header,.tagalys-namespace .tagalys-header,.tagalys-namespace.tagalys-similar-products .tagalys-header,.tagalys-namespace .tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-widget-header,#tagalys-namespace .tagalys-header,#tagalys-namespace.tagalys-similar-products .tagalys-header,#tagalys-namespace .tagalys-similar-products .tagalys-header{
+        display:block;
+        padding:2em 2em 0 2em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-header .tagalys-prev-next-links,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-header .tagalys-prev-next-links,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links{
+        top:2em;
+        right:1em
+    }
+    .tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,.tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-widget-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace.tagalys-similar-products .tagalys-header .tagalys-prev-next-links a,#tagalys-namespace .tagalys-similar-products .tagalys-header .tagalys-prev-next-links a{
+        display:inline-block;
+        padding:0 0.5em
+    }
+    .tagalys-namespace .tagalys-widget-footer,.tagalys-namespace .tagalys-footer,.tagalys-namespace.tagalys-similar-products .tagalys-footer,.tagalys-namespace .tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-widget-footer,#tagalys-namespace .tagalys-footer,#tagalys-namespace.tagalys-similar-products .tagalys-footer,#tagalys-namespace .tagalys-similar-products .tagalys-footer{
+        display:block;
+        padding:0 2em 0 2em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer{
+        display:block;
+        padding:0 2em 2em 2em
+    }
+    .tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link,#tagalys-namespace.tagalys-widget-custom .tagalys-widget-footer .powered-by-tagalys-link{
+        display:none
+    }
+    .tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,.tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace.tagalys-my-feed .tagalys-carousel-carousel,#tagalys-namespace .tagalys-my-feed .tagalys-carousel-carousel{
+        padding-bottom:0
+    }
+    .tagalys-namespace .tagalys-product-tiles.tagalys-carousel,#tagalys-namespace .tagalys-product-tiles.tagalys-carousel{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-managed-widths,.tagalys-namespace .tagalys-carousel-carousel,#tagalys-namespace .tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel{
+        padding:1em 1em 2em
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tiles,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tiles{
+        padding:0;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item{
+        width:100%;
+        padding:0 1em 0 1em;
+        margin:0
+    }
+    .tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,.tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-managed-widths .tagalys-carousel-item .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-product-tile .tagalys-product-tile,#tagalys-namespace .tagalys-carousel-carousel .tagalys-carousel-item .tagalys-product-tile{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths,#tagalys-namespace .tagalys-carousel-carousel.tagalys-managed-widths{
+        padding:0 1em 0
+    }
+}
+.tagalys-namespace .tagalys-filters,#tagalys-namespace .tagalys-filters{
+    display:none
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,.tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle{
+    display:none
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter{
+    display:block;
+    position:relative;
+    width:100%
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .tagalys-paginator,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .tagalys-paginator,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .tagalys-paginator,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .tagalys-paginator{
+    width:100%
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter{
+    width:100%
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle{
+    width:40%;
+    float:right
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter{
+    width:60%;
+    float:left;
+    text-align:left
+}
+.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer{
+    padding-top:0
+}
+@media only screen and (min-width: 300px) and (max-width: 900px){
+    .tagalys-namespace .tagalys-filters,#tagalys-namespace .tagalys-filters{
+        display:block;
+        position:fixed;
+        top:0;
+        bottom:0;
+        left:-320px;
+        transition:left 0.25s;
+        max-width:320px;
+        -webkit-box-shadow:0px 0px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow:0px 0px 5px 0px rgba(0,0,0,0.75);
+        box-shadow:0px 0px 5px 0px rgba(0,0,0,0.75);
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+        z-index:10000;
+        padding:1.5em
+    }
+    .tagalys-namespace .tagalys-filters.collapsible,#tagalys-namespace .tagalys-filters.collapsible{
+        padding:0
+    }
+    .tagalys-namespace .tagalys-filters.collapsible .filters-heading .filter-toggle,#tagalys-namespace .tagalys-filters.collapsible .filters-heading .filter-toggle{
+        top:50%;
+        margin-top:-15px;
+        right:0.5em
+    }
+    .tagalys-namespace .tagalys-filters.active,#tagalys-namespace .tagalys-filters.active{
+        left:0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading,#tagalys-namespace .tagalys-filters .filters-heading{
+        position:relative;
+        padding-left:0
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading .filter-toggle,#tagalys-namespace .tagalys-filters .filters-heading .filter-toggle{
+        position:absolute;
+        top:0;
+        right:0;
+        font-size:1.2em
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading .filter-toggle img,#tagalys-namespace .tagalys-filters .filters-heading .filter-toggle img{
+        width:30px;
+        height:30px
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter,#tagalys-namespace .tagalys-filters .tagalys-filter{
+        padding-left:0
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items li a{
+        height:1.3em;
+        padding:0.4em 0
+    }
+    .tagalys-namespace .tagalys-filters .tagalys-filter .filter-items:hover li a .count,#tagalys-namespace .tagalys-filters .tagalys-filter .filter-items:hover li a .count{
+        display:none
+    }
+}
+@media only screen and (min-width: 900px){
+    .tagalys-namespace .tagalys-filters,#tagalys-namespace .tagalys-filters{
+        display:block;
+        width:20%;
+        float:left
+    }
+    .tagalys-namespace .tagalys-filters .filters-heading .filter-toggle,#tagalys-namespace .tagalys-filters .filters-heading .filter-toggle{
+        display:none
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer,#tagalys-namespace .tagalys-managed-list .header-results-and-footer{
+        width:80%;
+        float:left
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters,#tagalys-namespace .tagalys-managed-list .header-results-and-footer.no-filters{
+        width:100%
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter{
+        width:100%;
+        height:2.3em
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .tagalys-paginator,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .tagalys-paginator,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .tagalys-paginator,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .tagalys-paginator{
+        width:50%;
+        float:right
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter{
+        width:50%;
+        float:left
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .filter-toggle{
+        display:none
+    }
+    .tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,.tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .header .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter,#tagalys-namespace .tagalys-managed-list .header-results-and-footer .footer .paginator-filter-toggle-and-sorter .filter-toggle-and-sorter .tagalys-sorter{
+        width:100%
+    }
+}
+@media only screen and (min-width: 300px) and (max-width: 900px){
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile,#tagalys-namespace .tagalys-filters.tabbed-on-mobile{
+        width:100%;
+        max-width:400px;
+        left:-400px;
+        padding:0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile.active,#tagalys-namespace .tagalys-filters.tabbed-on-mobile.active{
+        left:0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading{
+        border-bottom:1px solid #ddd;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        height:40px;
+        padding:0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading h1,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading h1{
+        margin:0;
+        font-size:16px;
+        line-height:24px;
+        padding:8px
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading .filter-toggle,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading .filter-toggle{
+        display:none
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading .clear-all-filters,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filters-heading .clear-all-filters{
+        display:inline-block;
+        position:absolute;
+        font-size:14px;
+        line-height:40px;
+        padding-right:10px;
+        right:0;
+        top:0;
+        font-weight:bold;
+        color:#2a3375
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions{
+        display:block;
+        position:absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        height:40px;
+        border-top:1px solid #ddd
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li{
+        position:absolute
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-cancel-container,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-cancel-container{
+        width:40%;
+        left:0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-apply-container,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-apply-container{
+        width:60%;
+        left:40%;
+        border-left:1px solid #ddd
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-apply-container a,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li.filter-action-apply-container a{
+        font-weight:bold;
+        color:#2a3375
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li a,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .filter-actions li a{
+        display:block;
+        padding:8px;
+        font-size:14px;
+        line-height:24px;
+        text-align:center
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container{
+        position:absolute;
+        top:40px;
+        left:0;
+        right:0;
+        bottom:40px
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs{
+        z-index:100;
+        position:absolute;
+        top:0;
+        left:0;
+        bottom:0;
+        right:60%;
+        overflow-y:scroll
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li{
+        display:block
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a{
+        display:block;
+        font-size:13px;
+        line-height:16px;
+        padding:10px;
+        height:16px;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        text-decoration:none;
+        overflow-x:hidden;
+        border-bottom:1px solid #ddd;
+        background:#f0f0f0;
+        position:relative
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a.active,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a.active{
+        background:#fff;
+        font-weight:bold
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a .selected-count,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .mobile-tabs-tabs li a .selected-count{
+        right:0;
+        position:absolute;
+        font-size:0.7em;
+        height:1.6em;
+        line-height:1.7em;
+        min-width:1.5em;
+        text-align:center;
+        background:#2a3375;
+        border-radius:2px;
+        color:#fff;
+        right:10px
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container{
+        position:absolute;
+        top:0;
+        left:40%;
+        right:0;
+        bottom:0;
+        border-left:1px solid #ddd;
+        overflow-y:scroll
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter{
+        padding:0;
+        display:none;
+        position:absolute;
+        top:0;
+        right:0;
+        left:0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-heading,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-heading{
+        display:none
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items{
+        max-height:10000px
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items a,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items a{
+        padding:0.75em;
+        border-bottom:1px solid #f0f0f0
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items a .count,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .filter-items a .count{
+        display:inline-block;
+        right:1em
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter.active,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter.active{
+        display:block
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .range-slider-and-inputs,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .tagalys-filter .range-slider-and-inputs{
+        padding:2.5em 1em
+    }
+    .tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .selected-filters-container .selected-filters li a,#tagalys-namespace .tagalys-filters.tabbed-on-mobile .mobile-tabs-container .filters-container .selected-filters-container .selected-filters li a{
+        border-top:0;
+        border-right:0;
+        border-left:0;
+        border-radius:0
+    }
+}

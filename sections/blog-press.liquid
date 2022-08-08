@@ -1,0 +1,60 @@
+{%- paginate blog.articles by 9 -%}
+<div class="sp-bs-sol-top-banner sp-press-blog-pg-banner sp-bs-sol-top-banner-black-lyr">  
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}"></div>
+  	<div class="sp-bs-sol-top-banner-cont">
+		<h3>{{blog.title}}</h3>
+      {%if section.settings.banner_text != blank %}
+		<p class="sp-bs-sol-top-banner-mail">{{section.settings.banner_text}}</p>
+      {%endif%}
+	</div>  
+</div>
+<div class="sp-press-cont-block-main">
+	<div class="sp-90-spc-container">
+		<div class="sp-press-cont-block-row">
+          {% comment %} reversed {% endcomment %}
+          {% for article in blogs.press.articles %}
+			<div class="sp-press-cont-block-box">
+				<div class="sp-press-cont-block-info">
+					<div class="sp-press-cont-block-title">
+						<p>{{article.published_at | date:" %B %d, %Y"}}</p>
+						{% comment %} <span>{{article.author}}</span> {% endcomment %}
+					</div>
+					<div class="sp-press-cont-block-desc">
+						<h3>{{article.title}}</h3>
+						<p>{{ article.content | strip_html | truncate: 250 }}</p>
+						<div class="sp-press-cont-block-btn"><a href="{{article.url}}" class="sp-bl-lined-btn">View More</a></div>
+					</div>
+				</div>
+			</div>
+		{%endfor%}
+		
+		</div>
+	</div>
+</div>
+ {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+
+{%- endpaginate -%}
+
+
+{% schema %}
+  {
+    "name": "Press",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      }
+   ]
+
+  }
+{% endschema %}
+

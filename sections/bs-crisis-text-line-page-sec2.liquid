@@ -1,0 +1,39 @@
+<div class="bs-ctl-sec2-main">
+  <div class="page-width">
+    <div class="bs-ctl-sec1-row">
+      <div class="bs-ctl-sec1-block lt">
+        {%- if section.settings.title != blank -%}
+          <h3 class="bs-ctl-sec2-title">
+          {{section.settings.title}}
+          </h3>
+        {%- endif -%}
+      </div>
+      <div class="bs-ctl-sec1-block rt">
+        {%- if section.settings.text1 != blank -%}
+          <p>
+          {{section.settings.text1}}
+          </p>
+        {%- endif -%}    
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "BS Crisis Text Line Sec2",
+    "class": "bs_ctl_sec2",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "title"
+      },
+      {
+        "type": "textarea",
+        "id": "text1",
+        "label": "Text 1"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,82 @@
+<div class="variation-grid">
+  {% if section.settings.variation_grid_headline != blank %}
+  <div class="variation-grid-headline">
+    <h2>{{ section.settings.variation_grid_headline }}</h2>
+  </div>
+  {% endif %}
+  <div class="variation-grid-products">
+    <ul>
+    {% for block in section.blocks %}
+      {% render 'variation-mix-item',
+      	 parent_link: block.settings.variation_parent,
+       	 sku_number: block.settings.variation_sku,
+       	 variation_image: block.settings.variation_image,
+       	 variation_device: block.settings.variation_device,
+       	 variation_title: block.settings.variation_title,
+       	 variation_color: block.settings.variation_color
+      %}    
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Variation Mix (Grid)",
+    "class": "variation-mix-grid",
+    "settings": [
+		{
+			"type": "text",
+			"id": "variation_grid_headline",
+			"label": "Variation Grid Headline",
+			"default": "Variation Mix Grid Headline Goes Here"
+		}
+	],
+	"blocks": [
+		{
+			"type": "variation_grid_item",
+			"name": "Variation Grid Item",
+			"settings": [
+				{
+					"type": "product",
+					"id": "variation_parent",
+					"label": "Variation Parent"
+				},
+				{
+					"type": "text",
+					"id": "variation_sku",
+					"label": "Variation SKU"
+				},
+				{
+					"type": "image_picker",
+					"id": "variation_image",
+					"label": "Variation Image"
+				},
+				{
+					"type": "text",
+					"id": "variation_device",
+					"label": "Variation Device",
+					"default": "Variation Device Goes Here"
+				},
+				{
+					"type": "text",
+					"id": "variation_title",
+					"label": "Variation Title",
+					"default": "Variation Design Center Goes Here"
+				},
+				{
+					"type": "text",
+					"id": "variation_color",
+					"label": "Variation Color",
+					"default": "Variation Color Goes Here"
+				}
+			]
+		}		
+	],
+    "presets": [
+		{
+      		"name": "Variation Mix (Grid)"
+    	}
+	]
+  }
+{% endschema %}

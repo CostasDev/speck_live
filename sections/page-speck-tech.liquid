@@ -1,0 +1,490 @@
+<div class="sp-tech-pg-main">
+	<div class="sp-tech-pg-tp-banner">
+      
+		<div class="sp-tech-pg-tp-bnr-sec" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}')">
+          <div class="sp-tech-pg-tp-bnr-sec-mob" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}')"></div>
+          {%if section.settings.banner_text != blank %}
+			<h1>{{section.settings.banner_text}}</h1>
+          {%endif%}
+		</div>
+	</div>
+	<div class="sp-tech-pg-container">
+		<div class="sp-tech-method-sec">
+			<h2>{{section.settings.section_heading}}</h2>
+			<p>{{section.settings.bottom_section}}</p>
+          {%if section.settings.Madness_section_image != blank %}
+			<div class="sp-tech-method-sec-img">
+              <img class="lazyload" data-src="{{section.settings.Madness_section_image | img_url: 'master'}}" alt="{{ section.settings.Madness_section_image.alt }}"/>
+          </div>
+          {%endif%}
+          {%if section.settings.Tried_section_heading != blank %}
+			<h2>{{section.settings.Tried_section_heading }}</h2>
+          {%endif%}
+          {%if section.settings.tried_section_text != blank %}
+			<p>{{section.settings.tried_section_text}}</p>
+          {%endif%}
+		</div>
+		<div class="sp-tech-pro-redf-sec">
+          {%if section.settings.section_heading_with_border != blank %}
+			<h2><span>{{section.settings.section_heading_with_border}}</span></h2>
+          {%endif%}
+          {%if section.settings.presidio_section_text != blank %}
+			<h3>{{section.settings.presidio_section_text}}</h3>
+          {%endif%}
+          {%if section.settings.presidio_section_small_text %}
+			<p>{{section.settings.presidio_section_small_text}}</p>
+          {%endif%}
+			<div class="sp-tech-pro-redf-row">
+              {%if section.settings.presidio_section_image != blank %}
+				<div class="sp-tech-pro-redf-row-img">
+                  <img class="lazyload" data-src="{{section.settings.presidio_section_image | img_url: 'master'}}" alt="{{ section.settings.presidio_section_image.alt }}"/>
+              </div>
+              {%endif%}
+			{%if section.settings.presidio_section_content != blank %}	
+              <div class="sp-tech-pro-redf-row-cont">
+                  
+					{{section.settings.presidio_section_content}}
+				</div>
+             {%endif%} 
+			</div>
+			<div class="sp-tech-pro-redf-b-img">
+              {%if section.settings.presidio_bottom_image != blank %}
+				<img class="lazyload" data-src="{{section.settings.presidio_bottom_image | img_url: 'master'}}" alt="{{ section.settings.presidio_bottom_image.alt }}"/>
+              {%endif%}
+			</div>
+			<div class="sp-tech-pro-redf-btn">
+            {%if section.settings.presidio_section_button_link %}
+              <a href="{{section.settings.presidio_section_button_link}}" class="sp-bl-back-btn" target="_blank">{{section.settings.presidio_section_button_text}}</a>
+           {%endif%}
+          </div>
+			<hr />
+          {%if section.settings.impactium_section_text != blank %}
+			<h3>{{section.settings.impactium_section_text}}</h3>
+          {%endif%}
+          {%if section.settings.impactium_section_small_text != blank %}
+			<p>{{section.settings.impactium_section_small_text }}</p>
+          {%endif%}
+			<div class="sp-tech-pro-redf-row">
+              {%if section.settings.impactium_section_image != blank %}
+				<div class="sp-tech-pro-redf-row-img"><img class="lazyload" data-src="{{section.settings.impactium_section_image | img_url: 'master'}}" alt="{{ section.settings.impactium_section_image.alt }}" /></div>
+              {%endif%}
+          
+           {%if section.settings.impactium_section_content != blank %}
+				<div class="sp-tech-pro-redf-row-cont">
+					{{section.settings.impactium_section_content}}
+				</div>
+            {%endif%}  
+			</div>
+          {%if section.settings.impactium_bottom_image != blank %}
+			<div class="sp-tech-pro-redf-b-img">
+				<img class="lazyload" data-src="{{section.settings.impactium_bottom_image | img_url : 'master'}}" alt="{{ section.settings.impactium_bottom_image.alt }}"/>
+			</div>
+          {%endif%}
+		 <div class="sp-tech-pro-redf-btn">
+           {%if section.settings.impactium_section_button_link %}
+              <a href="{{section.settings.impactium_section_button_link}}" class="sp-bl-back-btn" target="_blank">{{section.settings.impactium_section_button_text}}</a>
+           {%endif%}
+          </div>
+          {%if section.settings.impactium_bottom_text != blank %}
+			<div class="sp-tech-pro-redf-bottom">{{section.settings.impactium_bottom_text}}</div>
+          {%endif%}
+		</div>
+		<div class="sp-tech-no-bd-sec">
+          {%if section.settings.bigdrop_heading != blank %}
+			<h2>{{section.settings.bigdrop_heading}}</h2>
+          {%endif%}
+			<div class="sp-tech-no-bd-row">
+				<div class="sp-tech-no-bd-cont">
+                        {%if section.settings.bigdrop_section_text != blank %}
+					<p>{{section.settings.bigdrop_section_text}}</p>
+                  {%endif%}
+				</div>
+              {%if section.settings.bigdrop_section_image != blank %}
+				<div class="sp-tech-no-bd-img"><img class="lazyload" data-src="{{section.settings.bigdrop_section_image | img_url: 'master'}}"  alt="{{ section.settings.bigdrop_section_image.alt }}"/></div>
+              {%endif%}
+			</div>
+		</div>
+		<div class="sp-tech-one-drop-sec Saving-screen">
+          {%if section.settings.saving_screens_heading != blank %}
+			<h3>{{section.settings.saving_screens_heading}}</h3>
+          {%endif%}
+			<div class="sp-tech-one-drop-scr-img">
+              {%if section.settings.saving_screens_image != blank %}
+				<img class="lazyload" data-src="{{section.settings.saving_screens_image | img_url: 'master'}}" alt="{{ section.settings.saving_screens_image.alt }}"/>
+              {%endif%}
+                {%if section.settings.saving_screens_text != blank %}
+              <p><span>{{section.settings.saving_screens_text}}</span></p>
+              {%endif%}
+			</div>
+			<div class="sp-tech-one-drop-sp-mic">
+              {%if section.settings.protection_screens_image !=  blank %}
+				<div class="sp-tech-one-drop-sp-mic-logo"><img class="lazyload" data-src="{{section.settings.protection_screens_image  | img_url: 'master'}}" alt="{{ section.settings.protection_screens_image.alt }}"/></div>
+              {%endif%}
+              {%if section.settings.protection_section_samll_heading !=  blank %}
+				<p>{{section.settings.protection_section_samll_heading}}</p>
+              {%endif%}
+				<div class="sp-tech-one-drop-sp-mic-row">
+                  {%if section.settings.protection_section_image !=  blank %}
+					<div class="sp-tech-one-drop-sp-mic-left">
+						<img class="lazyload" data-src="{{section.settings.protection_section_image | img_url: 'master'}}" alt="{{ section.settings.protection_section_image.alt }}"/>
+					</div>
+                  {%endif%}
+                  {%if section.settings.protection_section_text != blank %}
+					<div class="sp-tech-one-drop-sp-mic-right">
+						{{section.settings.protection_section_text}}
+					</div>
+                  {%endif%}
+				</div>
+				<div class="sp-tech-one-drop-btn">
+                  {%if section.settings.protection_section_button_link != blank %}
+                  <a href="{{section.settings.protection_section_button_link}}" class="sp-bl-back-btn">{{section.settings.protection_section_button_text}}</a>
+                  {%endif%}
+              </div>
+			</div>
+		</div>
+		<div class="sp-tech-always-never-sec">
+          {%if section.settings.testing_section_heading != blank %}
+			<h2>{{section.settings.testing_section_heading}}</h2>
+          {%endif%}
+          {%if section.settings.testing_section_text  != blank %}
+			<p>{{section.settings.testing_section_text}}</p>
+          {%endif%}
+			<div class="sp-tech-always-never-lr-sec">
+              {%for block in section.blocks %}
+                 {%if block.type == 'testing-types'%}
+				<div class="sp-tech-always-never-row {%if forloop.index > 3 %} Mobile-hidden{%endif%}">
+					<div class="sp-tech-always-never-blk "><img class="lazyload" data-src="{{block.settings.testing_type_image | img_url: 'master'}}" alt="{{ block.settings.testing_type_image.alt }}"/></div>
+					<div class="sp-tech-always-never-blk">
+						<h3>{{block.settings.testing-type-heading }}</h3>
+						<p>{{block.settings.testing-type-text }}</p>
+					</div>
+				</div>
+              {%endif%}
+              {%endfor%}
+				
+				<div  class="sp-tech-always-never-btn"><a id="Mobile-Show-all" href="#" class="sp-bl-lined-btn">Show All</a></div>
+			</div>
+		</div>
+		<div class="sp-tech-explore-case-sec">
+           {%for block in section.blocks %}
+                 {%if block.type == 'rich-text'%}
+			<h2>{{block.settings.heading}}</h2>
+			<p>{{block.settings.rich-text}}</p>
+          {%endif%}
+          {%endfor%}
+			<div class="sp-tech-explore-case-inner">
+              {%for block in section.blocks %}
+              {%if block.type == 'product-list'%}
+				<div class="sp-tech-explore-case-row">
+					<div class="sp-tech-explore-case-img">
+						<img class="lazyload" data-src="{{block.settings.product-image | img_url: 'master'}}" alt="{{ block.settings.product-image.alt }}"/>
+                        <div class="sp-tech-explore-case-img-cont">
+                              <h3>{{block.settings.heading}}</h3>
+                              <p>{{block.settings.sub_heading}}</p>
+                        </div>
+					</div>
+					<div class="sp-tech-explore-case-cont">
+						<h3>{{block.settings.heading}}</h3>
+						<p>{{block.settings.sub_heading}}</p>
+					     {{block.settings.product-detail}}
+						<div class="sp-tech-explore-case-cont-btn"><a href="{{block.settings.product-link}}" class="sp-bl-back-btn">Shop Now</a></div>
+					</div>
+				</div>
+              {%endif%}
+              {%endfor%}
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Speck Tech",
+    "settings": [
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1600x600)"
+
+      },
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+      {
+		"type": "text",
+        "id": "section_heading",
+        "label": "Madess Section  Heading"
+      },
+      {
+		"type": "html",
+        "id": "bottom_section",
+        "label": "Madess Section Text"
+      },
+        {
+		"type": "image_picker",
+        "id": "Madness_section_image",
+        "label": "Madness Section Image(938 x 351)"
+      },
+	   {
+		"type": "text",
+        "id": "Tried_section_heading",
+        "label": "Tried Section  Heading"
+      },
+      {
+		"type": "html",
+        "id": "tried_section_text",
+        "label": "Tried Section Text"
+      },
+        {
+		"type": "text",
+        "id": "section_heading_with_border",
+        "label": "Section  Heading with Border"
+      },
+	  {
+		"type": "text",
+        "id": "presidio_section_text",
+        "label": "Presidio Section heading"
+      },
+      {
+		"type": "text",
+        "id": "presidio_section_small_text",
+        "label": "Presidio section small heading"
+      },
+      {
+		"type": "image_picker",
+        "id": "presidio_section_image",
+        "label": "Presidio Section image(844x564)"
+      },
+      {
+		"type": "html",
+        "id": "presidio_section_content",
+        "label": "Presidio Section Text"
+      },
+       {
+		"type": "image_picker",
+        "id": "presidio_bottom_image",
+        "label": "Presidio Section Bottom Image(416x278)"
+      },
+      {
+		"type": "url",
+        "id": "presidio_section_button_link",
+        "label": "Presidio Section Button Link"
+      },
+      {
+		"type": "text",
+        "id": "presidio_section_button_text",
+        "label": "Presidio Section Button text"
+      },
+	    {
+		"type": "text",
+        "id": "impactium_section_text",
+        "label": "Impactium Section heading"
+      },
+      {
+		"type": "text",
+        "id": "impactium_section_small_text",
+        "label": "Impactium section small heading"
+      },
+      {
+		"type": "image_picker",
+        "id": "impactium_section_image",
+        "label": "Impactium Section image(826x428)"
+      },
+      {
+		"type": "html",
+        "id": "impactium_section_content",
+        "label": "Impactium Section Text"
+      },
+       {
+		"type": "image_picker",
+        "id": "impactium_bottom_image",
+        "label": "Impactium Section Bottom Image(416x278)"
+      },
+      {
+		"type": "url",
+        "id": "impactium_section_button_link",
+        "label": "Impactium Section Button Link"
+      },
+      {
+		"type": "text",
+        "id": "impactium_section_button_text",
+        "label": "Impactium Section Button text"
+      },
+        {
+		"type": "text",
+        "id": "impactium_bottom_text",
+        "label": "Impactium Bottom Text"
+      },
+       {
+		"type": "text",
+        "id": "bigdrop_heading",
+        "label": "Bigdrop Heading"
+      },
+      {
+		"type": "image_picker",
+        "id": "bigdrop_section_image",
+        "label": "Bigdrop Section Image(826x420)"
+      },
+      {
+		"type": "html",
+        "id": "bigdrop_section_text",
+        "label": "Bigdrop Section Text"
+      },
+      {
+		"type": "text",
+        "id": "saving_screens_heading",
+        "label": "Saving Screens Heading"
+      },
+      {
+		"type": "image_picker",
+        "id": "saving_screens_image",
+        "label": "Saving Screens Image(600x266)"
+      },
+      {
+		"type": "html",
+        "id": "saving_screens_text",
+        "label": "Saving Screens Text"
+      },
+      {
+		"type": "image_picker",
+        "id": "protection_screens_image",
+        "label": "Protection Section Image(586x466)"
+      },
+      {
+		"type": "text",
+        "id": "protection_section_samll_heading",
+        "label": "Protection Section Small Heading"
+      },      
+      {
+		"type": "image_picker",
+        "id": "protection_section_image",
+        "label": "Protection Section Left Side Image(400x48)"
+      },
+      {
+		"type": "html",
+        "id": "protection_section_text",
+        "label": "Protection Section Text"
+      },
+       {
+		"type": "url",
+        "id": "protection_section_button_link",
+        "label": "Protection Section Button Link"
+      },
+      {
+		"type": "text",
+        "id": "protection_section_button_text",
+        "label": "Protection Section Button Text"
+      },
+         {
+		"type": "text",
+        "id": "testing_section_heading",
+        "label": "Testing Section Heading"
+      },
+      {
+		"type": "html",
+        "id": "testing_section_text",
+        "label": "Testing Section Text"
+      }
+      
+ 
+      
+
+   ],
+"blocks":
+[
+{
+"type": "testing-types",
+"name":"Testing Types",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "testing_type_image",
+   "label": "Testing Type Image(310x317)"
+
+ },
+    {
+
+   "type": "text",
+   "id": "testing-type-heading",
+   "label": "Testing Type Heading"
+
+ },
+  {
+
+   "type": "html",
+   "id": "testing-type-text",
+   "label": "Testing Type Description"
+
+ } 
+]
+},
+{
+"type": "rich-text",
+"name":"Rich Text",
+      "settings": [
+   {
+
+   "type": "text",
+   "id": "heading",
+   "label": "Heading"
+ },
+ {
+   "type": "html",
+   "id": "rich-text",
+   "label": "Rich Text"
+ } 
+]
+},
+{
+"type": "product-list",
+"name":"Product Listing",
+      "settings": [
+   {
+
+   "type": "text",
+   "id": "heading",
+   "label": "Heading"
+ },
+ {
+
+   "type": "text",
+   "id": "sub_heading",
+   "label": "Sub Heading"
+ },
+ {
+   "type": "image_picker",
+   "id": "product-image",
+   "label": "Product Image(310x317)"
+ },
+ {
+   "type": "html",
+   "id": "product-detail",
+   "label": "Product Detail"
+ },
+ {
+   "type": "url",
+   "id": "product-link",
+   "label": "Product Link"
+ } 
+]
+}
+  ]
+
+  }
+{% endschema %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+ 
+  $("#Mobile-Show-all").click(function(event){
+    event.preventDefault();
+    $(".Mobile-hidden").show();
+  });
+});
+</script>

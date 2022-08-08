@@ -1,0 +1,158 @@
+{%- assign disable_sticky_header = false -%}
+
+{%- if section.settings.enable -%}
+  {%- if section.settings.collection_image_enable and collection.image -%}
+    <div
+      id="CollectionHeaderSection"
+      data-section-id="{{ section.id }}"
+      data-section-type="collection-header"
+      {% if section.settings.parallax %}data-parallax="true"{% endif %}>
+
+      {%- assign img_url = collection.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+      <div class="collection-hero">
+
+        {%- if section.settings.parallax -%}
+          <div class="parallax-container">
+            <div class="parallax-image">
+        {%- endif -%}
+
+          <img class="collection-hero__image image-fit lazyload"
+            src=""
+            data-src="{{ img_url }}"
+            data-aspectratio="{{ collection.image.aspect_ratio }}"
+            data-widths="[720, 900, 1080, 1800, 2400]"
+            data-sizes="auto"
+            alt="{{ collection.image.alt | escape }}">
+
+          <noscript>
+            <img class="collection-hero__image image-fit"
+              src="{{ collection.image | img_url: '1400x' }}"
+              alt="{{ collection.image.alt | escape }}">
+          </noscript>
+
+        {%- if section.settings.parallax -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        <div class="collection-hero__content bottom-caption-content--{{section.settings.bottom_description}}">
+          <div class="page-width">
+            <header class="section-header section-header--hero text-{{section.settings.text_align}}">
+              <div class="section-header__shadow">
+                {% if section.settings.bottom_description == false %}
+                {%- render 'breadcrumbs' -%}
+                {%endif%}
+                <h1 class="section-header__title large">
+                  {{ collection.title }}
+                </h1>
+                {% if section.settings.bottom_description == false %}
+                <div class="rte collection__description">
+                  {{ collection.description }}
+                </div>
+                {% endif %}
+                {% if section.settings.button_text != blank %}
+                  <a class="btn btn-blue" href="{{section.settings.link}}">{{section.settings.button_text}}</a>
+                {% endif %}
+              </div>
+            </header>
+          </div>
+        </div>
+      </div>
+      
+      {% if section.settings.bottom_description == true %}
+      <div class="rte collection__description bottom page-width">
+        {{ collection.description }}
+      </div>
+      {% endif %}
+    </div>
+  {%- else -%}
+    {%- assign disable_sticky_header = true -%}
+    <div class="page-width page-content page-content--top">
+      <header class="section-header section-header--flush text-left">
+        {%- render 'breadcrumbs' -%}
+        <h1 class="section-header__title large">
+          {{ collection.title }}
+        </h1>
+      </header>
+    </div>
+  {%- endif -%}
+{% else %}
+  {%- assign disable_sticky_header = true -%}
+{%- endif -%}
+
+{%- if disable_sticky_header -%}
+  {% comment %}
+    Div to trigger theme.CollectionHeader JS
+  {% endcomment %}
+  <div
+    id="CollectionHeaderSection"
+    data-section-id="{{ section.id }}"
+    data-section-type="collection-header">
+  </div>
+{%- endif -%}
+
+
+{% schema %}
+  {
+    "name": "Collection header",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Enable header",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "collection_image_enable",
+        "label": "Show collection image",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "parallax",
+        "label": "Parallax image",
+        "default": true
+      },
+      {
+        "type": "select",
+        "id": "text_align",
+        "label": "Text align",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Link"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+      },
+      {
+        "type": "checkbox",
+        "id": "bottom_description",
+        "label": "Bottom description"
+      },
+      {
+        "type": "header",
+        "content": "bottom section"
+      }
+    ]
+  }
+{% endschema %}

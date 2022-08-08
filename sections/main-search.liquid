@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="https://ui.powerreviews.com/tag-builds/10314/4.1/css/styles.css">
+<div class="container" data-section-type="main-search-section">
+  <div class="row">
+    <div class="col-xs-12">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search-field">        
+        <label for="search">Search:</label>
+        <input type="search" name="q" id="search" value="{{ search.terms | escape | replace: '*', '' }}"
+        style="padding: 7px 10px; border: 1px solid #ccc; border-radius: 3px; display: block; width: 100%;"
+        class="tgls-ss tgls-ss-infocus" autocomplete="off">
+      </form>
+      <div class="card m-t-15">
+        <div class="tagalys-namespace tagalys-search-results tagalys-managed-list-parent" id="tagalys-namespace">
+          <div class="tagalys-managed-list" style="opacity: 1;">
+            <div class="tagalys-filters">
+            </div>
+            <div class="header-results-and-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var tagalysTemplate = {
+    'filter_content': {% render 'tagalys-html', context: 'filter_content' %},
+    'filter_type': {% render 'tagalys-html', context: 'filter_type' %},
+    'filter_value': {% render 'tagalys-html', context: 'filter_value' %},
+    'selcted_filter': {% render 'tagalys-html', context: 'selcted_filter' %},
+    'selected_filters': {% render 'tagalys-html', context: 'selected_filters' %},
+    'sort_options': {% render 'tagalys-html', context: 'sort_options' %},
+    'product': {% render 'tagalys-html', context: 'product' %},
+    'product_list': {% render 'tagalys-html', context: 'product_list' %},
+  }
+</script>
+
+{{'search.js' | asset_url | script_tag}}
+
+<script>  
+  window.addEventListener('load', function () {
+    setAriaExpanded();
+})
+</script>
+
+{% stylesheet %}
+.search-field label {margin:0 0 0 10px}
+{% endstylesheet %}

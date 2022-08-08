@@ -1,0 +1,95 @@
+<div class="sp-support-main">
+	<div class="page-width">
+		<div class="sp-support-upr">
+          <div class="sp-support-uprimg">
+            <h1>
+              {%if section.settings.imageOne != blank %}
+              <span><img src="{{section.settings.imageOne | img_url: 'original'}}" alt="{{ section.settings.imageOne.alt }}" /></span>
+              {{page.title}}
+              {%endif%}
+            </h1>
+          </div>
+			<h3>{{section.settings.top-content-one}}</h3>
+			<p>{{section.settings.top-content-two}}</p>
+		</div>
+		<div class="sp-support-lwr">
+			<div class="sp-support-lwr-grid">
+				<!--this will repeat-->
+              {%for block in section.blocks%}
+				<div class="sp-support-lwr-grid-block"{% if block.settings.link_win != true %} onclick="window.location.href='{{ block.settings.title-link }}'"{% else %} onclick="window.open('{{ block.settings.title-link }}')"{% endif %}>
+					<div class="sp-support-lwr-grid-img">
+                  {%if block.settings.block_image  != blank %}
+                      <img src="{{block.settings.block_image | img_url: 'original'}}" alt="{{ block.settings.block_image.alt }}" />
+                 {%endif%}
+                  </div>
+					<div class="sp-support-lwr-grid-cont">
+                      {%if block.settings.blog-content  != blank %}
+						<p>{{block.settings.blog-content}}</p>
+					  {%endif%}	
+                      <div class="sp-support-lwr-grid-cont-link">
+                        {%if block.settings.title-link != 'blank'%}
+                        <a href="{{block.settings.title-link}}" class="left-chevron sp-bl-text-link"{% if block.settings.link_win == true %} target="_blank"{% endif %}>Learn More</a>
+                        {%endif%}
+                      </div>
+					</div>
+				</div>
+              {%endfor%}
+				<!--this will repeat-->
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Speck Supports",
+    "settings": [
+   
+      			{
+                  "id": "imageOne",
+                  "type": "image_picker",
+                  "label": "Image One(240x60)"
+                },
+				 {
+                  "id": "top-content-one",
+                  "type": "html",
+                  "label": "Top decription one"
+                },
+				 {
+                  "id": "top-content-two",
+                  "type": "html",
+                  "label": "Top decription two"
+                }
+				
+      ],
+"blocks": [
+            {
+              "type": "supports-blocks",
+              "name": "Supports Blocks",
+              "settings": [
+                  {
+                  "id": "block_image",
+                  "type": "image_picker",
+                  "label": "Image(350x150)"
+                },
+                  {
+                  "id": "blog-content",
+                  "type": "html",
+                  "label": "Text"
+                },
+                {
+                  "id": "title-link",
+                  "type": "url",
+                  "label": "Link"
+                },
+                {
+                  "id": "link_win",
+                  "type": "checkbox",
+                  "label": "Open in new window?"
+                }
+              ]
+            }
+
+       ]
+    }
+{% endschema %}

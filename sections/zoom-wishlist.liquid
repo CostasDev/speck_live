@@ -1,0 +1,77 @@
+<div class="page-width">
+    <div class="section-header">
+        <h2 class="section-header__title">
+            Real Reviews from Real Customers
+          </h2>
+    </div>
+    <!-- start_review_render_code_widget_section -->
+    <div id="pr-reviewdisplay" style=""></div>
+    <div id="pr-questionsnippet" style="display:none;"></div>
+    <div id="pr-questiondisplay" style="display:none;"></div>
+    <!-- end_review_render_code_widget_section -->  
+</div>
+
+<!-- start_review_render_code_js_section -->
+
+<script>
+  window.pwr = window.pwr || function () {
+    (pwr.q = pwr.q || []).push(arguments); 
+  };
+  pwr("render", {
+  api_key: "ea86d570-8331-45c7-a38b-107ca54b89b3",
+  locale: "en_US",
+  merchant_group_id: "47546",
+  merchant_id: "37684",
+  page_id: "{{ product.id }}",
+  review_wrapper_url: "https://speck-products.myshopify.com/pages/write-a-review/?pr_page_id={{ product.id }}",
+  product: {
+    name: "{{ product.title | replace: "+", " " }}",
+    url: "https://speck-products.myshopify.com{{ product.url }}",
+    image_url: "https:{{ product.featured_image | product_img_url: "large" }}",
+    description: "{{ product.description | strip_html | strip_newlines | replace: "%0A", "%20" | replace: '"', '%27' | escape }}",
+    category_name: {% if product.type != '' %}"{{ product.type }}"{% else %} "Default" {% endif %},
+    upc: "{{ product.barcode }}",
+    brand_name: "{{ product.vendor }}",
+    price: "{{ product.price | money_without_currency }}",
+    in_stock: "{{ product.available }}",
+               variants: [ {% for variant in product.variants %}
+               {% assign product_name = product.title %}
+               {% if product.variants.size > 1 %}{% assign product_name = variant.title %}{% endif %}
+    {
+       name: "{{ product_name | replace: "+", " " }}",
+       description: "{{ product_name | escape }}",
+       page_id_variant: "{{variant.id}}",
+       upc: "{{ variant.barcode }}"
+    }{% if forloop.last == false %}, {% endif %} {% endfor %}
+  ]},
+    components: {
+      ReviewDisplay: "pr-reviewdisplay",
+      ReviewSnippet: "pr-reviewsnippet",
+		
+      //*** Start Q&A Components ***
+
+      QuestionSnippet: 'pr-questionsnippet',
+
+      QuestionDisplay: 'pr-questiondisplay'
+
+      //*** End Q&A Components
+    }  
+  });
+</script> 
+<!-- end_review_render_code_js_section -->
+
+{% schema %}
+{
+   "name": "wishlist section",
+  "class": "index-section",
+   "settings": [
+       
+   ],
+    "presets": [
+        {
+            "category": "wishlist",
+            "name":"Wishilst"
+        }
+    ]
+}
+{% endschema %}

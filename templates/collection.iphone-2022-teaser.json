@@ -1,0 +1,99 @@
+{
+  "wrapper": "div.iphone-teaser-page.page-width",
+  "sections": {
+    "page-header": {
+      "type": "landing_teaser-header",
+      "settings": {
+        "header-background": "shopify:\/\/shop_images\/iphone-2022-teaser_bg_3ff722a0-39e9-4735-a12b-fcd876d54050.jpg",
+        "header-background-cover": "cover",
+        "header-background-position": "center",
+        "header-font-color": "#ffffff",
+        "header-preheading": "Ready for the new iPhone? Coming soon from Speck,",
+        "header-heading": "New iPhone 14 Cases for 2022...",
+        "header-postheading": "...or whatever they’re gonna call it.",
+        "header-text-alignment": "center",
+        "header-feature1-img": "shopify:\/\/shop_images\/feature_magsafe_86fc6ba4-df3e-4444-9cdd-64f346affd6a.png",
+        "header-feature1-text": "Built-in magnets. <span>Built for MagSafe.<\/span>",
+        "header-feature2-img": "shopify:\/\/shop_images\/feature_drop-protection_7974ff77-274c-4d94-88d2-2c8df2373ddd.png",
+        "header-feature2-text": "Embedded air capsules <span>cushion drops up to 13ft.<\/span>",
+        "header-feature3-img": "shopify:\/\/shop_images\/feature_microban_ef3e64d7-210b-4136-a1ed-c455696aab7f.png",
+        "header-feature3-text": "Microban antimicrobial <span>product protection.<\/span>"
+      }
+    },
+    "signup-section": {
+      "type": "landing_signup-section",
+      "settings": {
+        "signup-heading": "Sign-up to be notified when\u0003our new iPhone 14 cases drop:",
+        "signup-heading-level": "h2",
+        "signup-text-alignment": "center",
+        "signup-class-id": "klaviyo-form-U22aig"
+      }
+    },
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+        "enable": false,
+        "collection_image_enable": false,
+        "parallax": false,
+        "text_align": "left",
+        "link": "",
+        "button_text": "",
+        "bottom_description": false
+      }
+    },
+    "main-collection": {
+      "type": "main-collection",
+      "blocks": {
+        "subcollections": {
+          "type": "subcollections",
+          "disabled": true,
+          "settings": {
+            "subcollections_per_row": 5
+          }
+        },
+        "product_grid": {
+          "type": "product_grid",
+          "settings": {
+            "enable_collection_count": true,
+            "per_row": 4,
+            "rows_per_page": 4,
+            "mobile_flush_grid": true
+          }
+        },
+        "6ed73d23-4a6b-437e-80c0-9836c84e0d82": {
+          "type": "collection_banner_product",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/speck_shopify_airtag_b24eb57d-d419-4db5-b0eb-95cd0dad0b42.png",
+            "mobile_image": "shopify:\/\/shop_images\/speck_shopify_airtag_b24eb57d-d419-4db5-b0eb-95cd0dad0b42.png",
+            "image_darken": true,
+            "title": "Track Your Valuables with AirTag Accessories",
+            "text_link": "shopify:\/\/collections\/airtag-accessories",
+            "desk_color": "#000000",
+            "text_position": "bottom-right",
+            "position": "9",
+            "text_below_image": true,
+            "mobile_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "subcollections",
+        "product_grid",
+        "6ed73d23-4a6b-437e-80c0-9836c84e0d82"
+      ],
+      "settings": {
+        "enable_sidebar": true,
+        "collapsed": true,
+        "filter_style": "sidebar",
+        "enable_color_swatches": false,
+        "enable_sort": true
+      }
+    }
+  },
+  "order": [
+    "page-header",
+    "signup-section",
+    "collection-header",
+    "main-collection"
+  ]
+}

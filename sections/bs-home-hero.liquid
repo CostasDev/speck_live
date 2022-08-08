@@ -1,0 +1,227 @@
+<div class="bs-hp-hero-main">
+  <div class="bs-hp-hero-image-wrapper">
+    <style>
+      .bs-hp-hero-image-wrapper {
+        min-height: {{ section.settings.image.height | times: 100 | divided_by: section.settings.image.width }}vw;
+      }
+      @media screen and (max-width: 768px) {
+        .bs-hp-hero-image-wrapper {
+          min-height: {{ section.settings.mob_image.height | times: 100 | divided_by: section.settings.mob_image.width }}vw;
+        }
+      }
+    </style>
+    <a href="{{ section.settings.link }}" aria-label="{%- if section.settings.pre_title != blank -%}{{ section.settings.pre_title | strip_html | strip_newlines }}{%- endif -%}{% if section.settings.pre_title != blank and section.settings.main_title != blank %} | {% endif %}{%- if section.settings.main_title != blank -%}{{ section.settings.main_title | strip_html | strip_newlines }}{%- endif -%}{% if section.settings.main_title != blank and section.settings.sub_title != blank %} | {% endif %}{%- if section.settings.sub_title != blank -%}{{ section.settings.sub_title | strip_html | strip_newlines}}{%- endif -%}{% if section.settings.sub_title != blank and section.settings.link_text != blank %} | {% endif %}{%- if section.settings.link_text != blank -%}{{ section.settings.link_text | strip_html | strip_newlines }}{%- endif -%}"></a>
+    {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="lazyload  small--hide"
+      src="{{ section.settings.image | img_url: '50x' }}" 
+      width="{{section.settings.image.width}}" 
+      height="{{section.settings.image.height}}" 
+      data-src="{{ img_url }}" 
+      data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+      data-sizes="auto"
+      alt="">
+    {%- assign img_url_mobile = section.settings.mob_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img class="loading loading--delayed medium-up--hide"
+      src="{{ section.settings.mob_image | img_url: '50x ' }}" 
+      width="{{section.settings.mob_image.width}}" 
+      height="{{section.settings.mob_image.height}}" 
+      data-delay="200"
+      data-src="{{ img_url_mobile }}"
+      data-aspectratio="{{ section.settings.mob_image.aspect_ratio }}"
+      data-sizes="auto"
+      alt="">   
+  </div>  
+  {% if section.settings.hero_text_display == true %}
+  <div class="bs-hp-hero-text-wrap">
+    <div class="page-width">
+      <div class="bs-hp-hero-txt-block">
+        <div class="bs-hp-hero-txt-ini" style="align-self:{{ section.settings.text_position }};">
+          {%- if section.settings.pre_title != blank -%}
+            <h3 class="bs-hp-hero-pre-title" 
+            style="color: {{section.settings.color_text}}; border-bottom: 1px solid {{section.settings.color_text}};">
+            {{section.settings.pre_title}}
+            </h3>
+          {%- endif -%}
+          {%- if section.settings.main_title != blank -%}
+            <h2 class="bs-hp-hero-main-title" style="color: {{section.settings.color_text}}">
+            {{section.settings.main_title}}
+            </h2>
+          {%- endif -%}
+          {%- if section.settings.sub_title != blank -%}
+            <p class="bs-hp-hero-sub-title" style="color: {{section.settings.color_text}}">
+            {{section.settings.sub_title}}
+            </p>
+          {%- endif -%}
+          {%- if section.settings.link_text != blank -%}
+            {% comment %} <a href="{{ section.settings.link }}" 
+              class="bs-hp-hero-btn btn">
+              {{ section.settings.link_text }}
+            </a> {% endcomment %}
+            <button onClick="location.href='{{ section.settings.link }}'"
+              class="bs-hp-hero-btn btn">
+              {{ section.settings.link_text }}
+            </button>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% style %}
+.bs-hp-hero-main .bs-hp-hero-txt-ini h2, .bs-hp-hero-main .bs-hp-hero-txt-ini h3, .bs-hp-hero-main .bs-hp-hero-txt-ini p {
+	text-shadow:{{ section.settings.text_shadow_distanceh }}px {{ section.settings.text_shadow_distancev }}px {{ section.settings.text_shadow_blur }}px rgba({{ section.settings.color_shadow | color_extract: 'red' }},{{ section.settings.color_shadow | color_extract: 'green' }},{{ section.settings.color_shadow | color_extract: 'blue' }},{{ section.settings.text_shadow_opacity | times: 0.01 }}){% if section.settings.text_shadow_glow == true %},
+	{{ section.settings.text_shadow_distanceh | times: -1 }}px {{ section.settings.text_shadow_distancev }}px {{ section.settings.text_shadow_blur }}px rgba({{ section.settings.color_shadow | color_extract: 'red' }},{{ section.settings.color_shadow | color_extract: 'green' }},{{ section.settings.color_shadow | color_extract: 'blue' }},{{ section.settings.text_shadow_opacity | times: 0.01 }}),
+	{{ section.settings.text_shadow_distanceh }}px {{ section.settings.text_shadow_distancev | times: -1 }}px {{ section.settings.text_shadow_blur }}px rgba({{ section.settings.color_shadow | color_extract: 'red' }},{{ section.settings.color_shadow | color_extract: 'green' }},{{ section.settings.color_shadow | color_extract: 'blue' }},{{ section.settings.text_shadow_opacity | times: 0.01 }}),
+	{{ section.settings.text_shadow_distanceh | times: -1 }}px {{ section.settings.text_shadow_distancev | times: -1 }}px {{ section.settings.text_shadow_blur }}px rgba({{ section.settings.color_shadow | color_extract: 'red' }},{{ section.settings.color_shadow | color_extract: 'green' }},{{ section.settings.color_shadow | color_extract: 'blue' }},{{ section.settings.text_shadow_opacity | times: 0.01 }})
+{% endif%}}
+.collab-lab-page .bs-hp-hero-image-wrapper {border-radius:6px;overflow:hidden;min-height:unset;}
+.collab-lab-page .bs-hp-hero-main {background:none;}
+.collab-lab-page .bs_hero_home_sec {margin-top:1em;}
+@media only screen and (max-width: 767px) {
+	.collab-lab-page .bs-hp-hero-text-wrap {background-color:rgb(237,237,237);margin-top:0;padding-top:18px;}
+	.collab-lab-page .bs-hp-hero-image-wrapper {border-top-left-radius:6px;border-top-right-radius:6px;border-bottom-left-radius:0;border-bottom-right-radius:0;}
+	.bs-hp-hero-main .bs-hp-hero-txt-ini h2, .bs-hp-hero-main .bs-hp-hero-txt-ini h3, .bs-hp-hero-main .bs-hp-hero-txt-ini p {text-shadow:none;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+}
+{% endstyle %}
+
+{% schema %}
+  {
+    "name": "BS Hero Home",
+    "class": "bs_hero_home_sec",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "3200 * 1000px"
+      },
+      {
+        "type": "image_picker",
+        "id": "mob_image",
+        "label": "Mobile Image",
+        "info": "830 * 520px"
+      },
+	  {
+		"type": "checkbox",
+		"id": "hero_text_display",
+		"label": "Display text with Hero Image?",
+		"default": true
+	  },
+      {
+        "type": "textarea",
+        "id": "pre_title",
+        "label": "Pre Title"
+      },
+      {
+        "type": "textarea",
+        "id": "main_title",
+        "label": "Main Title"
+      },
+      {
+        "type": "textarea",
+        "id": "sub_title",
+        "label": "Sub Title"
+      },
+      {
+        "type": "text",
+        "id": "link_text",
+        "label": "Slide link text",
+        "default": "Optional button"
+      },
+      {
+        "type": "url",
+        "id": "link",
+        "label": "Slide link"
+      },
+	  {
+		"type": "header",
+		"content": "Text Formatting"
+	  },
+      {
+        "type": "color",
+        "id": "color_text",
+        "label": "Text Color",
+        "default": "#FFF"
+      },
+      {
+        "type": "color",
+        "id": "color_shadow",
+        "label": "Shadow Color",
+        "default": "#000000"
+      },
+	  {
+		"type": "range",
+		"id": "text_shadow_opacity",
+		"min": 0,
+		"max": 100,
+		"step": 1,
+		"unit": "%",
+		"label": "Text Shadow Opacity",
+		"default": 50
+      },
+	  {
+		"type": "range",
+		"id": "text_shadow_blur",
+		"min": -12,
+		"max": 12,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Shadow Blur",
+		"default": 4
+      },
+	  {
+		"type": "range",
+		"id": "text_shadow_distanceh",
+		"min": -12,
+		"max": 12,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Shadow Distance (Horz)",
+		"default": 2
+      },
+	  {
+		"type": "range",
+		"id": "text_shadow_distancev",
+		"min": -12,
+		"max": 12,
+		"step": 1,
+		"unit": "px",
+		"label": "Text Shadow Distance (Vert)",
+		"default": 2
+      },
+	  {
+		"type": "checkbox",
+		"id": "text_shadow_glow",
+		"label": "Full text shadow glow?",
+		"default": false
+	  },
+      {
+        "type": "select",
+        "id": "text_position",
+        "label": "Text Block Position",
+		"options": [
+			{
+				"value": "start",
+				"label": "Top"
+			},
+			{
+				"value": "center",
+				"label": "Middle"
+			},
+			{
+				"value": "end",
+				"label": "Bottom"
+			}
+		],
+		"default": "center"
+      }
+    ],
+    "presets": [{
+      "name": "BS Hero Home"
+    }]
+  }
+{% endschema %}

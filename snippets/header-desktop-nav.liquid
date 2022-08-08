@@ -1,0 +1,238 @@
+{%- liquid
+  unless limit
+    assign limit = main_menu.links.size
+  endunless
+  unless offset
+    assign offset = 0
+  endunless
+-%}
+
+<ul
+  class="site-nav site-navigation small--hide"
+  {% unless disable_aria %}
+    role="navigation" aria-label="Primary"
+  {% endunless %}>
+  {%- for link in main_menu.links limit: limit offset: offset -%}
+    {%- liquid
+      assign has_dropdown = false
+      assign is_megamenu = false
+      if link.links != blank
+        assign has_dropdown = true
+        assign is_megamenu = true
+      endif
+    -%}
+
+    <li
+      class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %} text-left"
+      {% if has_dropdown %}aria-haspopup="true"{% endif %}>
+
+      <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"{% if has_dropdown %} role="button"{% else %} role="link"{% endif %}>
+        {{ link.title }}
+      </a>
+      {%- if is_megamenu -%}
+        {%- assign previous_column_type = '' -%}
+        {%- assign animation_column = 1 -%}
+        {% assign type = 'list' %}
+        {% for block in section.blocks %}
+          {% if block.type == 'megamenu' and block.settings.title == link.title %}
+            {% assign type = block.settings.type %}
+            {% assign banner_1 = block.settings.banner_1 %}
+            {% assign banner_title_1 = block.settings.banner_title_1 %}
+            {% assign menu_titles = block.settings.menu_title_1 | append: ',' | append: block.settings.menu_title_2 | append: ',' | append: block.settings.menu_title_3 | append: ',' | append: block.settings.menu_title_4 | append: ',' | append: block.settings.menu_title_5 %}
+            {% assign banner_link_1 = block.settings.banner_link_1 %}
+            {% assign banner_2 = block.settings.banner_2 %}
+            {% assign banner_title_2 = block.settings.banner_title_2 %}
+            {% assign banner_link_2 = block.settings.banner_link_2 %}
+            {% assign bottom_link = block.settings.botom_link %}
+            {% assign bottom_title = block.settings.bottom_title %}
+          {% endif %}
+        {% endfor %}
+        <div class="site-nav__dropdown megamenu text-left menu-type--{{type}}">
+          <div class="page-width">
+            <div class="grid">  
+                {% if type == 'tab' %}
+                  <div class="grid__item medium-up--four-sixths appear-animation appear-delay-{{ animation_column }} tab">
+                    <div class="grid">
+                      {%- assign animation_column = animation_column | plus: 1 -%}
+                      <div class="side-accordian grid__item medium-up--one-quarter">
+                        {%- for childlink in link.links -%}
+                          {%- assign animation_column = animation_column | plus: 1 -%}
+                          <div class="accordian-link appear-animation appear-delay-{{ animation_column }}">
+                            <a data-id="#accordian-{{link.title | handleize}}--{{forloop.index0}}" href="{{childlink.url}}" class="site-nav__dropdown-link  {% if forloop.index0 == 0 %}active{% endif %} site-nav__dropdown-link--top-level {% if childlink.links != blank %}has-submenu{%endif%}">
+                              {% assign file_name = childlink.title | prepend: 'icon-' | handleize | append: '.svg' %}
+                              <img width="30" height="39" class="icon lazyload" data-src="{{file_name | asset_url }}">
+                              <span>{{ childlink.title }}</span>
+                            </a>
+                          </div>
+                        {%- endfor -%}
+                      </div>
+                      <div class="submenus grid__item medium-up--three-quarters">
+                        {%- for childlink in link.links -%}
+                          {% if childlink.links != blank %}
+                            <div id="accordian-{{link.title | handleize}}--{{forloop.index0}}" class="accordian-pannel {% if forloop.index0 != 0 %}hide{% endif %}">
+                              {%- liquid
+                                if childlink.levels > 0
+                                  assign previous_column_type = 'full'
+                                else
+                                  assign previous_column_type = 'single'
+                                endif
+                              -%}
+
+                              {% assign menu_titles_array = menu_titles | split: ',' %}
+                              {% assign menu_title = menu_titles_array[forloop.index0]  %}
+  
+                              {% if menu_title != blank %}
+                                <div class="grid">
+                                  <div class="grid__item one-whole menu-header">
+                                    <h2>{{menu_title}}</h2>
+                                  </div>
+                                </div>
+                              {% else %}
+                                <div class="grid">
+                                  <div class="grid__item one-whole menu-header">
+                                    <p>{{menu_titles_array[forloop.index0]}}</p>
+                                  </div>
+                                </div>
+                              {% endif %}
+                              
+                              <div class="grid">
+                                <div class="grid__item medium-up--one-third"><ul class="sp-sub-drop-link-list {{ link.title | handleize }}" id="{{ childlink.title | handleize }}">
+                                  {%- for grandchildlink in childlink.links -%}<li><a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{grandchildlink.title}}</a></li>{% comment %}
+                                  <!-- For Accessibility, removing the separate <div> lists in favor of one full list separated into columns with CSS -->
+                                    {% assign modulo = forloop.index | modulo: 7 %}
+                                    {% if modulo == 0 %}
+                                      </ul></div><div class="grid__item medium-up--one-third"><ul class="sp-sub-drop-link-list">
+                                    {% endif %}
+                                  {% endcomment %}{%- endfor -%}</ul>
+                                </div>
+                              </div>
+                            </div>
+                          {% endif %}
+                        {%- endfor -%}
+                      </div>
+                    </div>
+                  </div>
+                {% elsif type == 'block' %}
+                  <div class="grid__item medium-up--four-sixths appear-animation appear-delay-{{ animation_column }} block">
+                    {% assign menu_titles_array = menu_titles | split: ',' %}
+                    {% assign menu_title = menu_titles_array[0]  %}
+                    {% if menu_title != blank %}
+                    <div class="grid">
+                      <div class="grid__item one-whole menu-header">
+                        <p>{{menu_title}}</p>
+                      </div>
+                    </div>
+                    {% endif %}
+
+                    <div class="grid">
+                      {%- for childlink in link.links -%}
+                      <div class="grid__item medium-up--one-quarter">
+                        <a href="{{ childlink.url }}" class="site-nav__dropdown-link">
+                          {% assign image_handle = childlink.title | handleize | append: '.png' %}
+                          <img width="30" height="39" class="lazyload" data-src="{{image_handle | asset_url}}" alt="{{childlink.title}}">
+                        </a>
+                      </div>
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                {% else %}
+                  <div class="grid__item medium-up--four-sixths appear-animation appear-delay-{{ animation_column }} list">
+                    {% assign menu_titles_array = menu_titles | split: ',' %}
+                    {% assign menu_title = menu_titles_array[0]  %}
+                    {% if menu_title != blank %}
+                    <div class="grid">
+                      <div class="grid__item one-whole menu-header">
+                        <h2>{{menu_title}}</h2>
+                      </div>
+                    </div>
+                    {% endif %}
+                    
+                    <div class="grid">
+                      <div class="grid__item medium-up--one-sixth">
+                        <ul class="sp-sub-drop-link-list {{ link.title | handleize }}">
+                        {%- for childlink in link.links -%}
+                          <li>
+                            <a href="{{ childlink.url }}" class="site-nav__dropdown-link">
+                              {{childlink.title}}
+                            </a></li>
+                            {% comment %}
+                            <!-- For Accessibility, removing the separate <div> lists in favor of one full list separated into columns with CSS -->
+                              {% assign modulo = forloop.index | modulo: 7 %}
+                              {% if modulo == 0 %}
+                                </ul>
+                                </div><div class="grid__item medium-up--one-sixth"><ul class="sp-sub-drop-link-list">
+                              {% endif %}
+                            {% endcomment %}
+                        {%- endfor -%}
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+                {% endif %}
+                <div class="banner grid__item medium-up--two-sixths appear-animation appear-delay-{{ animation_column }}">
+                  <div class="grid">
+                    <div class="grid__item medium-up--one-half">
+                      <a href="{{banner_link_1}}">
+                        {%- assign img_url = banner_1 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                        <img width="218" height="236" class="lazyload"
+                          data-src="{{ img_url }}"
+                          data-widths="[360, 540, 720, 1000]"
+                          data-aspectratio="{{ banner_1.aspect_ratio }}"
+                          data-sizes="auto"
+                          alt="{{ banner_1.alt }}">
+                          <span>{{banner_title_1}}</span>
+                      </a>
+                    </div>
+                    <div class="grid__item medium-up--one-half">
+                      <a href="{{banner_link_2}}">
+                        {%- assign img_url = banner_2 | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                        <img  width="218" height="236" class="lazyload"
+                          data-src="{{ img_url }}"
+                          data-widths="[360, 540, 720, 1000]"
+                          data-aspectratio="{{ banner_2.aspect_ratio }}"
+                          data-sizes="auto"
+                          alt="{{ banner_2.alt }}">
+                          <span>{{banner_title_2}}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <div class="page-width bottom-link">
+            <a class="left-chevron" href="{{bottom_link}}">{{bottom_title}}</a>
+          </div>
+        </div>
+      {%- elsif has_dropdown -%}
+        <ul class="site-nav__dropdown text-left">
+          {%- for childlink in link.links -%}
+            {%- liquid
+              assign has_sub_dropdown = false
+              if childlink.links != blank
+                assign has_sub_dropdown = true
+              endif
+            -%}
+
+            <li class="{% if has_sub_dropdown %} site-nav__deep-dropdown-trigger{% endif %}">
+              <a href="{{ childlink.url }}" class="site-nav__dropdown-link site-nav__dropdown-link--second-level{% if has_sub_dropdown %} site-nav__dropdown-link--has-children{% endif %}">
+                {{ childlink.title | escape }}
+                {%- if has_sub_dropdown -%}
+                  <svg aria-hidden="true" focusable="false" role="presentation" class="icon icon--wide icon-chevron-down" viewBox="0 0 28 16"><path d="M1.57 1.59l12.76 12.77L27.1 1.59" stroke-width="2" stroke="#000" fill="none" fill-rule="evenodd"/></svg>
+                {%- endif -%}
+              </a>
+              {%- if has_sub_dropdown -%}
+                <ul class="site-nav__deep-dropdown">
+                  {%- for grandchildlink in childlink.links -%}
+                    <li>
+                      <a href="{{ grandchildlink.url }}" class="site-nav__dropdown-link">{{ grandchildlink.title | escape }}</a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>

@@ -1,0 +1,215 @@
+<div class="sp-inn-pg-tp-secndry-nav">
+  {% assign submenu = linklists[section.settings.second_menu] %}
+	<ul>
+      {% for link in submenu.links %}
+		<li {%if forloop.index == 4 %}class="active"{%endif%}><a href="{{link.url}}">{{link.title}}</a></li>
+	  {%endfor%}	
+	</ul>
+</div>
+<div class="sp-bs-sol-top-banner sp-bs-sol-top-banner-res-prgrm sp-bs-sol-top-banner-black-lyr">
+	  {%if section.settings.banner_image != blank %}
+	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url : 'master'}}')"></div>
+  {%endif%}
+  
+  {%if section.settings.banner_text != blank %}
+	<div class="sp-bs-sol-top-banner-cont">
+		<h3>{{section.settings.banner_text}}</h3>
+	</div>
+  {%endif%}
+</div>
+<div class="sp-inn-pg-res-prgrm-main">
+	<div class="sp-inn-pg-res-prgrm-top">
+		 {%if section.settings.banner_bottom_text != blank %}
+      {{section.settings.banner_bottom_text}}
+ {%endif%}
+		<div class="sp-inn-pg-res-prgrm-top-row">
+		{%for block in section.blocks %}	
+           {%if block.type == 'text-blocks'%}
+			<div class="sp-inn-pg-res-prgrm-top-block {%if block.settings.block_image != blank %} sp-inn-pg-res-prgrm-top-block-img{%endif%}">
+              {%if block.settings.block_image != blank %}
+				<img class="lazyload" data-src=" {{block.settings.block_image | img_url: 'master'}}" />
+              {%endif%}
+				<h3>{{block.settings.block_heading}}</h3>
+				<p>{{block.settings.block_text}}</p>
+			</div>
+          {%endif%}
+          {%endfor%}
+			
+		</div>
+	</div>
+	<div class="sp-cst-container">
+		<div class="res-prg-l-r-main">
+          {%if section.settings.prs_heading != blank %}
+			<h3 class="res-prg-l-r-mn-title">{{section.settings.prs_heading}}</h3>
+          {%endif%}
+          
+          {%for block in section.blocks %}	
+           {%if block.type == 'product-blocks'%}
+			<div class="res-prg-l-r-row">
+				<div class="res-prg-l-r-img">
+					<img class="lazyload" data-src="{{block.settings.product_image | img_url: '453x316'}}" />
+				</div>
+				<div class="res-prg-l-r-cont">
+                  {%if block.settings.product_title != blank %}
+					<h3>{{block.settings.product_title}}</h3>
+                  {%endif%}
+                  
+                  {%if block.settings.product_description != blank %}
+					<p>{{block.settings.product_description}}</p>
+				  {%endif%}
+                  
+               {%if block.settings.product_details != blank %}
+                  <h4 class="Learn-More_heading" data-id="{{forloop.index}}">Learn more:</h4>
+					<div class="res-prg-l-r-cont-list {%if block.settings.product_details_two != blank %} res-prg-l-r-cont-list-half {%else%} res-prg-l-r-cont-list-full {%endif%} Mobile-hidden toggle-div-{{forloop.index}}">
+						
+                     {%if block.settings.product_details != blank %} 
+                       <div class="res-prg-l-r-cont-list-col">						
+							{{block.settings.product_details}}
+                       
+                       </div>
+                      {%endif%}
+                      
+                         {%if block.settings.product_details_two != blank %} 
+                       <div class="res-prg-l-r-cont-list-col">						
+							{{block.settings.product_details_two}}
+                       
+                       </div>
+                      {%endif%}
+                      
+						</div>						
+					</div>
+                  {%endif%}
+                  
+				</div>
+			
+          {%endif%}
+          {%endfor%}	
+		</div>
+	 {%if section.settings.bottom_info_section != blank %} 
+        <div class="sp-bs-sol-email-main sp-inn-pg-res-prgrm-mail-box">
+          <p>{{section.settings.bottom_info_section}}</p>
+        </div>
+        {%endif%}
+	</div>	
+</div>
+
+
+{% schema %}
+  {
+    "name": "Reseller Program Four",
+    "settings": [
+       {
+		"type": "link_list",
+        "id": "second_menu",
+        "label": "Second Menu"
+
+      },
+      {
+		"type": "image_picker",
+        "id": "banner_image",
+        "label": "Banner Image(1136x500)"
+
+      },
+       {
+		"type": "html",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+     {
+		"type": "html",
+        "id": "banner_bottom_text",
+        "label": "Banner Bottom Text"
+      },
+   {
+   "type": "text",
+   "id": "prs_heading",
+   "label": "Products section Heading"
+ },
+ {
+   "type": "html",
+   "id": "bottom_info_section",
+   "label": "Info  section"
+ }    
+      
+   ],
+"blocks":
+[
+{
+"type": "text-blocks",
+"name":"Text Blocks",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "block_image",
+   "label": "Block Image(98x33)"
+
+ },
+  {
+
+   "type": "text",
+   "id": "block_heading",
+   "label": "Block Heading"
+
+ },
+ {
+   "type": "html",
+   "id": "block_text",
+   "label": "Block Text"
+
+ }
+]
+},
+{
+"type": "product-blocks",
+"name":"Product Block",
+      "settings": [
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Product Image(98x33)"
+
+ },
+  {
+
+   "type": "text",
+   "id": "product_title",
+   "label": "Product Title"
+
+ },
+ {
+   "type": "html",
+   "id": "product_description",
+   "label": "Product Description"
+
+ },
+{
+   "type": "html",
+   "id": "product_details",
+   "label": "List One"
+
+ },
+{
+   "type": "html",
+   "id": "product_details_two",
+   "label": "List two"
+
+ }
+]
+}
+  ]
+
+  }
+{% endschema %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  if ($(window).width() < 500) {
+  $(".Learn-More_heading").click(function(){
+   var id =  $(this).attr("data-id")
+    $(".toggle-div-"+id).toggleClass('Mobile-hidden');
+  });
+  }  
+});
+</script>
