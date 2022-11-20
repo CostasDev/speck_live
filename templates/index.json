@@ -2,6 +2,7 @@
   "sections": {
     "1655009507b4747234": {
       "type": "bs-home-hero",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/20220616_summer-colors_b_02_shfy.jpg",
         "mob_image": "shopify:\/\/shop_images\/20220616_summer-colors_b_01_m_shfy.jpg",
@@ -25,14 +26,14 @@
       "type": "bs-home-hero",
       "disabled": true,
       "settings": {
-        "image": "shopify:\/\/shop_images\/20220517_apple-iphone-13_02_shfy.jpg",
-        "mob_image": "shopify:\/\/shop_images\/20220517_apple-iphone-13_01_m_shfy.jpg",
+        "image": "shopify:\/\/shop_images\/20221003_iphone-14_01c_shfy.jpg",
+        "mob_image": "shopify:\/\/shop_images\/20221003_iphone-14_01c_m_shfy.jpg",
         "hero_text_display": true,
         "pre_title": "",
-        "main_title": "13 Might be the Luckiest Number Yet.",
-        "sub_title": "When it comes to protecting your iPhone 13, look no further. We have every accessory you could ever need in a multitude of colors and prints so you can live out loud.",
+        "main_title": "Spark Imagination.",
+        "sub_title": "Permission to play with the new iPhone® 14 lineup",
         "link_text": "Shop Now",
-        "link": "shopify:\/\/collections\/iphone-13-iphone-13-pro-iphone-13-pro-max-and-iphone-13-mini-cases",
+        "link": "shopify:\/\/collections\/new-iphone-14-iphone-14-plus-iphone-14-pro-iphone-14-pro-max-cases",
         "color_text": "#ffffff",
         "color_shadow": "#000000",
         "text_shadow_opacity": 50,
@@ -45,93 +46,93 @@
     },
     "slideshow": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
-        "23346a66-81e8-46fe-8269-b405b6a35518": {
-          "type": "image",
-          "settings": {
-            "preTitle": "Show off your iPhone®",
-            "preTitle_border-color": "",
-            "title": "iPhone 13 | 13 Pro | 13 Pro Max",
-            "subTitle": "<p>Presidio Perfect-Clear  Cases<\/p>",
-            "text_shadow": false,
-            "link": "shopify:\/\/collections\/presidio-perfect-clear-iphone-13-cases",
-            "link_text": "Shop now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_color": "#000000",
-            "color_accent": "#007e9e",
-            "button_border": "#dddddd",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/MagSafe_iPhone_FMA.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/MagSafe_iPhone_Mobile_1.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "3fe85c7e-8248-45a2-aeea-ca43752c36ba": {
-          "type": "image",
-          "settings": {
-            "preTitle": "Protect Your Tech",
-            "preTitle_border-color": "",
-            "title": "Cases for Samsung \nGalaxy S22 | S22+ | S22 Ultra",
-            "subTitle": "",
-            "text_shadow": true,
-            "link": "shopify:\/\/collections\/samsung-galaxy-s22-s22-plus-s22-ultra-cases",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_color": "#fafafa",
-            "color_accent": "#007e9e",
-            "button_border": "#dddddd",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/samsung-s22_hero_01_shfy.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/samsung-s22_hero_01_m_shfy.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "5b35095f-49d9-41d1-a463-11b63f9a876f": {
+        "7497860e-9efe-44ec-aa43-12f6d4eec20f": {
           "type": "image",
           "disabled": true,
           "settings": {
-            "preTitle": "The Latest From The Collab Lab",
-            "preTitle_border-color": "",
-            "title": "Electric Feel",
-            "subTitle": "<p>Available for iPhone 13, iPhone 13 Pro, and iPhone 13 Pro Max. Limited quantities available. Don’t miss this web exclusive.<\/p>",
-            "text_shadow": false,
-            "link": "shopify:\/\/pages\/collab-lab",
-            "link_text": "Shop Now",
-            "link_2": "",
-            "link_text_2": "",
-            "text_color": "#fafafa",
-            "color_accent": "#007e9e",
-            "button_border": "#ffffff",
-            "text_align": "vertical-bottom horizontal-left",
-            "image": "shopify:\/\/shop_images\/20220414_collab-lab_electric-feel_01_shfy.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/20220414_collab-lab_electric-feel_01_m_shfy.jpg",
-            "overlay_opacity": 0,
-            "focal_point": "center center"
-          }
-        },
-        "7497860e-9efe-44ec-aa43-12f6d4eec20f": {
-          "type": "image",
-          "settings": {
             "preTitle": "",
             "preTitle_border-color": "",
-            "title": "Free 2-Day Shipping!!!",
-            "subTitle": "<p>Just in time for Father's Day.<\/p>",
+            "title": "Cool Colors for Summer Heat.",
+            "subTitle": "<p>Our best-selling Presidio case got a make-over and is def cooler for the summer.<\/p>",
             "text_shadow": true,
-            "link": "",
-            "link_text": "",
+            "link": "shopify:\/\/pages\/iphone-summer-colors-collection-for-2022",
+            "link_text": "Shop Now",
             "link_2": "",
             "link_text_2": "",
             "text_color": "#fafafa",
             "color_accent": "#007e9e",
             "button_border": "#dddddd",
             "text_align": "vertical-center horizontal-left",
-            "image": "shopify:\/\/shop_images\/20220612_fathers-day_free-2-day-shipping_01_shfy.jpg",
-            "image_mobile": "shopify:\/\/shop_images\/20220612_fathers-day_free-2-day-shipping_01_m_shfy.jpg",
+            "image": "shopify:\/\/shop_images\/20220616_summer-colors_b_02_shfy.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/20220616_summer-colors_b_01_m_shfy.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "80% 50%"
+          }
+        },
+        "5b35095f-49d9-41d1-a463-11b63f9a876f": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "preTitle": "",
+            "preTitle_border-color": "",
+            "title": "The Flip Phone But It's 2022.",
+            "subTitle": "<p>Available for Samsung Galaxy Z Fold4 | Z Flip4<\/p>",
+            "text_shadow": false,
+            "link": "shopify:\/\/collections\/samsung-galaxy-z-fold4-galaxy-z-flip4",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_color": "#fafafa",
+            "color_accent": "#007e9e",
+            "button_border": "#ffffff",
+            "text_align": "vertical-center horizontal-right",
+            "image": "shopify:\/\/shop_images\/20220810_samsung-galaxy-z-fold4_01_shfy.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/20220810_samsung-galaxy-z-fold4_01_m_shfy.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "20% 50%"
+          }
+        },
+        "23346a66-81e8-46fe-8269-b405b6a35518": {
+          "type": "image",
+          "settings": {
+            "preTitle": "",
+            "preTitle_border-color": "",
+            "title": "Spark Imagination.",
+            "subTitle": "<p>Permission to play with the new iPhone® 14 lineup.<\/p>",
+            "text_shadow": false,
+            "link": "shopify:\/\/collections\/new-iphone-14-iphone-14-plus-iphone-14-pro-iphone-14-pro-max-cases",
+            "link_text": "Shop now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_color": "#ffffff",
+            "color_accent": "#007e9e",
+            "button_border": "#dddddd",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/20221003_iphone-14_01c_shfy.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/20221003_iphone-14_01c_m_shfy.jpg",
+            "overlay_opacity": 0,
+            "focal_point": "80% 50%"
+          }
+        },
+        "3fe85c7e-8248-45a2-aeea-ca43752c36ba": {
+          "type": "image",
+          "settings": {
+            "preTitle": "",
+            "preTitle_border-color": "",
+            "title": "Google it!",
+            "subTitle": "<p>IMPACTHERO cases now available for the Google Pixel 7 lineup.<\/p>",
+            "text_shadow": true,
+            "link": "shopify:\/\/collections\/google-pixel-7-lineup",
+            "link_text": "Shop Now",
+            "link_2": "",
+            "link_text_2": "",
+            "text_color": "#fafafa",
+            "color_accent": "#007e9e",
+            "button_border": "#dddddd",
+            "text_align": "vertical-center horizontal-left",
+            "image": "shopify:\/\/shop_images\/20221006_google-pixel-7_01_shfy.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/20221006_google-pixel-7_01_m_shfy.jpg",
             "overlay_opacity": 0,
             "focal_point": "80% 50%"
           }
@@ -207,10 +208,10 @@
         }
       },
       "block_order": [
+        "7497860e-9efe-44ec-aa43-12f6d4eec20f",
+        "5b35095f-49d9-41d1-a463-11b63f9a876f",
         "23346a66-81e8-46fe-8269-b405b6a35518",
         "3fe85c7e-8248-45a2-aeea-ca43752c36ba",
-        "5b35095f-49d9-41d1-a463-11b63f9a876f",
-        "7497860e-9efe-44ec-aa43-12f6d4eec20f",
         "aeb028dd-5462-46ff-a025-b78eed2f65fe",
         "1ce7f490-7da7-40a3-a666-e3873af463f6",
         "slideshow-1"
@@ -410,7 +411,7 @@
           "type": "collection",
           "disabled": true,
           "settings": {
-            "collection": "shopify:\/\/collections\/magsafe-compatible",
+            "collection": "shopify:\/\/collections\/built-for-magsafe",
             "image": "shopify:\/\/shop_images\/compatible_with_magsafe_case.jpg",
             "title": "<strong>Compatible with MagSafe<\/strong>® Cases",
             "focal_point": "center center"

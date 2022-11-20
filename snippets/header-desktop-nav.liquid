@@ -26,9 +26,15 @@
       class="site-nav__item site-nav__expanded-item{% if has_dropdown %} site-nav--has-dropdown{% endif %}{% if is_megamenu %} site-nav--is-megamenu{% endif %} text-left"
       {% if has_dropdown %}aria-haspopup="true"{% endif %}>
 
-      <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"{% if has_dropdown %} role="button"{% else %} role="link"{% endif %}>
+      <a href="{{ link.url }}" class="site-nav__link site-nav__link--underline{% if has_dropdown %} site-nav__link--has-dropdown{% endif %}"{% if has_dropdown %} role="button"{% else %} role="link"{% endif %} id="label-{{ link.title | handleize }}">
         {{ link.title }}
       </a>
+      {% if has_dropdown %}
+      <button class="toggle-button" aria-controls="megamenu-{{ link.title | handleize }}" aria-expanded="false">
+        <span class="fas fa-caret-down" aria-hidden="true">&gt;</span>
+        <span class="sr-only">{{ link.title }} submenu</span>
+      </button>
+      {% endif %}
       {%- if is_megamenu -%}
         {%- assign previous_column_type = '' -%}
         {%- assign animation_column = 1 -%}
@@ -47,7 +53,7 @@
             {% assign bottom_title = block.settings.bottom_title %}
           {% endif %}
         {% endfor %}
-        <div class="site-nav__dropdown megamenu text-left menu-type--{{type}}">
+        <div class="site-nav__dropdown megamenu text-left menu-type--{{type}}" id="megamenu-{{ link.title | handleize }}" aria-labelledby="label-{{ link.title | handleize }}">
           <div class="page-width">
             <div class="grid">  
                 {% if type == 'tab' %}

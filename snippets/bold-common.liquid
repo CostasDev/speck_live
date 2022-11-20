@@ -125,8 +125,3 @@ It may be overwritten and any customizations would be lost.
     {%- endfor -%}
     window.BOLD.common.cacheParams = window.BOLD.common.cacheParams || {};
 </script>
-
-{%- comment -%} INCLUDE APP SCRIPTS BELOW {%- endcomment -%}
-
-{{ 'bold-upsell.css' | asset_url | stylesheet_tag }}
-{{ 'bold-upsell-custom.css' | asset_url | stylesheet_tag }}

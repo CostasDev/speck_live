@@ -1,0 +1,148 @@
+	<div class="sp-cst-container">
+      {%if section.settings.main_heading != blank %}
+		<h1>{{section.settings.main_heading}}</h1>
+      {%endif%}
+		<div class="sp-text-cont-pg-inn">
+         {%if section.settings.page_description != blank %}
+			<p class="sp-inn-pg-res-prgrm-top-sub-txt">
+              {{section.settings.page_description}}
+          </p>
+		 {%endif%} 
+          <div class="sp-ft-gd-method-row">
+				<div class="sp-ft-gd-method-block full">
+                  {%if section.settings.find_model_heading %}
+					<h3>{{section.settings.find_model_heading}}</h3>
+                  {%endif%}
+                  {%if section.settings.find_model_list %}
+					<ul>                      
+                     {{ section.settings.find_model_list}}												
+					</ul>
+                  {%endif%}
+				</div>
+			</div>
+          {%if block.settings.list_bottom_description != blank %}
+			<p>{{block.settings.list_bottom_description}}</p>
+          {%endif%}
+		</div>
+	</div>
+	<div class="sp-fit-gd-4-col-main">
+		<div class="sp-fit-gd-4-col-inn">
+			<div class="sp-fit-gd-4-col-row">
+              {%for block in section.blocks %}
+                 {%if block.type == 'product-blocks' %}
+				<div class="sp-fit-gd-4-col-block">
+                  <a href="{{block.settings.achor_id}}"></a>
+					<div class="sp-fit-gd-4-col-box">
+						<div class="sp-fit-gd-4-col-img">
+							<img src="{{block.settings.product_image | img_url: 'master'}}" />
+						</div>
+						<div class="sp-fit-gd-4-col-cont">
+							<h3>{{block.settings.title}}</h3>
+							<p>{{block.settings.product_description_tittle}}</p>
+							<ul class="sp-text-cont-lined-list">
+								{{ block.settings.product_description }}
+							</ul>
+						</div>
+					</div>
+                 
+				</div>
+              {%endif%}
+		 {%endfor%}
+				
+			
+			</div>
+		</div>
+	</div>		
+
+{% schema %}
+  {
+    "name": "AirPod Fit Guide",
+    "settings": [   
+    
+       {
+		"type": "text",
+        "id": "main_heading",
+        "label": "Main Heading"
+      },
+     {
+		"type": "text",
+        "id": "page_description",
+        "label": "Description"
+      },
+      {
+		"type": "text",
+        "id": "find_model_heading",
+        "label": "Model Number Find Heading"
+      },
+      {
+  		"type": "html",
+        "id": "find_model_list",
+        "label": "Model Number Find List"
+      },
+      {
+  		"type": "html",
+        "id": "list_bottom_description",
+        "label": "List Bottom Description"
+       }
+      
+   ],
+"blocks":
+[
+{
+"type": "product-blocks",
+"name":"Product Block",
+      "settings": [
+  {
+
+   "type": "textarea",
+   "id": "achor_id",
+   "label": "Achor Id"
+
+ },
+  {
+
+   "type": "image_picker",
+   "id": "product_image",
+   "label": "Product Image (940px x 900px)"
+
+ },
+  {
+
+   "type": "text",
+   "id": "title",
+   "label": "Title"
+
+ },
+{
+   "type": "url",
+   "id": "product_link",
+   "label": "Product Link"
+
+ },
+{
+   "type": "text",
+   "id": "product_description_title",
+   "label": "Product Description Title"
+
+ },
+{
+
+   "type": "html",
+   "id": "product_description",
+   "label": "Product Description"
+
+} 
+
+]
+}
+
+  ]
+
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+.sp-ft-gd-method-row:after {display: none;}
+
+{% endstylesheet %}

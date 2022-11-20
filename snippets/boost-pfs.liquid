@@ -64,12 +64,19 @@
     {% if shop.metafields.bc-sf-filter.settings != blank %}
     settings: {{ shop.metafields.bc-sf-filter.settings | strip_html }},
     {% endif %}
-    {% if shop.metafields.pfs-swatch-settings != blank %}
-    swatch_settings: {{ shop.metafields.pfs-swatch-settings | json | strip_html }},
-    {% endif %}
-    {% if shop.metafields.boostpfs-settings.default-sort-order != blank %}
-    default_sort_order: {{ shop.metafields.boostpfs-settings.default-sort-order | json | strip_html }},
-    {% endif %}
+    
+swatch_settings: {
+  {% if shop.metafields.pfs-swatch-settings.size > 0 %}
+    {% for key in shop.metafields.pfs-swatch-settings %}
+      {{ key[0] | json }}: {{ key[1] | replace: '=>', ':' }},
+    {% endfor %}
+  {% endif %}
+},
+    {% if shop.metafields.boostpfs-settings.default-sort-order.type != nil %} 
+default_sort_order: {{ shop.metafields.boostpfs-settings.default-sort-order.value | json | strip_html }},
+{% elsif shop.metafields.boostpfs-settings.default-sort-order != blank  %}
+default_sort_order: {{ shop.metafields.boostpfs-settings.default-sort-order | json | strip_html }},
+{% endif %}
   };
   function mergeObject(obj1, obj2){
     var obj3 = {};

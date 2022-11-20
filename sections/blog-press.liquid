@@ -2,10 +2,16 @@
 <div class="sp-bs-sol-top-banner sp-press-blog-pg-banner sp-bs-sol-top-banner-black-lyr">  
 	<div class="sp-bs-sol-top-banner-inn" style="background-image: url('{{section.settings.banner_image | img_url: 'master'}}"></div>
   	<div class="sp-bs-sol-top-banner-cont">
-		<h3>{{blog.title}}</h3>
-      {%if section.settings.banner_text != blank %}
-		<p class="sp-bs-sol-top-banner-mail">{{section.settings.banner_text}}</p>
-      {%endif%}
+	  {% if blog.title contains "Blog" %}
+	  	{% comment %} sp-bs-sol-top-banner-mail{margin:auto!important;max-width: 400px; {% endcomment %}
+		<h3 style="text-transform: capitalize; font-weight: bold;">Speck Buzz Blog</h3>
+		<p class="sp-bs-sol-top-banner-mail">Catch up on the latest Speck Buzz, where you'll find breaking product news, reviews, and stories.</p>
+	  {% else %}
+	  	<h3>{{blog.title}}</h3>
+		{%if section.settings.banner_text != blank %}
+			<p class="sp-bs-sol-top-banner-mail">{{section.settings.banner_text}}</p>
+		{%endif%}
+	  {% endif %}
 	</div>  
 </div>
 <div class="sp-press-cont-block-main">

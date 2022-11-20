@@ -14,7 +14,7 @@
         "66354125-a9f3-4ffb-960a-f1130950fbb8": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ippm21-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730250535043",
             "variation_image": "shopify:\/\/shop_images\/ippm21-p2p-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -25,7 +25,7 @@
         "70340cc9-7cf5-4929-b73b-ab7dc62bf4cf": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ippm21-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730250567811",
             "variation_image": "shopify:\/\/shop_images\/ippm21-p2p-ms_uplift-orange.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -36,7 +36,7 @@
         "8a761299-f24d-43ee-983e-dbaa88f33625": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ippm21-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730532307075",
             "variation_image": "shopify:\/\/shop_images\/ippm21-p2g-ms_spring-purple.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -47,7 +47,7 @@
         "6d34157e-59e6-4437-9a19-db2ae2111dbe": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ippm21-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730532110467",
             "variation_image": "shopify:\/\/shop_images\/ippm21-p2g-ms_deep-sea-teal.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -58,7 +58,7 @@
         "abbff020-5568-484f-a943-972813e5b4ec": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-max-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730607968387",
             "variation_image": "shopify:\/\/shop_images\/ippm21-pmo-ms_arctic-fade.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -69,7 +69,7 @@
         "b91064cd-fe03-42c3-b38f-eb47c0475396": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-max-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730608001155",
             "variation_image": "shopify:\/\/shop_images\/ippm21-pmo-ms_cosmo-pink.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -80,7 +80,7 @@
         "21f4a30a-bce8-47a5-9369-897bdd29c38c": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-max-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730608033923",
             "variation_image": "shopify:\/\/shop_images\/ippm21-pmo-ms_orange-soda.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -91,7 +91,7 @@
         "1eb85750-d030-4497-89bb-621c80cf46bc": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ippm21-pp-ig-ms",
+            "variation_parent": "presidio-perfect-clear-with-impact-geometry-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730514874499",
             "variation_image": "shopify:\/\/shop_images\/ippm21-pp-ig-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -102,7 +102,7 @@
         "76542418-bd43-4240-8abb-b7ac1d7ec868": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-edition-compatible-with-magsafe-iphone-13-pro-max-cases",
+            "variation_parent": "presidio-edition-magsafe-iphone-13-pro-max-cases",
             "variation_sku": "42730890952835",
             "variation_image": "shopify:\/\/shop_images\/ippm21-ped-ms_brushed-floral_d518ae04-8152-40d2-b9c7-b1c08d503afb.jpg",
             "variation_device": "iPhone 13 Pro Max",
@@ -132,7 +132,7 @@
         "ded8effe-34a6-4798-b020-c5dc18536b25": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21p-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730246144131",
             "variation_image": "shopify:\/\/shop_images\/ipp21-p2p-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -143,7 +143,7 @@
         "413505d7-9f4a-4d00-ad0e-6185d4a16fd7": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21p-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730246176899",
             "variation_image": "shopify:\/\/shop_images\/ipp21-p2p-ms_uplift-orange.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -154,7 +154,7 @@
         "7726e337-f70c-45d1-86be-367ae31ce72d": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21p-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730527719555",
             "variation_image": "shopify:\/\/shop_images\/ipp21-p2g-ms_spring-purple.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -165,7 +165,7 @@
         "8cfba10e-6334-45bd-8eca-d0348194d7c6": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21p-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730528440451",
             "variation_image": "shopify:\/\/shop_images\/ipp21-p2g-ms_deep-sea-teal.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -176,7 +176,7 @@
         "526ad550-e931-4cc7-aa64-d890c71c378a": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730603905155",
             "variation_image": "shopify:\/\/shop_images\/ipp21-pmo-ms_arctic-fade.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -187,7 +187,7 @@
         "e6b37ebd-0725-46b7-85cb-96e024bd7abb": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730603839619",
             "variation_image": "shopify:\/\/shop_images\/ipp21-pmo-ms_cosmo-pink.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -198,7 +198,7 @@
         "d5e2f94a-9c61-46ef-ab3e-0e21cb395ec5": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-perfect-mist-ombre-compatible-with-magsafe-iphone-13-pro-cases",
+            "variation_parent": "presidio-perfect-mist-ombre-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730603937923",
             "variation_image": "shopify:\/\/shop_images\/ipp21-pmo-ms_orange-soda.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -209,7 +209,7 @@
         "390e9a0a-1d52-4061-aaec-a8a96ccd911f": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21p-pp-ig-ms",
+            "variation_parent": "presidio-perfect-clear-with-impact-geometry-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730510778499",
             "variation_image": "shopify:\/\/shop_images\/ipp21-pp-ig-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -220,7 +220,7 @@
         "a9b2db15-a4f0-4df9-aa0e-462669415f2e": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-edition-compatible-with-magsafe-iphone-13-pro-cases",
+            "variation_parent": "presidio-edition-magsafe-iphone-13-pro-cases",
             "variation_sku": "42730890723459",
             "variation_image": "shopify:\/\/shop_images\/ipp21-ped-ms_brushed-floral_6abfbe04-ae4e-4236-af44-c0d7ff10e958.jpg",
             "variation_device": "iPhone 13 Pro",
@@ -250,7 +250,7 @@
         "814ea822-00f4-4303-8785-8088e0941704": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-cases",
             "variation_sku": "42730533814403",
             "variation_image": "shopify:\/\/shop_images\/ip21-p2p-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13",
@@ -261,7 +261,7 @@
         "6e556729-4fbc-467e-a1c0-e501dbebbb8f": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21-p2p-ms",
+            "variation_parent": "presidio2-pro-magsafe-iphone-13-cases",
             "variation_sku": "42730533912707",
             "variation_image": "shopify:\/\/shop_images\/ip21-p2p-ms_uplift-orange.jpg",
             "variation_device": "iPhone 13",
@@ -272,7 +272,7 @@
         "d89aabe8-4ad4-4078-b357-4cfcd7c31f19": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-cases",
             "variation_sku": "42730279731331",
             "variation_image": "shopify:\/\/shop_images\/ip21-p2g-ms_spring-purple.jpg",
             "variation_device": "iPhone 13",
@@ -283,7 +283,7 @@
         "b8ced8f1-7023-4758-b422-2f11ef3ce186": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21-p2g-ms",
+            "variation_parent": "presidio2-grip-magsafe-iphone-13-cases",
             "variation_sku": "42730279698563",
             "variation_image": "shopify:\/\/shop_images\/ip21-p2g-ms_deep-sea-teal.jpg",
             "variation_device": "iPhone 13",
@@ -327,7 +327,7 @@
         "b9429a15-061e-4eb5-ab74-57d50584a8c5": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "ip21-pp-ig-ms",
+            "variation_parent": "presidio-perfect-clear-with-impact-geometry-magsafe-iphone-13-cases",
             "variation_sku": "42730499768451",
             "variation_image": "shopify:\/\/shop_images\/ip21-pp-ig-ms_grounded-purple.jpg",
             "variation_device": "iPhone 13",
@@ -338,7 +338,7 @@
         "96f411b8-964a-4236-98f3-42a39fa6a3c4": {
           "type": "variation_grid_item",
           "settings": {
-            "variation_parent": "presidio-edition-compatible-with-magsafe-iphone-13-cases",
+            "variation_parent": "presidio-edition-magsafe-iphone-13-cases",
             "variation_sku": "42730889904259",
             "variation_image": "shopify:\/\/shop_images\/ip21-ped-ms_brushed-floral.jpg",
             "variation_device": "iPhone 13",

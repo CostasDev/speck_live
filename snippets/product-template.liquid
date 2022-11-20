@@ -150,9 +150,11 @@
               <div class="grid-product__tag grid-product__tag--custom">
                 <div class="grid-product__tag grid-product__tag--custom">
                   {% if custom_label contains 'samsung' %}
-                    {% render 'icon-samsung' %}
-                  {% elsif custom_label contains 'magsafe' %}
-                    {% render 'icon-magsafe' %}
+                    {% render 'icon-samsung', product-id: product.id %}
+                  {% elsif custom_label == 'magsafe' %}                    
+                      {% render 'icon-magsafe', product-id: product.id %}
+                  {% elsif custom_label == 'bf-magsafe' %}
+                    {% render 'icon_built-for-magsafe', product-id: product.id %}
                   {% endif %}
                 </div>
               </div>
@@ -626,9 +628,11 @@
               <div class="grid-product__tag grid-product__tag--custom">
                 <div class="grid-product__tag grid-product__tag--custom">
                   {% if custom_label contains 'samsung' %}
-                    {% render 'icon-samsung' %}
-                  {% elsif custom_label contains 'magsafe' %}
-                    {% render 'icon-magsafe' %}
+                    {% render 'icon-samsung', product-id: product.id %}
+                  {% elsif custom_label == 'magsafe' %}                    
+                      {% render 'icon-magsafe', product-id: product.id %}
+                  {% elsif custom_label == 'bf-magsafe' %}
+                    {% render 'icon_built-for-magsafe', product-id: product.id %}
                   {% endif %}
                 </div>
               </div>

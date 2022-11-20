@@ -40,6 +40,25 @@
 }
 </script>
 
+{% comment %} <script>
+var isloaded = false;
+setTimeout(() => {
+     isloaded= true;
+}, 3000);
+if (isloaded == false) {
+  window.scrollTo(0, 0);
+}
+ 
+window.onscroll = function(){
+  if (document.readyState != 'complete') {
+    window.scrollTo(0, 0);
+  }
+  if (isloaded != true) {
+    window.scrollTo(0, 0);
+  }
+}
+</script>  {% endcomment %}
+
 {% schema %}
   {
     "name": "Product grid",

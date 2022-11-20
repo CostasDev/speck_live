@@ -4,40 +4,44 @@
 		<div class="sp-text-cont-pg-inn">
 			<div class="sp-text-cont-pg-faq">
 				<div class="sp-text-cont-pg-faq-left">
-                  <nav>
-					<ul>
-					    {%for block in section.blocks %}
-                       {%if block.settings.heading != blank %}
-						<li class="Sidebar-link {%if forloop.index == 1%} active {%endif%}"><a href="#faq-{{forloop.index}}" {%if forloop.index == 1%} aria-current="page" {%endif%}>{{block.settings.heading}}</a></li>
-                      {%endif%}
-					  {%endfor%}
+                  <nav aria-label="FAQ Sections">
+                    <ul>
+					{%for block in section.blocks %}
+                    	{%if block.settings.heading != blank %}
+    					<li class="Sidebar-link {%if forloop.index == 1%} active {%endif%}"><a href="#faq-{{forloop.index}}" {%if forloop.index == 1%} aria-current="page" {%endif%}>{{block.settings.heading}}</a></li>
+                        {%endif%}
+					{%endfor%}
 					</ul>
                   </nav>
-				</div>
-				<div class="sp-text-cont-pg-faq-right">
-					    {%for block in section.blocks %} 
-                  {%if block.settings.heading != blank %}
-                  {%if forloop.index != 1 %}
-                   </div>
-                   {%endif%}
-					<div id="faq-{{forloop.index}}" class="sp-text-cont-pg-faq-info">
-						<h2 >{{block.settings.heading}}</h2>
-                    {%endif%}
-						<div class="sp-text-cont-pg-faq-sec">
-							<h4 class="accordion"><button class="accordion-btn" aria-controls="faq_{{ forloop.index0 | plus: 1 }}" aria-expanded="false">{{ block.settings.title }}</button></h4>
-                            <div class="panel" id="faq_{{ forloop.index0 | plus: 1 }}" style="display:none">
-                              <p>{{ block.settings.text }}</p>
-                            </div>
-						</div>
-                     {% if forloop.last == true %}  
-                 </div> 
+				</div>              
+                <div class="sp-text-cont-pg-faq-right">
+				{%for block in section.blocks %}
+                	{%if block.settings.heading != blank and forloop.index != 1 %}</div>{% endif %}
+                    {%if block.settings.heading != blank%}
+                    <div id="faq-{{forloop.index}}" class="sp-text-cont-pg-faq-info">
+                      <h2>{{block.settings.heading}}</h2>
                     {%endif%}  
-                   {%endfor%}
-                  
-			</div>
+					<div class="sp-text-cont-pg-faq-sec">
+                      {%  if block.settings.article-url != blank %}
+                        <h4><span>&bull;&nbsp;</span><a href="{{ block.settings.article-url }}"{%  if block.settings.article-newwin == true %} target="_blank"{% endif %}>{{ block.settings.title }}</a></h4>
+                      {% else %}
+        				<h4 class="accordion"><button class="accordion-btn" aria-controls="faq_{{ forloop.index0 | plus: 1 }}" aria-expanded="false">{{ block.settings.title }}</button></h4>
+                        <div class="panel" id="faq_{{ forloop.index0 | plus: 1 }}" style="display:none">
+                          <p>{{ block.settings.text }}</p>
+                        </div>
+                      {% endif %}
+					</div>
+                 {%endfor%}                  
+    			</div>
+    		</div>
 		</div>
 	</div>
 </div>
+
+{% style %}
+  .sp-text-cont-pg-faq-sec h4 span {color:#0097bd;font-size:150%;float:left;}
+  .sp-text-cont-pg-faq-sec a {display:block;margin-left:18px;}
+{% endstyle %}
 
 			
 
@@ -69,6 +73,16 @@
             "id": "title",
             "label": "Question",
             "default": "Frequently asked question"
+          },
+          {
+            "type": "url",
+            "id": "article-url",
+            "label": "Knowledgebase URL"
+          },
+          {
+            "type": "checkbox",
+            "id": "article-newwin",
+            "label": "Open in new window?"
           },
           {
             "type": "richtext",

@@ -56,8 +56,7 @@
   --colorDrawerButtonText:{{ settings.color_drawer_button_text | default: "#fff" }};
   
   --colorError:{{ settings.color_error | default: "#f00" }};
-    
-
+  
   --grid-gutter:17px;
   --drawer-gutter:20px;
   --color-body-text:{{ settings.color_body_text | default: "#1c1d1d" }};
@@ -4735,7 +4734,8 @@ form+.footer__social{
 .site-nav__item{
   position:relative;
   display:inline-block;
-  margin:0
+  margin:0;
+  cursor: pointer;
 }
 
 .site-nav__item li{
@@ -4790,6 +4790,19 @@ form+.footer__social{
     margin-left:5px;
   }
 
+.site-nav__link--has-dropdown {
+    padding-right:2px; 
+}
+
+.site-nav__item .toggle-button {padding:7.5px 2px}
+
+.site-nav__item .toggle-button span.fas {
+    transform: rotate(90deg);
+    display: inline-block;
+    line-height: 0.5;  
+  
+}
+
 @media only screen and (max-width:959px){
 
 .site-nav__link{
@@ -4834,7 +4847,11 @@ form+.footer__social{
 }
 
 .site-nav__item:hover .site-nav__link--underline:after{
-    right:0
+    right:0;
+}
+
+.site-nav__item:hover .site-nav__link--underline.site-nav__link--has-dropdown:after{
+    right:-15px;
 }
 
 .site-nav--has-dropdown{
@@ -5260,6 +5277,8 @@ form+.footer__social{
   transition:all 300ms cubic-bezier(0.2, 0.06, 0.05, 0.95);
   transition-delay:0.3s
 }
+
+.megamenu .banner a { display: block }
 
 .is-focused>.megamenu,.site-nav--has-dropdown:hover .megamenu{
     opacity:1;
@@ -7730,7 +7749,8 @@ select .variant-input{
 }
 
 .grid-product{
-  margin-bottom:15px
+  margin-bottom:15px;
+  list-style: none;
 }
 
 @media only screen and (min-width:769px){
@@ -7885,7 +7905,8 @@ html[dir=rtl] .grid-product__content{
 @media only screen and (max-width:768px){
 
 .small--grid--flush .grid-product__meta{
-      padding-left:10px;
+      /*padding-left:10px;*/
+      padding-left:0;
       padding-right:10px
 }
   }
@@ -7979,7 +8000,7 @@ html[dir=rtl] .grid-product__content{
   opacity:0;
   transform:translateY(5px);
   transition:opacity 0.25s ease,transform 0.25s ease-out,background 0.4s ease;
-  background-color: #007E9E;
+  background-color: #0097BD;
 }
 .quick-product__btn button{
   font-size:calc(var(--typeBaseSize)*0.85) !important;
@@ -8014,7 +8035,7 @@ html[dir=rtl] .grid-product__content{
       display:flex;
     }
 
-    .grid-overflow-wrapper .grid__item{ 
+    .grid-overflow-wrapper .grid__item{
       width:46vw;
       flex:0 0 46vw;
       display:inline-block;
@@ -8023,10 +8044,10 @@ html[dir=rtl] .grid-product__content{
       vertical-align: top;
     }
   
-/*      .grid-overflow-wrapper .grid__item:first-child{
-        margin-left:17px;
+      .grid-overflow-wrapper .grid__item:first-child{
+        /*margin-left:17px;*/
       }
-*/
+
       .grid-overflow-wrapper .grid__item:last-child:after{
         content:"";
         display:inline-block;
@@ -8207,7 +8228,8 @@ html[dir=rtl] .grid-product__content{
       top:-1px;
       left:-1px;
       right:-1px;
-      bottom:-1px
+      bottom:-1px;
+      content: none;
   }
 
 .tag:not(.tag--active) label:hover .color-swatch:hover,a.color-swatch:hover{
@@ -8594,6 +8616,7 @@ html[dir=rtl] .grid-product__content{
 .section-header .article__date h3{
     font-weight: 400;
 }
+
 
 .article__author{
   margin-top:2px;
@@ -10559,7 +10582,7 @@ html[dir=rtl] .product-single__meta .rte{
       left:0;
       right:0;
       bottom:0;
-      box-shadow:inset 0 0 0 1px #007E9E;
+      box-shadow:inset 0 0 0 1px #0097BD;
       z-index:1;
     }
 
@@ -11326,9 +11349,14 @@ html[dir=rtl] .product-single__meta .rte{
 #shopify-section-template--14192596123779__featured-collections .section-header .section-header__link{
   top: 25px; 
 }
+.bs-search-nothing{
+  font-size: 25px !important;
+  margin: 65px auto 0px auto !important;
+  text-align: center!important;
+}
 
 #fc_frame, #fc_frame.fc-widget-normal{
-  z-index: 35 !important;
+  z-index: 20 !important;
 }
 .collection-grid__wrapper .boost-pfs-filter-products ul{
   /*margin-left: -17px;*/
@@ -11389,27 +11417,18 @@ html[dir=rtl] .product-single__meta .rte{
     .thestickerproject .bs-ctl-sec2-main .bs-ctl-sec1-block.lt {border-right:none;}
     .thestickerproject .bs-ctl-sec2-main .bs-ctl-sec1-block.lt, .thestickerproject .bs-ctl-sec2-main .bs-ctl-sec1-block.rt {width:100%;}
 }
+.fs-product-hide {
+  display: none !important;
+}
+.boost-pfs-filter-option-amount{
+  display: none !important;
+}
 /***********Crisis Text Line (The Sticker Project) Page End *******************************/
-@media (max-width: 768px){
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(1):before{
-    content:"Model Name"; 
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(2):before{
-  	content:"";    
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(3):before{
-  	content:"SCREEN SIZE";    
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(4):before{
-  	content:"MODEL ID";    
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(5):before{
-  	content:"PERIPHERAL CONNECTIONS";    
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(6):before{
-  	content:"COMPATIBLE SPECK CASE(S)";    
-  }
-  #macbook-pro .sp-fit-gd-pro-specification-tbl table tbody td:nth-child(7):before{
-  	content:"COMPATIBLE SPECK SLEEVE(S)";    
-  }  
+
+.tagalys-namespace .plp .filter-overlay, #tagalys-namespace .plp .filter-overlay, #tagalys-namespace.tagalys-namespace .plp .filter-overlay {
+  z-index: 100!important;
+}
+
+.tagalys-namespace .plp.show-filters-in-drawer.filter-drawer-opened .filters, #tagalys-namespace .plp.show-filters-in-drawer.filter-drawer-opened .filters, #tagalys-namespace.tagalys-namespace .plp.show-filters-in-drawer.filter-drawer-opened .filters {
+  z-index: 110;
 }

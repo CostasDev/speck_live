@@ -2,10 +2,9 @@
   "sections": {
     "collection-header": {
       "type": "collection-header",
-      "disabled": true,
       "settings": {
         "enable": true,
-        "collection_image_enable": true,
+        "collection_image_enable": false,
         "parallax": false,
         "text_align": "left",
         "link": "",
@@ -16,13 +15,6 @@
     "main-collection": {
       "type": "main-collection",
       "blocks": {
-        "subcollections": {
-          "type": "subcollections",
-          "disabled": true,
-          "settings": {
-            "subcollections_per_row": 5
-          }
-        },
         "product_grid": {
           "type": "product_grid",
           "settings": {
@@ -31,27 +23,10 @@
             "rows_per_page": 4,
             "mobile_flush_grid": true
           }
-        },
-        "6ed73d23-4a6b-437e-80c0-9836c84e0d82": {
-          "type": "collection_banner_product",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/speck_shopify_airtag_b24eb57d-d419-4db5-b0eb-95cd0dad0b42.png",
-            "mobile_image": "shopify:\/\/shop_images\/speck_shopify_airtag_b24eb57d-d419-4db5-b0eb-95cd0dad0b42.png",
-            "image_darken": true,
-            "title": "Track Your Valuables with AirTag Accessories",
-            "text_link": "shopify:\/\/collections\/airtag-accessories",
-            "desk_color": "#000000",
-            "text_position": "bottom-right",
-            "position": "9",
-            "text_below_image": true,
-            "mobile_text_color": "#000000"
-          }
         }
       },
       "block_order": [
-        "subcollections",
-        "product_grid",
-        "6ed73d23-4a6b-437e-80c0-9836c84e0d82"
+        "product_grid"
       ],
       "settings": {
         "enable_sidebar": true,

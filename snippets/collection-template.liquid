@@ -6,7 +6,7 @@
     case block.type
     when 'product_grid'
       assign per_row = block.settings.per_row
-      assign paginate_by = per_row | times: block.settings.rows_per_page | minus: 1
+      assign paginate_by = per_row | times: block.settings.rows_per_page
     when 'collection_banner_product'
       assign pos_setting = block.settings.position | abs
       capture 'banner'
@@ -169,7 +169,7 @@
     // Grid Template
     'productGridItemHtml': {% render 'boost-pfs-filter-html', layout: 'productGridItemHtml' %},
     'productBannerItem': {{banner  | json }},
-    'productBannerPosition': {{pos_setting}},
+    'productBannerPosition': {{pos_setting |json }},
       // Pagination Template
     'previousActiveHtml': {% render 'boost-pfs-filter-html', layout: 'previousActiveHtml' %},
     'previousDisabledHtml': {% render 'boost-pfs-filter-html', layout: 'previousDisabledHtml' %},

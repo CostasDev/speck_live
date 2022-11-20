@@ -14,6 +14,7 @@
     {% render 'checkout_style_spk' %}
     {{ checkout_scripts }}
     {% render 'checkout_scripts_spk' %}
+    {{ "jquery.min.js" | asset_url | script_tag }} 
   </head>
   <body>
     {{ skip_to_content_link }}
@@ -48,9 +49,34 @@
             {{ content_for_order_summary }}
           </div>
         </aside>
-      </div>
+      </div> 
     </div>
 
     {{ tracking_code }}
+    <script type="text/javascript">
+      $(document).ready(function(){ 
+        function checkInternation()
+        {
+          var objects = $('.content-box__row');
+          for(i = 0; i < objects.length; i++) {
+            console.log(objects[i]);
+            if ( objects[i].innerHTML.indexOf('checkout_shipping_rate_id_shopify-standard-0_00') > -1 )
+            {
+              objects[i].innerHTML = objects[i].innerHTML + "<p>Standard shipping within the U.S. usually takes 3-5 business days to arrive.</p>";
+                
+            }
+            else if ( objects[i].innerHTML.indexOf('checkout_shipping_rate_id_shopify-2-day-15_00') > -1 )
+            {
+              objects[i].innerHTML = objects[i].innerHTML + "<p>Cutoff times for 2-Day orders are <b>10am PST</b>. If you order after that time, the order will process the next business day, and arrival times will be relative to date of processing.</p>";
+            }
+            else if ( objects[i].innerHTML.indexOf('checkout_shipping_rate_id_shopify-overnight-20_00') > -1 )
+            {
+              objects[i].innerHTML = objects[i].innerHTML + "<p>Cutoff times for Overnight orders are <b>10am PST</b>. If you order after that time, the order will process the next business day, and arrival times will be relative to date of processing.";
+            }
+          } 
+        }
+        setTimeout(checkInternation, 2000)
+      });
+    </script>
   </body>
 </html>

@@ -3059,6 +3059,7 @@ lazySizesConfig.expFactor = 4;
     };
   
     var productSelectors = {
+      container: '.product__thumbs',
       thumb: '.product__thumb-item:not(.hide)',
       links: '.product__thumb-item:not(.hide) button',
       arrow: '.product__thumb-arrow'
@@ -3083,7 +3084,8 @@ lazySizesConfig.expFactor = 4;
       setGallerySize: true,
       wrapAround: true
     };
-  
+    
+    
     function slideshow(el, args) {
       this.el = el;
       this.args = Object.assign({}, defaults, args);
@@ -3267,9 +3269,21 @@ lazySizesConfig.expFactor = 4;
       },
   
       childNavGoTo: function(index) {
+        
+        // Added 20220809 for Accessiblity      
+        var childNavContainerWidth = document.querySelector(productSelectors.container).offsetWidth;
+        var childNavThumbnailWidth = document.querySelector(productSelectors.thumb).offsetWidth;
+        var childNavThumbnail = document.querySelector(productSelectors.thumb);
+        var childNavThumbnailStyle = childNavThumbnail.currentStyle || window.getComputedStyle(childNavThumbnail);
+        var childNavThumbnailMargin = parseFloat(childNavThumbnailStyle.marginLeft) + parseFloat(childNavThumbnailStyle.marginRight);
+        var childNavThumbnailWidth = childNavThumbnailWidth + childNavThumbnailMargin;        
+        var numVisibleThumbnails = Math.round(childNavContainerWidth / (childNavThumbnailWidth + 1));
+        // console.log(">>>> container: " + childNavContainerWidth + ", thumbnail with margin: " + childNavThumbnailWidth + ", num visible thumbs: " + numVisibleThumbnails);
+        
         this.childNavLinks.forEach(a => {
           a.classList.remove(classes.isActive);
           a.removeAttribute("aria-current");
+          a.setAttribute('tabindex', -1); // Entered for Accessibliity
         });
   
         var el = this.childNavLinks[index];
@@ -3289,6 +3303,34 @@ lazySizesConfig.expFactor = 4;
           var elLeft = el.offsetLeft;
           this.args.childNavScroller.scrollLeft = elLeft - 100;
         }
+        
+        //
+        // Below Portion of Function Entered for Accessibliity
+        this.childNavEls.forEach(b => {
+          b.setAttribute('aria-hidden', true);
+        });
+
+        var leftMostThumbnailIndex;
+
+        if (index == 0) {
+          leftMostThumbnailIndex = 0;
+        } else {
+          leftMostThumbnailIndex = index - 1;
+        }        
+
+        for(var z = 0; z < this.childNavLinks.length; z++) {
+          if (index <= (this.childNavLinks.length - numVisibleThumbnails)) {
+            for(var i = leftMostThumbnailIndex; i < leftMostThumbnailIndex + numVisibleThumbnails; i++) {
+              this.childNavEls[i].removeAttribute('aria-hidden');
+              this.childNavLinks[i].removeAttribute('tabindex');
+            }            
+          } else {
+            for(var i = (this.childNavLinks.length - numVisibleThumbnails); i < this.childNavLinks.length; i++) {
+              this.childNavEls[i].removeAttribute('aria-hidden');
+              this.childNavLinks[i].removeAttribute('tabindex');              
+            }
+          }
+        } // End Function Accessiblity Logic
       },
   
       arrowClick: function(evt) {
@@ -3823,6 +3865,7 @@ lazySizesConfig.expFactor = 4;
       logo: '#LogoContainer img',
       megamenu: '.megamenu',
       navItems: '.site-nav__item',
+      navItemsToggle: '.site-nav__item .toggle-button',
       navLinks: '.site-nav__link',
       navLinksWithDropdown: '.site-nav__link--has-dropdown',
       navDropdownLinks: '.site-nav__dropdown-link--second-level'
@@ -4012,11 +4055,43 @@ lazySizesConfig.expFactor = 4;
       }
   
       // Open/hide top level dropdowns
-      document.querySelectorAll(selectors.navLinks).forEach(el => {
-        el.on('focusin' + config.namespace, accessibleMouseEvent);
+      document.querySelectorAll(selectors.navItems).forEach(el => {
         el.on('mouseover' + config.namespace, accessibleMouseEvent);
         el.on('mouseleave' + config.namespace, closeDropdowns);
       });
+
+      // Hide top level dropdowns on link focus
+      document.querySelectorAll(selectors.navLinks).forEach(el => {
+        el.on('focusin' + config.namespace, closeSecondLevelDropdown);
+      });
+
+      // Open/hide top level dropdowns on button enter press
+      document.querySelectorAll(selectors.navItemsToggle).forEach(el => {
+        el.on('keydown' + config.namespace, accessibleKeypress);
+      });
+
+      // Hide Megamenu on Escape press
+      document.querySelectorAll(selectors.megamenu).forEach(el => {
+        el.on('keydown' + config.namespace, accesibleEscape);
+      });
+
+      function accessibleKeypress(evt) {
+        if (evt.keyCode === 13) {
+          accessibleMouseEvent(evt);
+        }
+      }
+
+      function accesibleEscape(evt) {
+        if (evt.keyCode === 27) {
+          closeDropdowns();
+          const menuParent = evt.currentTarget.parentElement;
+          for (let i = 0; i < menuParent.children.length; i++) {
+            if (menuParent.children[i].classList.contains('toggle-button')) {
+              menuParent.children[i].focus();  
+            }            
+          }
+        }
+      }
   
       document.querySelectorAll(selectors.navDropdownLinks).forEach(el => {
         if (theme.config.isTouch) {
@@ -4074,10 +4149,20 @@ lazySizesConfig.expFactor = 4;
   
       // Private dropdown functions
       function openFirstLevelDropdown(el) {
-        var parent = el.parentNode;
-        if (parent.classList.contains(classes.hasDropdownClass)) {
-          parent.classList.add(classes.dropdownActive);
-          hasActiveDropdown = true;
+        if (el.classList.contains(classes.hasDropdownClass)) {
+          if (el.classList.contains(classes.hasDropdownClass)) {
+            el.classList.add(classes.dropdownActive);
+            el.querySelector('.toggle-button').ariaExpanded = "true";
+            hasActiveDropdown = true;
+          }
+        } else {
+          if (el.parentElement.classList.contains(classes.hasDropdownClass)) {
+            setTimeout(function(){
+              el.parentElement.classList.add(classes.dropdownActive);
+              el.ariaExpanded = "true";
+              hasActiveDropdown = true;
+            }, 100);
+          }
         }
   
         if (!theme.config.isTouch) {
@@ -4108,7 +4193,10 @@ lazySizesConfig.expFactor = 4;
   
       function closeSecondLevelDropdown() {
         document.querySelectorAll(selectors.navItems).forEach(el => {
-          el.classList.remove(classes.dropdownActive)
+          el.classList.remove(classes.dropdownActive);
+        });
+        document.querySelectorAll(selectors.navItemsToggle).forEach(el => {
+          el.ariaExpanded = "false";
         });
       }
   
@@ -4198,7 +4286,6 @@ lazySizesConfig.expFactor = 4;
       theme.a11y.unlockMobileScrolling(config.namespace);
   
       unbindSearchEvents();
-      document.querySelector(selectors.searchBtn).focus();
     }
   
     function bindSearchEvents() {

@@ -51,6 +51,27 @@
   "name": {{ collection.title | json }}
 }
 </script>
+
+{% comment %} <script>
+
+var isloaded = false;
+setTimeout(() => {
+     isloaded= true;
+}, 3000);
+if (isloaded == false) {
+  window.scrollTo(0, 0);
+} 
+
+window.onscroll = function(){
+  if (document.readyState != 'complete') {
+    window.scrollTo(0, 0);
+  }
+  if (isloaded != true) {
+    window.scrollTo(0, 0);
+  }
+}
+</script>  {% endcomment %}
+
 {% schema %}
 
 
@@ -108,11 +129,6 @@
     ],
     "blocks": [
       {
-        "type": "collection_description",
-        "name": "Collection description",
-        "limit": 1
-      },
-      {
         "type": "product_grid",
         "name": "Products",
         "settings": [
@@ -148,104 +164,6 @@
           }
         ],
         "limit": 1
-      },
-      {
-        "type": "subcollections",
-        "name": "Subcollections",
-        "settings": [
-          {
-            "type": "paragraph",
-            "content": "Links to collections from your menu will appear here. [Learn more](https://archetypethemes.co/blogs/expanse/how-do-i-create-subcollections)"
-          },
-          {
-            "type": "range",
-            "id": "subcollections_per_row",
-            "label": "Subcollections per row",
-            "default": 5,
-            "min": 2,
-            "max": 5,
-            "step": 1
-          }
-        ],
-        "limit": 1
-      },
-      {
-        "name": "Banner image 2",
-        "type": "collection_banner_product", 
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Image",
-            "info": "1800 x 1000px recommended"
-          },
-          {
-            "type": "image_picker",
-            "id": "mobile_image",
-            "label": "Mobile Image",
-            "info": "1024 x 747px recommended"
-          },
-          {
-            "type": "checkbox",
-            "id": "image_darken",
-            "label": "Darken image",
-            "default": false
-          },
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Heading"
-          },
-          {
-            "type": "url",
-            "id": "text_link",
-            "label": "link"
-          },
-          {
-            "type": "color",
-            "id": "desk_color",
-            "label": "Title color"
-          },
-          {
-            "type": "select",
-            "id": "text_position",
-            "label": "Text position",
-            "options": [
-              {
-                "value": "top-left",
-                "label": "Top Left"
-              },
-              {
-                "value": "bottom-left",
-                "label": "Bottom Left"
-              },
-              {
-                "value": "top-right",
-                "label": "Top Right"
-              },
-              {
-                "value": "bottom-right",
-                "label": "Bottom Right"
-              }
-            ]
-          },
-          {
-            "type": "text",
-            "id": "position",
-            "label": "Position"
-          },
-          {
-            "type": "checkbox",
-            "id": "text_below_image",
-            "label": "Show text below image",
-            "default": true
-          },
-          {
-            "type": "color",
-            "id": "mobile_text_color",
-            "label": "Text"
-          }
-        ]
       }
     ]
 

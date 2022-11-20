@@ -1,48 +1,89 @@
-<link rel="stylesheet" href="https://ui.powerreviews.com/tag-builds/10314/4.1/css/styles.css">
-<div class="container" data-section-type="main-search-section">
-  <div class="row">
-    <div class="col-xs-12">
-      <form action="{{ routes.search_url }}" method="get" role="search" class="search-field">        
-        <label for="search">Search:</label>
-        <input type="search" name="q" id="search" value="{{ search.terms | escape | replace: '*', '' }}"
-        style="padding: 7px 10px; border: 1px solid #ccc; border-radius: 3px; display: block; width: 100%;"
-        class="tgls-ss tgls-ss-infocus" autocomplete="off">
-      </form>
-      <div class="card m-t-15">
-        <div class="tagalys-namespace tagalys-search-results tagalys-managed-list-parent" id="tagalys-namespace">
-          <div class="tagalys-managed-list" style="opacity: 1;">
-            <div class="tagalys-filters">
-            </div>
-            <div class="header-results-and-footer">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+{% paginate search.results by 16 %}
+<div class="page-title-banner text-center">
+  <div class="container">
+    {% if search.performed %}
+    <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
+    <h1 class="h2">{{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}</h1>
+    {% else %}
+    <h1 class="h2">{{ 'general.search.title' | t }}</h1>
+    {% endif %}
   </div>
 </div>
+{%- comment -%}
+  <form action="/search" method="get" role="search">
+    <label for="Search" class="label-hidden">
+      {{ 'general.search.placeholder' | t }}
+    </label>
+    <input type="search"
+           name="q"
+           id="Search"
+           value="{{ search.terms | escape }}"
+           placeholder="{{ 'general.search.placeholder' | t }}">
+    <button type="submit" class="button">
+      {% include 'icon-search' %}
+      <span class="icon-fallback-text">{{ 'general.search.submit' | t }}</span>
+    </button>
+  </form>
+{%- endcomment -%}
+<div class="collection-wrap searchwrap">
+  <div class="container">
+  {% if search.performed %}
+    {% if search.results_count == 0 %}
+      <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
+    {% else %}
+      <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
+      <ul class="row row20 p-0 collection-products collection-matrix">
+        {% for item in search.results %}
+          <li class="col-md-3 col-6 wc-product-wrap column">
+            {% include 'product-card-grid', max_height: max_height, product: item, show_vendor: section.settings.show_vendor %}
+          </li>
+          {% comment %}
+          <li>
+            <a href="{{ item.url | within: collection }}">
+              {% assign featured_image = item.image | default: item.featured_image %}
+              {% if featured_image != blank %}
+                {{ featured_image | img_url: '240x240' | img_tag }}
+              {% endif %}
+              <h3>{{ item.title }}</h3>
+            </a>
+            {% if item.object_type == 'product' %}
+              <p>
+                {% if item.compare_at_price > item.price %}
+                  {% if item.price_varies %}
+                    {% assign sale_price = item.price | money %}
+                    {{ 'products.product.on_sale_from_html' | t: price: sale_price }}
+                  {% else %}
+                    {{ 'products.product.on_sale' | t }}
+                    <span>{{ item.price | money }}</span>
+                  {% endif %}
+                  <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+                  <s>{{ item.compare_at_price | money }}</s>
+                {% else %}
+                  {% if item.price_varies %}
+                    {% assign price = item.price | money %}
+                    <span>{{ 'products.product.from_text_html' | t: price: price }}</span>
+                  {% else %}
+                    <span>{{ item.price | money }}</span>
+                  {% endif %}
+                {% endif %}
+                {% unless item.available %}
+                {{ 'products.product.sold_out' | t }}
+                {% endunless %}
+              </p>
+            {% else %}
+              <p>{{ item.content | strip_html | truncatewords: 50 }}</p>
+            {% endif %}
 
-<script>
-  var tagalysTemplate = {
-    'filter_content': {% render 'tagalys-html', context: 'filter_content' %},
-    'filter_type': {% render 'tagalys-html', context: 'filter_type' %},
-    'filter_value': {% render 'tagalys-html', context: 'filter_value' %},
-    'selcted_filter': {% render 'tagalys-html', context: 'selcted_filter' %},
-    'selected_filters': {% render 'tagalys-html', context: 'selected_filters' %},
-    'sort_options': {% render 'tagalys-html', context: 'sort_options' %},
-    'product': {% render 'tagalys-html', context: 'product' %},
-    'product_list': {% render 'tagalys-html', context: 'product_list' %},
-  }
-</script>
+          </li>
+          {% endcomment %}
+        {% endfor %}
+      </ul>
 
-{{'search.js' | asset_url | script_tag}}
-
-<script>  
-  window.addEventListener('load', function () {
-    setAriaExpanded();
-})
-</script>
-
-{% stylesheet %}
-.search-field label {margin:0 0 0 10px}
-{% endstylesheet %}
+      {% if paginate.pages > 1 %}
+        {% include 'pagination' %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+  </div>
+</div>
+{% endpaginate %}

@@ -46,6 +46,16 @@ if (document.querySelectorAll('.show_more').length > 0) {
     }
 })();
 
+var searchbox = document.getElementsByClassName(".site-header__search-container");
+{% comment %} console.log(searchbox) {% endcomment %}
+if (searchbox.length > 0) {
+    if ( searchbox.classList.contains("is-active") ) {
+        console.log(obj);
+    } else {
+        console.log("no dice");
+    }
+}
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////
 // Add event listener to all product grid items, get URL and go to URL of product clicked on
@@ -77,4 +87,4 @@ setTimeout(() => {
     document.querySelectorAll('.bs-hp-hero-image-wrapper img.medium-up--hide').forEach(panel => {
         panel.classList.add('lazyload')
     });
-}, 8000); 
+}, 8000);

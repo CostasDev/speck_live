@@ -14,8 +14,7 @@
 				<div class="sp-fit-guide-pg-block">
 					<div class="sp-fit-guide-pg-box">
 						<a href="{{block.settings.image_link}}">
-							<img width="{{block.settings.product_image.width}}" 
-              height="{{block.settings.product_image.height}}"  src="{{block.settings.product_image | img_url: 'master'}}" />
+							<img src="{{block.settings.product_image | img_url: 'master'}}" />
                           {%if block.settings.title != blank %}
 							<p>{{block.settings.title}}</p>
                           {%endif%}

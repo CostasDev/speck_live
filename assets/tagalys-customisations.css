@@ -1,0 +1,1260 @@
+html .tagalys-namespace .plp .products,
+html #tagalys-namespace .plp .products,
+html #tagalys-namespace.tagalys-namespace .plp .products {
+  overflow-y: auto;
+}
+@media only screen and (min-width: 300px) {
+  html .tagalys-namespace .plp .products .product,
+  html #tagalys-namespace .plp .products .product,
+  html #tagalys-namespace.tagalys-namespace .plp .products .product {
+    width: 50%;
+  }
+}
+html .tagalys-namespace .plp .products,
+html #tagalys-namespace .plp .products,
+html #tagalys-namespace.tagalys-namespace .plp .products {
+  overflow-y: auto;
+}
+@media only screen and (min-width: 769px) {
+  html .tagalys-namespace .plp .products .product,
+  html #tagalys-namespace .plp .products .product,
+  html #tagalys-namespace.tagalys-namespace .plp .products .product {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 300px) {
+  html
+    .tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product {
+    width: 50%;
+  }
+}
+html
+  .tagalys-namespace
+  .search-suggestions
+  .product-and-text-suggestions
+  .products,
+html
+  #tagalys-namespace
+  .search-suggestions
+  .product-and-text-suggestions
+  .products,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product-and-text-suggestions
+  .products {
+  overflow-y: auto;
+}
+@media only screen and (min-width: 769px) {
+  html
+    .tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions
+    .products
+    .product {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 300px) {
+  html
+    .tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product {
+    width: 50%;
+  }
+}
+html .tagalys-namespace .search-suggestions .product-suggestions .products,
+html #tagalys-namespace .search-suggestions .product-suggestions .products,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product-suggestions
+  .products {
+  overflow-y: auto;
+}
+@media only screen and (min-width: 769px) {
+  html
+    .tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product,
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .product-suggestions
+    .products
+    .product {
+    width: 25%;
+  }
+}
+html #tagalys-namespace.tagalys-namespace .search-suggestions .container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+html #tagalys-namespace.tagalys-namespace .search-suggestions .view-more {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product-and-text-suggestions
+  .products {
+  border: none;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .recent-search-item
+  a,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .popular-search-item
+  a,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .text-suggestion-item
+  a,
+html #tagalys-namespace.tagalys-namespace .search-suggestions .hint a {
+  padding: 4px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .suggestions-label {
+  border-bottom-color: #e8e8e1;
+  padding: 5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: normal;
+  font-size: 15px;
+  line-height: 1;
+  color: #6a6c68;
+  font-weight: 800;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .click-suggestions-label {
+  margin-bottom: 0;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .text-suggestions-container {
+  flex: 4;
+}
+html #tagalys-namespace.tagalys-namespace .search-suggestions .btn.btn-small {
+  padding: 8px 14px;
+  background-position: 150% 45%;
+  min-width: 90px;
+  font-size: 10.2px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+html #tagalys-namespace.tagalys-namespace .search-suggestions .btn {
+  line-height: 1.42;
+  text-decoration: none;
+  text-align: center;
+  white-space: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  display: inline-block;
+  padding: 11px 20px;
+  margin: 0;
+  width: auto;
+  min-width: 90px;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  color: #fff;
+  background: #111111;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .type-suggestions
+  > div {
+  margin: 10px 10px 30px;
+}
+@media (max-width: 768px) {
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .text-suggestions {
+    border-bottom: 1px solid #eee;
+  }
+  html
+    #tagalys-namespace.tagalys-namespace
+    .search-suggestions
+    .product-and-text-suggestions {
+    flex-direction: column;
+  }
+}
+html #tagalys-namespace.tagalys-namespace .plp .product,
+html #tagalys-namespace.tagalys-namespace .search-suggestions .product {
+  padding-left: 22px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-link,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-link {
+  position: relative;
+  padding: 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-details,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-details {
+  padding: 10px 0 6px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-details *,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-details
+  * {
+  line-height: 1.2;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-image-container:before,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-image-container:before {
+  padding-bottom: 100%;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-name,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-name {
+  text-transform: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #6a6c68;
+  margin: 0 0 1px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-name,
+html #tagalys-namespace.tagalys-namespace .plp .product .product-prices,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-name,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-prices {
+  text-align: left;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-prices,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-prices {
+  font-size: 15px;
+  color: #0f0f0f;
+  margin-top: 15px;
+  font-weight: 700;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-prices.discounted
+  .product-price-regular,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-prices.discounted
+  .product-price-regular {
+  color: inherit;
+  font-weight: inherit;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-image,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-image {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-image.is-active,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-image.is-active {
+  opacity: 1;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-sale-label,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-sale-label {
+  background-color: #1c1d1d;
+  color: #fff;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-prices.discounted,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-prices.discounted {
+  display: flex;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-prices.discounted
+  .product-price-discounted,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-prices.discounted
+  .product-price-discounted {
+  margin-left: 4px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-sold-out-label,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-sold-out-label {
+  background-color: #fff;
+  color: #000;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-tag,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-tag {
+  font-size: 13.6px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  right: 0;
+  line-height: 1;
+  padding: 7px 7px 7px 9px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .product-tag.product-custom-tag,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-tag.product-custom-tag {
+  background: rgba(255, 255, 255, 0.48);
+  backdrop-filter: blur(4px);
+  border-radius: 4px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .product-model,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .product-model {
+  text-transform: initial;
+  letter-spacing: normal;
+  line-height: 1.2;
+  font-size: 13px;
+  margin-top: 5px;
+  font-weight: 400;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .swatch-list,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .swatch-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .swatch-list li,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .swatch-list
+  li {
+  list-style: none;
+  margin: 0 4px 4px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product .swatch-list li .swatch,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .swatch-list
+  li
+  .swatch {
+  width: 19px;
+  height: 19px;
+  display: none;
+  box-shadow: 0 0 0 1px #e8e8e1;
+  transition: box-shadow 0.2s ease;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .swatch-list
+  li
+  .swatch-active,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .swatch-list
+  li
+  .swatch-active {
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .product
+  .swatch-list
+  li
+  .swatch-active:hover,
+html
+  #tagalys-namespace.tagalys-namespace
+  .search-suggestions
+  .product
+  .swatch-list
+  li
+  .swatch-active:hover {
+  box-shadow: 0 0 0 1px #000;
+}
+@media (max-width: 768px) {
+  html #tagalys-namespace.tagalys-namespace .plp .product,
+  html #tagalys-namespace.tagalys-namespace .search-suggestions .product {
+    padding-left: 17px;
+  }
+  .tagalys-namespace .search-suggestions,
+  #tagalys-namespace .search-suggestions,
+  #tagalys-namespace.tagalys-namespace .search-suggestions {
+    width: 100% !important;
+  }
+}
+html #tagalys-namespace.tagalys-namespace {
+  font-family: Texta, sans-serif;
+}
+html #tagalys-namespace.tagalys-namespace .h1,
+html #tagalys-namespace.tagalys-namespace .h2,
+html #tagalys-namespace.tagalys-namespace .h3,
+html #tagalys-namespace.tagalys-namespace h1,
+html #tagalys-namespace.tagalys-namespace h2,
+html #tagalys-namespace.tagalys-namespace h3 {
+  font-family: Texta, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0em;
+}
+html #tagalys-namespace.tagalys-namespace .plp *:focus {
+  outline: 2px solid #000 !important;
+}
+html #tagalys-namespace.tagalys-namespace .plp .plp-info-and-actions {
+  margin-bottom: 20px;
+  align-items: center;
+}
+html #tagalys-namespace.tagalys-namespace .plp .results-count {
+  font-weight: 400;
+}
+html #tagalys-namespace.tagalys-namespace .plp .plp-header {
+  margin-left: 0;
+  margin-right: 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .products {
+  padding: 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .product {
+  margin-bottom: 30px;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+html #tagalys-namespace.tagalys-namespace .plp .loading {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: 56px;
+  height: 56px;
+  margin-left: -28px;
+  margin-top: -28px;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  text-indent: -999em;
+  -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 4px #0000004d;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 9999999999;
+}
+html #tagalys-namespace.tagalys-namespace .plp .loading .loading-icon {
+  display: block;
+  font-size: 10px;
+  margin: 14px auto;
+  text-indent: -9999em;
+  width: 28px;
+  height: 28px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #ffffff;
+  background: -moz-linear-gradient(left, #333 50%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #333 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background: -o-linear-gradient(left, #333 50%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(left, #333 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to right, #333 50%, rgba(255, 255, 255, 0) 100%);
+  position: relative;
+  -webkit-animation: load3 0.7s infinite linear;
+  animation: load3 0.7s infinite linear;
+  animation-duration: 0.7s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: load3;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 999999;
+}
+html #tagalys-namespace.tagalys-namespace .plp .loading .loading-icon:before {
+  width: 50%;
+  height: 50%;
+  background: #333;
+  border-radius: 100% 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+html #tagalys-namespace.tagalys-namespace .plp .loading .loading-icon:after {
+  background: #fff;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .sort-options-container
+  select.sort-options {
+  height: 33px;
+  padding: 0 10px;
+  border: 1px solid #e8e8e1;
+  cursor: pointer;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filter-drawer-toggle {
+  height: 33px;
+  font-size: 15px;
+  line-height: 11px;
+  padding: 0 10px;
+  border: 1px solid #e8e8e1;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters {
+  padding-left: 22px;
+  padding-right: 10px;
+  transition-duration: 0.45s;
+  margin: 0;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-body::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 0;
+  background-color: #e6e6e6;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-checkboxes
+  .filter-item-label {
+  white-space: normal;
+  word-break: break-word;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-body-checkboxes {
+  max-height: 220px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-body::-webkit-scrollbar-thumb {
+  width: 4px;
+  border-radius: 0;
+  background-color: #757575;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filters-container
+  .filter:first-child {
+  border: none;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filters-heading {
+  display: none;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-heading {
+  color: #6a6c68;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-header {
+  border-bottom: none;
+  padding: 10px 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filters-header {
+  display: block;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .sub-header {
+  display: flex;
+  justify-content: space-between;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter {
+  padding: 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .refine-by-heading {
+  color: #6a6c68;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 800;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .clear-all-filters {
+  margin: 0;
+  width: auto;
+  font-size: 80%;
+  color: #6a6c68;
+  text-decoration: none;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .clear-all-filters:hover {
+  margin: 0;
+  width: auto;
+  color: #000;
+  text-decoration: none;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .applied-filter-name {
+  font-weight: 400;
+  margin-right: 3px;
+  text-transform: capitalize;
+  display: inline;
+  word-break: break-word;
+  color: #6a6c68;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .close-icon {
+  width: 20px;
+  height: 20px;
+  fill: #6a6c68;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .applied-filter
+  .applied-filter-label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .applied-filter
+  .applied-filter-action-clear {
+  flex-shrink: 0;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .applied-filter-item-name {
+  font-weight: 800;
+  display: inline;
+  word-break: break-word;
+  color: #6a6c68;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .applied-filter {
+  margin-bottom: 4px;
+  display: flex;
+  padding: 0;
+  border-radius: initial;
+  align-items: center;
+  width: 100%;
+  background: none;
+  font-size: 14px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-body-checkboxes:hover
+  .filter-item-count {
+  background: none;
+  margin-right: 0;
+  display: block;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-body {
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  transition-property: max-height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  clear: both;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .expanded .filter-body {
+  overflow: auto;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-action-clear {
+  float: right;
+  font-size: 80%;
+  margin: 0;
+  line-height: 22px;
+  width: auto;
+  color: #6a6c68;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-action-clear:hover {
+  color: #000;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-checkboxes {
+  margin: 0 0 0 -6px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .applied-filter {
+  margin-bottom: 8px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .applied-filters {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e3e3e3;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-item:not(.range-slider) {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 24px;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 9px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filter-item .checkbox {
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 15px;
+  height: 15px;
+  background: 0 0;
+  display: inline-block;
+  position: absolute;
+  left: 9px;
+  top: 3px;
+  margin: 0;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item
+  .filter-item-label-and-count {
+  font-size: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item
+  .filter-item-label,
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item
+  .filter-item-count {
+  color: #6a6c68;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: Texta;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item
+  .filter-item-count {
+  background: none;
+  float: right;
+  margin-right: 0;
+  padding: 0;
+  margin-left: 3px;
+  display: block;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item.selected
+  .filter-item-label,
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item.selected
+  .filter-item-count {
+  font-weight: 800;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-item.selected
+  .checkbox:before {
+  content: "";
+  width: 9px;
+  height: 6px;
+  border: 2px solid #000;
+  border-top: none;
+  border-right: none;
+  background: 0 0;
+  -ms-transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  transform: rotate(-50deg);
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .filters
+  .filter-action-toggle-collapse {
+  fill: #6a6c68;
+  height: 12px;
+  width: 12px;
+  margin-right: 5px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .filters .filters-header {
+  padding-bottom: 5px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination {
+  padding: 60px 0;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.previous,
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.next {
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #111111;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.previous .icon,
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.next .icon {
+  cursor: pointer;
+  color: #fff;
+  width: 13px;
+  height: 14px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .pagination
+  .btn.previous
+  .icon
+  .cls-1,
+html
+  #tagalys-namespace.tagalys-namespace
+  .plp
+  .pagination
+  .btn.next
+  .icon
+  .cls-1 {
+  fill: #fff;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.disabled {
+  display: none;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn {
+  padding: 8px 12px;
+  border: none;
+  position: relative;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn:after {
+  content: none !important;
+}
+html #tagalys-namespace.tagalys-namespace .plp .pagination .btn.active {
+  opacity: 0.3;
+  border: none;
+}
+@media (max-width: 768px) {
+  html
+    #tagalys-namespace.tagalys-namespace
+    .plp
+    .results-count-and-filter-toggle {
+    flex-basis: 45%;
+  }
+  html #tagalys-namespace.tagalys-namespace .plp .products-list {
+    padding-left: 0;
+  }
+  html #tagalys-namespace.tagalys-namespace .plp .filter-drawer-toggle {
+    text-decoration: none;
+    width: 100%;
+  }
+  html
+    #tagalys-namespace.tagalys-namespace
+    .plp
+    .filter-drawer-toggle
+    .icon-filter {
+    margin-right: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    fill: none;
+    stroke-width: 2px;
+    stroke: currentColor;
+    stroke-linecap: miter;
+    stroke-linejoin: miter;
+  }
+  html #tagalys-namespace.tagalys-namespace .plp .sort-options-container {
+    flex-basis: 45%;
+  }
+  html
+    #tagalys-namespace.tagalys-namespace
+    .plp
+    .sort-options-container
+    select.sort-options {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  html #tagalys-namespace.tagalys-namespace .plp .product {
+    margin-bottom: 15px;
+  }
+  html #tagalys-namespace.tagalys-namespace .plp .filters-and-products-list {
+    margin-left: -17px;
+  }
+  html #tagalys-namespace.tagalys-namespace .plp .product .product-tag {
+    font-size: 10.4px;
+    padding: 6px 5px 6px 7px;
+  }
+}
+html #tagalys-namespace.tagalys-namespace .filters-and-products-list {
+  margin-left: -22px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-container,
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-header,
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .applied-filters {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.22s,
+    opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.32s;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-and-products-list
+  .filters {
+  padding: 10px 20px;
+  max-width: 350px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-and-products-list
+  .filters
+  .filter {
+  padding: 20px 0;
+  border-top: 1px solid #e3e3e3;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-and-products-list
+  .filters
+  .filters-heading {
+  color: #6a6c68;
+  display: block;
+  font-weight: 800;
+  padding-bottom: 10px;
+  font-size: 20.44px;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .show-filters-in-drawer
+  .filters-and-products-list
+  .filters
+  .filters-heading-and-close-action {
+  height: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+html
+  #tagalys-namespace.tagalys-namespace
+  .filter-drawer-opened
+  .filters-container,
+html #tagalys-namespace.tagalys-namespace .filter-drawer-opened .filters-header,
+html
+  #tagalys-namespace.tagalys-namespace
+  .filter-drawer-opened
+  .applied-filters {
+  opacity: 1;
+  transform: translateY(0);
+}
+#tagalys-namespace.tagalys-namespace .pr-star-v4 {
+  display: inline-block;
+}
+#tagalys-namespace.tagalys-namespace .pr-snippet-rating-decimal,
+#tagalys-namespace.tagalys-namespace .pr-category-snippet__total {
+  display: none;
+}
+html #tagalys-namespace.tagalys-namespace .product .swatch-list {
+  margin-bottom: 5px;
+  position: relative;
+  left: -4px;
+}
+html #tagalys-namespace.tagalys-namespace .plp .plp-header .plp-heading {
+  font-size: 44px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  html #tagalys-namespace.tagalys-namespace .plp .plp-header .plp-heading {
+    font-size: 34px;
+  }
+}
+
+/* range slider CSS */
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .noUi-horizontal .noUi-handle{
+  background: #000000;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .noUi-horizontal{
+  height: 2px;
+  background: #B9B9B9;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .noUi-target {
+  background: #000000;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .range-slider{
+  padding: 15px;
+  border: 1px solid #e8e8e1;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .input-group .input-container input{
+  position: relative;
+  width: calc(50% - 15px);
+  height: 36px;
+  margin: 0 0 10px;
+  padding: 1px 5px;
+  line-height: 24px;
+  border: 1px solid #e3e3e3;
+  clear: none;
+  min-height: auto;
+  min-width: auto;
+  text-align: center;
+}
+
+html #tagalys-namespace.tagalys-namespace .noUi-handle{
+  box-shadow: none;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .input-group{
+  display: block;
+  margin-bottom: 20px;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .input-group .input-container{
+  display: inline;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .input-group .input-container input{
+  cursor: text;
+  color: #6a6c68;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .input-group .to{
+  width: 30px;
+}
+
+html #tagalys-namespace.tagalys-namespace .noUi-horizontal .noUi-handle{
+  top: -10px;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .noUi-connect{
+  background: #3D4246;
+  border: 1px solid;
+  left: auto;
+}
+
+html #tagalys-namespace.tagalys-namespace .plp .filters .noUi-base{
+  height: 2px;
+}

@@ -3,7 +3,7 @@
 
 {%- when 'productGridItemHtml' -%}
 {% raw %}
-	<div data-product-handle={{itemHandle}} data-product-id="{{itemId}}" id="{{itemHandle}}" class="grid__item grid-product {{grid_item_width}} {{itemQuickShopClass}}" data-aos="row-of-{{products_per_row}}" onclick="window.location.assign('https://speckproducts.com{{itemUrl}}');">
+	<div data-product-handle={{itemHandle}} data-product-id="{{itemId}}" id="{{itemHandle}}" class="grid__item grid-product {{grid_item_width}} {{itemQuickShopClass}} {{item_hide}}" data-aos="row-of-{{products_per_row}}" onclick="window.location.assign('https://speckproducts.com{{itemUrl}}');">
 		<div class="grid-product__content">
 			{{itemLabel}}
 			<div class="grid-product__image-mask">

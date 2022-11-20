@@ -43,8 +43,10 @@
         {% assign product-id = product.id %}
         {% if custom_label contains 'samsung' %}
           {% render 'icon-samsung', product-id: product-id %}
-        {% elsif custom_label contains 'magsafe' %}
+        {% elsif custom_label == 'magsafe' %}
           {% render 'icon-magsafe', product-id: product-id %}
+        {% elsif custom_label == 'bf-magsafe' %}
+          {% render 'icon_built-for-magsafe', product-id: product-id %}
         {% else %}
           {{custom_label}}
         {% endif %}
@@ -289,12 +291,3 @@
   <div class="pwr-category-snippets" style=""><div id="snippet-{{ product.id }}"></div></div>
   <!-- end_pwr_category_snippet -->
 </li>
-<script>
-  $(window).load(function(){
-    $(".home_col_2").on('click',function() {
-      var geturlll = $(this).attr('data-url');
-      //alert("click");
-      window.location.href = geturlll
-    });
-  });
-</script>
